@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Login | Zaffran Royal Biryani</title>
+  <meta name="description" content="Sign in to your Zaffran customer account to track live orders, view past feasts, and manage profile settings.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="bg-warm d-flex flex-column min-vh-100 position-relative">
+
+  <!-- Top Right Theme & RTL Controls (Desktop & Mobile) -->
+  <div class="position-absolute top-0 end-0 p-3 p-md-4 d-flex align-items-center gap-2 z-3">
+    <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+      <i class="bi bi-moon-stars-fill"></i>
+    </button>
+    <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+      <span class="small fw-bold">RTL</span>
+    </button>
+  </div>
+
+  <!-- Login Form Main Body -->
+  <main class="flex-grow-1 d-flex flex-column justify-content-center py-5">
+    <div class="container" style="max-width: 520px;">
+      <div class="card auth-card border-0 rounded-4 overflow-hidden">
+        <div class="p-4 p-md-5">
+
+          <!-- Brand Logo & Title INSIDE Container -->
+          <div class="text-center mb-4">
+            <a href="index.html" class="d-inline-block mb-3" title="Zaffran Royal Biryani">
+              <img src="assets/images/icons/logo.svg" alt="Zaffran Royal Biryani" class="brand-logo-img" style="height: 48px;">
+            </a>
+            <div>
+              <span class="badge badge-gold mb-2">ROYAL PATRON LOGIN</span>
+            </div>
+            <h2 class="font-heading text-primary fw-bold mb-1">Sign In to Your Account</h2>
+            <p class="small text-muted mb-0">Access live cooking tracking, saved biryanis, and your royal orders.</p>
+          </div>
+
+          <!-- Credentials Login Form -->
+          <form id="standaloneLoginForm" novalidate>
+            <div class="mb-3">
+              <label for="loginIdentifier" class="form-label">Email or Mobile Number <span class="text-danger">*</span></label>
+              <div class="input-group">
+                <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
+                <input type="text" class="form-control" id="loginIdentifier" placeholder="Enter email or 10-digit mobile" required>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <label for="loginPassword" class="form-label mb-0">Password <span class="text-danger">*</span></label>
+                <a href="forgot-password.html" class="small text-secondary fw-semibold">Forgot Password?</a>
+              </div>
+              <div class="input-group">
+                <span class="input-group-text bg-light"><i class="bi bi-lock"></i></span>
+                <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" required>
+                <button class="btn btn-outline-secondary" type="button" id="togglePasswordBtn">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rememberMeCheck" checked>
+                <label class="form-check-label small text-muted" for="rememberMeCheck">Remember Me</label>
+              </div>
+            </div>
+
+            <!-- Sign In to Account Button -->
+            <button type="submit" class="btn btn-royal w-100 py-2.5 fs-6 fw-bold rounded-3">
+              <i class="bi bi-box-arrow-in-right me-1"></i> Sign In to Account
+            </button>
+          </form>
+
+          <!-- Divider -->
+          <div class="d-flex align-items-center my-4">
+            <hr class="flex-grow-1 my-0 text-muted">
+            <span class="px-3 small text-muted text-uppercase" style="font-size: 0.72rem; letter-spacing: 0.5px;">or sign in with</span>
+            <hr class="flex-grow-1 my-0 text-muted">
+          </div>
+
+          <!-- Social Sign-in Buttons: Google & Apple (AFTER Sign In to Account button) -->
+          <div class="d-flex flex-column gap-2 mb-3">
+            <!-- Google Sign-In -->
+            <button type="button" class="btn btn-social-google w-100 d-flex align-items-center justify-content-center gap-2 py-2.5 rounded-3 fw-semibold shadow-xs" id="googleSignInBtn">
+              <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.616z" fill="#4285F4"/>
+                <path d="M9 18c2.43 0 4.467-.806 5.956-2.184l-2.908-2.258c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z" fill="#34A853"/>
+                <path d="M3.964 10.707c-.18-.54-.282-1.117-.282-1.707s.102-1.167.282-1.707V4.961H.957C.347 6.175 0 7.55 0 9s.347 2.825.957 4.039l3.007-2.332z" fill="#FBBC05"/>
+                <path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.961L3.964 7.293C4.672 5.166 6.656 3.58 9 3.58z" fill="#EA4335"/>
+              </svg>
+              <span>Continue with Google</span>
+            </button>
+
+            <!-- Apple Sign-In -->
+            <button type="button" class="btn btn-social-apple w-100 d-flex align-items-center justify-content-center gap-2 py-2.5 rounded-3 fw-semibold shadow-xs" id="appleSignInBtn">
+              <i class="bi bi-apple fs-5"></i>
+              <span>Continue with Apple</span>
+            </button>
+          </div>
+
+          <div class="text-center mt-4 pt-3 border-top">
+            <p class="small text-muted mb-0">
+              Don't have an account yet? 
+              <a href="register.html" class="text-primary fw-bold text-decoration-none">Register Here</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Theme & RTL Buttons (Under container in centre) -->
+      <div class="d-flex d-md-none justify-content-center align-items-center gap-3 mt-4">
+        <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+          <span class="small fw-bold">RTL</span>
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/auth.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Toggle password visibility
+      const toggleBtn = document.getElementById('togglePasswordBtn');
+      const passInput = document.getElementById('loginPassword');
+      if (toggleBtn && passInput) {
+        toggleBtn.addEventListener('click', () => {
+          const isPass = passInput.getAttribute('type') === 'password';
+          passInput.setAttribute('type', isPass ? 'text' : 'password');
+          toggleBtn.innerHTML = isPass ? '<i class="bi bi-eye-slash"></i>' : '<i class="bi bi-eye"></i>';
+        });
+      }
+
+      // Standalone Login Form
+      const form = document.getElementById('standaloneLoginForm');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const identifier = document.getElementById('loginIdentifier').value.trim();
+          const password = passInput.value.trim();
+
+          if (!identifier) {
+            Validation.toast('Please enter your email or mobile number.', 'error');
+            return;
+          }
+          if (!password) {
+            Validation.toast('Please enter your password.', 'error');
+            return;
+          }
+
+          let user = Auth.authenticate(identifier, password);
+          if (!user) {
+            // For demo ease, authenticate with demo account
+            const users = Auth.getUsers();
+            user = users && users.length > 0 ? users[0] : {
+              id: 'USR-101',
+              name: 'Jero Khan',
+              email: identifier.includes('@') ? identifier : 'jero@zaffranbiryani.com',
+              avatar: 'assets/images/chefs/chef-1.jpg'
+            };
+          }
+
+          Auth.loginUser(user, true);
+          setTimeout(() => {
+            window.location.href = 'dashboard.html';
+          }, 800);
+        });
+      }
+
+      // Google Sign-In Simulation
+      const googleBtn = document.getElementById('googleSignInBtn');
+      if (googleBtn) {
+        googleBtn.addEventListener('click', () => {
+          const user = {
+            id: 'USR-GOOG',
+            name: 'Jero Khan',
+            email: 'jero.khan@gmail.com',
+            avatar: 'assets/images/chefs/chef-1.jpg',
+            memberSince: 'Nov 2026'
+          };
+          Auth.loginUser(user, false);
+          Swal.fire({
+            title: 'Signed in with Google',
+            text: 'Welcome back, Jero Khan!',
+            icon: 'success',
+            timer: 1500,
+            showConfirmButton: false
+          }).then(() => {
+            window.location.href = 'dashboard.html';
+          });
+        });
+      }
+
+      // Apple Sign-In Simulation
+      const appleBtn = document.getElementById('appleSignInBtn');
+      if (appleBtn) {
+        appleBtn.addEventListener('click', () => {
+          const user = {
+            id: 'USR-APPL',
+            name: 'Jero Khan',
+            email: 'jero.khan@icloud.com',
+            avatar: 'assets/images/chefs/chef-2.jpg',
+            memberSince: 'Nov 2026'
+          };
+          Auth.loginUser(user, false);
+          Swal.fire({
+            title: 'Signed in with Apple',
+            text: 'Welcome back, Jero Khan!',
+            icon: 'success',
+            timer: 1500,
+            showConfirmButton: false
+          }).then(() => {
+            window.location.href = 'dashboard.html';
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

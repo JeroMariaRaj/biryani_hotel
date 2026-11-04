@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaffran Royal Biryani House & Takeaway | Authentic Dum Biryani</title>
+  <meta name="description" content="Experience royal Hyderabadi dum biryani slow-cooked to perfection in sealed earthen degs. Order online for express takeaway and grand catering.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <!-- Core & Vendor CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+  <!-- Theme & Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/icons/logo.svg" alt="Zaffran Royal Biryani" class="brand-logo-img">
+      </a>
+
+      <!-- Mobile Right Controls (Cart & Hamburger) -->
+      <!-- Mobile Right Controls (Theme, RTL, Cart & Hamburger) -->
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+          <span class="small fw-bold">RTL</span>
+        </button>
+        <a href="cart.html" class="nav-action-btn" title="Shopping Cart">
+          <i class="bi bi-bag"></i>
+          <span class="nav-badge-count cart-badge-count">0</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active d-inline-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+              <i class="bi bi-chevron-down nav-dropdown-arrow"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="index.html"><i class="bi bi-house"></i> Home 1 – Royal Landing</a></li>
+              <li><a class="dropdown-item" href="index-2.html"><i class="bi bi-stars"></i> Home 2 – Editorial Feast</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <!-- Dashboard MUST appear immediately after Contact -->
+          <li class="nav-item">
+            <a class="nav-link nav-dashboard-link" href="dashboard.html">Dashboard</a>
+          </li>
+        </ul>
+
+        <!-- Right Side Action Controls -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- Theme Toggle -->
+          <button class="nav-action-btn theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="nav-action-btn rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+            <span class="small fw-bold">RTL</span>
+          </button>
+
+          <!-- Cart Button -->
+          <a href="cart.html" class="nav-action-btn d-none d-lg-inline-flex" title="Shopping Cart">
+            <i class="bi bi-bag"></i>
+            <span class="nav-badge-count cart-badge-count">0</span>
+          </a>
+
+          <!-- Auth Container (Login Modal trigger or User Profile Dropdown) -->
+          <div class="nav-auth-container">
+            <!-- Dynamically populated by auth.js -->
+          </div>
+        </div>
+</div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       SECTION 1: HERO SECTION
+       ========================================================================= -->
+  <section class="hero-slider-section">
+    <div class="hero-bg-overlay"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-lg-6 hero-content" data-aos="fade-up" data-aos-duration="1000">
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-dark border border-warning mb-3">
+            <i class="bi bi-award-fill text-warning"></i>
+            <span class="small text-warning fw-bold text-uppercase letter-spacing-1">Authentic Awadhi &amp; Hyderabadi Tradition</span>
+          </div>
+          <h1 class="hero-title">Every Grain Tells a Story of <span class="text-gold">Flavour</span>.</h1>
+          <p class="hero-text">
+            Immerse yourself in authentic Nawabi heritage. Hand-crafted with aged long-grain basmati, rare Kashmiri saffron, and meat slow-cooked in sealed clay handis over glowing embers.
+          </p>
+          <div class="d-flex align-items-center gap-3 flex-wrap">
+            <a href="menu.html" class="btn btn-saffron btn-lg">
+              <i class="bi bi-menu-button-wide me-1"></i> Explore Menu
+            </a>
+            <a href="cart.html" class="btn btn-outline-gold btn-lg">
+              <i class="bi bi-bag-plus me-1"></i> Order Takeaway
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="d-flex align-items-center gap-4 mt-4 pt-3 border-top border-secondary border-opacity-25">
+            <div class="d-flex align-items-center gap-2">
+              <div class="fs-4 fw-bold text-warning font-heading">4.9</div>
+              <div class="lh-1">
+                <div class="text-warning small">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <span class="small text-light">12,500+ Google Reviews</span>
+              </div>
+            </div>
+            <div class="vr bg-secondary opacity-50"></div>
+            <div>
+              <span class="fs-5 fw-bold text-light font-heading d-block">100% Halal</span>
+              <span class="small text-light">Farm-Fresh Ingredients</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 hero-image-frame" data-aos="zoom-in" data-aos-duration="1200">
+          <div class="hero-img-wrap">
+            <img src="assets/images/hero/hero-biryani-1.jpg" alt="Zaffran Royal Dum Biryani" class="img-fluid rounded-4 shadow-lg">
+            
+            <!-- Floating Trust Badge -->
+            <div class="hero-floating-badge" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon-box">
+                <i class="bi bi-fire"></i>
+              </div>
+              <div>
+                <h6 class="mb-0 fw-bold">Traditional Dum Pukht</h6>
+                <small class="text-secondary">Slow cooked for 4 hours in brass degs</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="row g-4 text-center text-md-start">
+        <div class="col-md-3 col-6">
+          <div class="trust-item">
+            <i class="bi bi-shield-check"></i>
+            <div>
+              <h6>Original 1984 Recipe</h6>
+              <p>40 years of royal spices</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="trust-item">
+            <i class="bi bi-stopwatch"></i>
+            <div>
+              <h6>30-Min Fast Takeaway</h6>
+              <p>Sealed hot in thermal handis</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="trust-item">
+            <i class="bi bi-people"></i>
+            <div>
+              <h6>Party &amp; Bulk Orders</h6>
+              <p>Custom handi degs for 15-500 guests</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="trust-item">
+            <i class="bi bi-gem"></i>
+            <div>
+              <h6>Finest Saffron &amp; Ghee</h6>
+              <p>Pure cow ghee &amp; whole spices</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SECTION 2: SIGNATURE BIRYANI COLLECTION
+       ========================================================================= -->
+  <section class="py-5 my-3">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Royal Masterpieces</span>
+        <h2 class="section-title">Our Signature Biryani Collection</h2>
+        <div class="ornament-divider">
+          <i class="bi bi-gem"></i>
+        </div>
+        <p class="text-muted mx-auto" style="max-width: 620px;">
+          Each deg is sealed with whole-wheat dough and simmered slowly on charcoal embers to capture every nuance of aroma.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Dish 1: Hyderabadi Dum -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/Royal Hyderabadi Chicken Dum Biryani.jpg" alt="Hyderabadi Dum Biryani">
+              <button class="food-card-fav-btn fav-btn-dish-1" onclick="Menu.toggleFavourite('dish-1')" title="Add to Favourites">
+                <i class="bi bi-heart"></i>
+              </button>
+              <div class="food-card-badge">
+                <span class="badge-gold me-1"><i class="bi bi-star-fill"></i> Bestseller</span>
+                <span class="diet-badge non-veg" title="Non-Vegetarian"></span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <span class="badge bg-light text-muted small">Hyderabadi Special</span>
+                <div class="food-rating"><i class="bi bi-star-fill text-warning"></i> 4.9 <span>(320)</span></div>
+              </div>
+              <h5 class="food-card-title">Hyderabadi Chicken Dum Biryani</h5>
+              <p class="food-card-desc">Long-grain aged basmati slow-cooked in handi with saffron-marinated tender chicken and caramelized onions.</p>
+              <div class="food-card-footer">
+                <div class="food-price">₹349 <span class="original-price">₹399</span></div>
+                <button class="btn btn-add-cart" onclick="Cart.add('dish-1')">
+                  <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 2: Chicken 65 Biryani -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/Nizami Chicken 65 Biryani.jpg" alt="Chicken 65 Biryani">
+              <button class="food-card-fav-btn fav-btn-dish-2" onclick="Menu.toggleFavourite('dish-2')" title="Add to Favourites">
+                <i class="bi bi-heart"></i>
+              </button>
+              <div class="food-card-badge">
+                <span class="badge-gold me-1"><i class="bi bi-fire"></i> Spicy</span>
+                <span class="diet-badge non-veg" title="Non-Vegetarian"></span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <span class="badge bg-light text-muted small">Fusion Delight</span>
+                <div class="food-rating"><i class="bi bi-star-fill text-warning"></i> 4.8 <span>(215)</span></div>
+              </div>
+              <h5 class="food-card-title">Nizami Chicken 65 Biryani</h5>
+              <p class="food-card-desc">Crispy fiery South-spiced Chicken 65 boneless bites layered over fragrant dum saffron rice with roasted curry leaves.</p>
+              <div class="food-card-footer">
+                <div class="food-price">₹369 <span class="original-price">₹429</span></div>
+                <button class="btn btn-add-cart" onclick="Cart.add('dish-2')">
+                  <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 3: Mutton Biryani -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/Kache Gosht Ki Mutton Dum Biryani.jpg" alt="Mutton Dum Biryani">
+              <button class="food-card-fav-btn fav-btn-dish-4" onclick="Menu.toggleFavourite('dish-4')" title="Add to Favourites">
+                <i class="bi bi-heart"></i>
+              </button>
+              <div class="food-card-badge">
+                <span class="badge-gold me-1"><i class="bi bi-gem"></i> Chef Choice</span>
+                <span class="diet-badge non-veg" title="Non-Vegetarian"></span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <span class="badge bg-light text-muted small">Kache Gosht</span>
+                <div class="food-rating"><i class="bi bi-star-fill text-warning"></i> 5.0 <span>(480)</span></div>
+              </div>
+              <h5 class="food-card-title">Kache Gosht Ki Mutton Biryani</h5>
+              <p class="food-card-desc">Tender baby lamb cuts steeped in spiced yoghurt marinade, cooked in sealed earthen deg until succulent and juicy.</p>
+              <div class="food-card-footer">
+                <div class="food-price">₹469 <span class="original-price">₹529</span></div>
+                <button class="btn btn-add-cart" onclick="Cart.add('dish-4')">
+                  <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 4: Ambur Biryani -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/Traditional Ambur Mutton Biryani.jpg" alt="Ambur Mutton Biryani">
+              <button class="food-card-fav-btn fav-btn-dish-5" onclick="Menu.toggleFavourite('dish-5')" title="Add to Favourites">
+                <i class="bi bi-heart"></i>
+              </button>
+              <div class="food-card-badge">
+                <span class="badge-maroon me-1">Seeraga Samba</span>
+                <span class="diet-badge non-veg" title="Non-Vegetarian"></span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <span class="badge bg-light text-muted small">Arcot Heritage</span>
+                <div class="food-rating"><i class="bi bi-star-fill text-warning"></i> 4.8 <span>(190)</span></div>
+              </div>
+              <h5 class="food-card-title">Traditional Ambur Mutton Biryani</h5>
+              <p class="food-card-desc">Classic South Indian specialty made with Seeraga Samba short-grain rice, whole garlic, red chillies and curd gravy.</p>
+              <div class="food-card-footer">
+                <div class="food-price">₹439 <span class="original-price">₹499</span></div>
+                <button class="btn btn-add-cart" onclick="Cart.add('dish-5')">
+                  <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 5: Special Family Platter -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/Royal Feast Family Platter Biryani.jpg" alt="Special Family Biryani">
+              <button class="food-card-fav-btn fav-btn-dish-10" onclick="Menu.toggleFavourite('dish-10')" title="Add to Favourites">
+                <i class="bi bi-heart"></i>
+              </button>
+              <div class="food-card-badge">
+                <span class="badge-gold me-1">Feast Platter (Serves 4-5)</span>
+                <span class="diet-badge non-veg" title="Non-Vegetarian"></span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <span class="badge bg-light text-muted small">Family Combo</span>
+                <div class="food-rating"><i class="bi bi-star-fill text-warning"></i> 5.0 <span>(350)</span></div>
+              </div>
+              <h5 class="food-card-title">Royal Feast Family Platter</h5>
+              <p class="food-card-desc">Grand brass platter with Chicken Dum Biryani, Mutton Biryani, 4 boiled eggs, chicken kebabs, salan and raita.</p>
+              <div class="food-card-footer">
+                <div class="food-price">₹999 <span class="original-price">₹1199</span></div>
+                <button class="btn btn-add-cart" onclick="Cart.add('dish-10')">
+                  <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 6: Paneer Tikka Biryani -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/Zaffran Shahi Paneer Tikka Biryani.jpg" alt="Paneer Tikka Biryani">
+              <button class="food-card-fav-btn fav-btn-dish-7" onclick="Menu.toggleFavourite('dish-7')" title="Add to Favourites">
+                <i class="bi bi-heart"></i>
+              </button>
+              <div class="food-card-badge">
+                <span class="badge-gold me-1">Pure Veg</span>
+                <span class="diet-badge veg" title="Pure Vegetarian"></span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <span class="badge bg-light text-muted small">Vegetarian Royal</span>
+                <div class="food-rating"><i class="bi bi-star-fill text-warning"></i> 4.8 <span>(230)</span></div>
+              </div>
+              <h5 class="food-card-title">Zaffran Shahi Paneer Biryani</h5>
+              <p class="food-card-desc">Charcoal-tandoor smoked malai paneer cubes marinated in ajwain spices, layered with garden herbs and saffron rice.</p>
+              <div class="food-card-footer">
+                <div class="food-price">₹299 <span class="original-price">₹349</span></div>
+                <button class="btn btn-add-cart" onclick="Cart.add('dish-7')">
+                  <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="menu.html" class="btn btn-royal btn-lg">
+          <i class="bi bi-grid-3x3-gap me-2"></i> View Full 21+ Dish Menu
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: OUR CULINARY STORY
+       ========================================================================= -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="position-relative">
+            <img src="assets/images/restaurant/about-dum.jpg" alt="Traditional Dum Cooking" class="rounded-4 shadow-lg w-100" style="max-height: 480px; object-fit: cover;">
+            <div class="position-absolute bottom-0 end-0 bg-dark text-white p-3 rounded-3 m-3 border border-warning shadow" style="max-width: 240px;">
+              <span class="d-block fs-3 fw-bold text-warning font-heading">40+ Years</span>
+              <span class="small text-light">Preserving the royal Nawabi culinary tradition since 1984.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <span class="section-subtitle">Since 1984</span>
+          <h2 class="section-title">A Living Heritage of Slow-Cooked Perfection</h2>
+          <div class="ornament-divider text-start justify-content-start">
+            <i class="bi bi-fire"></i>
+          </div>
+          <p class="lead text-primary fw-medium">
+            At Zaffran, biryani is not just a dish — it is an age-old ritual celebrated across generations.
+          </p>
+          <p>
+            Our master ustads trace their lineage to the royal kitchens of the Deccan. We preserve the authentic <em>Dum Pukht</em> technique: heavy-bottomed copper degs are hand-sealed with dough, ensuring no steam escapes while the meats tenderize in their own natural juices.
+          </p>
+          <div class="row g-3 my-3">
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
+                <i class="bi bi-check2-circle fs-3 text-secondary"></i>
+                <div>
+                  <h6 class="mb-0 fw-bold">2-Year Aged Basmati</h6>
+                  <small class="text-muted">Extra-long slender grain</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
+                <i class="bi bi-check2-circle fs-3 text-secondary"></i>
+                <div>
+                  <h6 class="mb-0 fw-bold">Original Deg Firewood</h6>
+                  <small class="text-muted">Zero artificial additives</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="about.html" class="btn btn-royal mt-2">
+            <i class="bi bi-book-half me-1"></i> Read Our Full Story
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: WHY CHOOSE US
+       ========================================================================= -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">The Zaffran Promise</span>
+        <h2 class="section-title">Why Biryani Lovers Choose Zaffran</h2>
+        <div class="ornament-divider">
+          <i class="bi bi-shield-check"></i>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4">
+            <div class="stat-icon mx-auto mb-3">
+              <i class="bi bi-journal-bookmark-fill"></i>
+            </div>
+            <h5 class="font-heading mb-2">Authentic Royal Recipes</h5>
+            <p class="text-muted small mb-0">Every spice ratio is calibrated from hereditary court recipes of Nizam ul-Mulk, maintaining unbroken culinary purity.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4">
+            <div class="stat-icon mx-auto mb-3">
+              <i class="bi bi-heart-pulse-fill"></i>
+            </div>
+            <h5 class="font-heading mb-2">Farm Fresh &amp; 100% Halal</h5>
+            <p class="text-muted small mb-0">We source only tender prime cuts delivered fresh every dawn. Zero frozen meats, zero MSG, and zero artificial coloring.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4">
+            <div class="stat-icon mx-auto mb-3">
+              <i class="bi bi-fire"></i>
+            </div>
+            <h5 class="font-heading mb-2">Dough-Sealed Handi Preparation</h5>
+            <p class="text-muted small mb-0">Cooked in batches of 15 kg inside hand-crafted clay and copper handis so every grain absorbs the saffron essence.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4">
+            <div class="stat-icon mx-auto mb-3">
+              <i class="bi bi-scooter"></i>
+            </div>
+            <h5 class="font-heading mb-2">Thermal Pack Fast Delivery</h5>
+            <p class="text-muted small mb-0">Insulated earthen pot packaging keeps your biryani steaming hot and fragrant right to your doorstep within 35 minutes.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4">
+            <div class="stat-icon mx-auto mb-3">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <h5 class="font-heading mb-2">Family-Friendly Hospitality</h5>
+            <p class="text-muted small mb-0">Generous portion sizes, complimentary Mirchi Ka Salan &amp; Dahi Chutney, and dedicated family dining booths.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4">
+            <div class="stat-icon mx-auto mb-3">
+              <i class="bi bi-award-fill"></i>
+            </div>
+            <h5 class="font-heading mb-2">Award-Winning Culinary Team</h5>
+            <p class="text-muted small mb-0">Voted "Best Hyderabadi Dum Biryani" by Times Food Awards three consecutive years running (2023, 2024, 2025).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: PARTY & CATERING ORDERS
+       ========================================================================= -->
+  <section class="py-5" style="background: linear-gradient(135deg, rgba(116, 28, 36, 0.05) 0%, rgba(217, 154, 50, 0.08) 100%);">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="section-subtitle">Bulk &amp; Event Feasts</span>
+          <h2 class="section-title">Party, Wedding &amp; Corporate Catering</h2>
+          <div class="ornament-divider text-start justify-content-start">
+            <i class="bi bi-cake2"></i>
+          </div>
+          <p class="lead text-primary">
+            Planning a grand celebration? Serve live dum biryani in authentic copper degs that will mesmerize your guests.
+          </p>
+          <p>
+            Whether it's an intimate birthday gathering of 20, a corporate conference of 150, or a royal wedding reception of 1,000 guests, our specialized outdoor catering team delivers fresh, steaming feasts on time.
+          </p>
+
+          <ul class="list-unstyled my-4">
+            <li class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-check-circle-fill text-warning fs-5"></i>
+              <span><strong>Live Handi Deg Counters:</strong> Chefs unseal the steaming dough on-site.</span>
+            </li>
+            <li class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-check-circle-fill text-warning fs-5"></i>
+              <span><strong>Custom Portion Planning:</strong> Tailored to your exact headcount and diet mix.</span>
+            </li>
+            <li class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-check-circle-fill text-warning fs-5"></i>
+              <span><strong>Complete Royal Spread:</strong> Accompanied by kebabs, salan, raita &amp; shahi desserts.</span>
+            </li>
+          </ul>
+
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="party-orders.html" class="btn btn-royal">
+              <i class="bi bi-calculator me-1"></i> Calculate Deg Quantities
+            </a>
+            <a href="contact.html" class="btn btn-outline-royal">
+              <i class="bi bi-chat-dots me-1"></i> Request Custom Quote
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="calc-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="font-heading mb-0 text-primary">Quick Party Estimator</h5>
+              <span class="badge badge-gold">Interactive Tool</span>
+            </div>
+            <p class="small text-muted mb-4">Estimate the handi degs required for your upcoming celebration.</p>
+
+            <div class="mb-3">
+              <label class="form-label">Number of Expected Guests:</label>
+              <div class="calc-stepper justify-content-center">
+                <button type="button" class="stepper-btn" id="btnGuestMinus">−</button>
+                <input type="number" id="calcGuests" class="form-control text-center fw-bold fs-5" style="max-width: 140px;" value="30" min="15" max="1000" step="5">
+                <button type="button" class="stepper-btn" id="btnGuestPlus">+</button>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label">Preferred Biryani Selection:</label>
+              <select id="calcBiryaniType" class="form-select">
+                <option value="chicken" selected>Hyderabadi Chicken Dum Biryani (₹280/guest)</option>
+                <option value="mutton">Kache Gosht Mutton Biryani (₹390/guest)</option>
+                <option value="veg">Zaffran Shahi Paneer Biryani (₹230/guest)</option>
+                <option value="special">Nizam Special Platter Combo (₹450/guest)</option>
+              </select>
+            </div>
+
+            <div class="p-3 bg-light rounded-3 border mb-3">
+              <div class="row text-center g-2">
+                <div class="col-4 border-end">
+                  <span class="d-block small text-muted">Biryani Weight</span>
+                  <span class="fs-5 fw-bold text-primary" id="calcKgOutput">9 kg</span>
+                </div>
+                <div class="col-4 border-end">
+                  <span class="d-block small text-muted">Handi Degs</span>
+                  <span class="fs-5 fw-bold text-primary" id="calcDegsOutput">1 Handi Deg</span>
+                </div>
+                <div class="col-4">
+                  <span class="d-block small text-muted">Approx. Cost</span>
+                  <span class="fs-5 fw-bold text-success" id="calcTotalOutput">₹8,400</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="party-orders.html" class="btn btn-saffron w-100">
+              <i class="bi bi-arrow-right-circle me-1"></i> Proceed with Bulk Enquiry
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: CUSTOMER TESTIMONIALS + FINAL CTA
+       ========================================================================= -->
+  <section class="py-5 bg-white border-top">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Real Words from Real Connoisseurs</span>
+        <h2 class="section-title">What Our Guests Say About Us</h2>
+        <div class="ornament-divider">
+          <i class="bi bi-chat-square-quote"></i>
+        </div>
+      </div>
+
+      <!-- Testimonial Slider -->
+      <div class="swiper testimonial-swiper pb-5" data-aos="fade-up">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="text-warning mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "The mutton dum biryani took me right back to the Old City feast of my childhood. The meat literally drops off the bone, and every grain of basmati has the unmistakable scent of pure saffron and mace."
+              </p>
+              <div class="testimonial-author">
+                <img src="assets/images/chefs/chef-1.jpg" alt="Rahman Al-Zaidi" class="author-avatar">
+                <div>
+                  <h6 class="author-name">Rahman Al-Zaidi</h6>
+                  <span class="author-role">Food Critic, Deccan Chronicle</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="text-warning mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "We ordered 5 degs for our daughter's engagement ceremony. Zaffran delivered them sealed on glowing charcoal. Our 180 guests could not stop praising the mirchi ka salan and the authentic aroma."
+              </p>
+              <div class="testimonial-author">
+                <img src="assets/images/chefs/chef-3.jpg" alt="Priya &amp; Sandeep Rao" class="author-avatar">
+                <div>
+                  <h6 class="author-name">Priya &amp; Sandeep Rao</h6>
+                  <span class="author-role">Private Catering Clients</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="text-warning mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Their online ordering and live tracking is remarkably smooth. The clay pot arrived boiling hot in under 30 minutes, neatly packed with boiled eggs and fried onions. Best takeaway in Jubilee Hills!"
+              </p>
+              <div class="testimonial-author">
+                <img src="assets/images/chefs/chef-4.jpg" alt="Kavita Reddy" class="author-avatar">
+                <div>
+                  <h6 class="author-name">Kavita Reddy</h6>
+                  <span class="author-role">Tech Lead, Google Hyderabad</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <!-- Final Call to Action Banner -->
+      <div class="mt-4 p-5 rounded-4 position-relative overflow-hidden shadow-lg text-white" style="background: linear-gradient(135deg, var(--primary) 0%, #400B10 100%);">
+        <div class="row align-items-center position-relative z-2">
+          <div class="col-lg-8 mb-4 mb-lg-0 text-center text-lg-start">
+            <span class="badge badge-gold mb-2">HOT &amp; FRESH FROM THE DEG</span>
+            <h2 class="font-heading text-white mb-2">Ready to Taste True Nizam Royalty?</h2>
+            <p class="text-light mb-0">Order your favourite handi now or book a catering consultation with our master chef.</p>
+          </div>
+          <div class="col-lg-4 text-center text-lg-end">
+            <a href="menu.html" class="btn btn-saffron btn-lg px-4 me-2 mb-2">
+              <i class="bi bi-bag-check-fill me-1"></i> Order Now
+            </a>
+            <a href="tel:+914023456789" class="btn btn-outline-light btn-lg px-3 mb-2">
+              <i class="bi bi-telephone me-1"></i> Call Table
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: About & Logo -->
+        <div class="col-lg-4 col-md-6">
+          <img src="assets/images/icons/logo-light.svg" alt="Zaffran Royal Biryani" class="mb-3 brand-logo-img" style="height: 50px;">
+          <p class="small text-muted mb-4">
+            Celebrating 40 years of culinary royalty. We hand-craft authentic Hyderabadi and Awadhi dum biryanis in firewood-sealed degs using hereditary Nawabi recipes.
+          </p>
+          <div class="social-links">
+            <a href="https://facebook.com" class="social-btn" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" class="social-btn" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://twitter.com" class="social-btn" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://youtube.com" class="social-btn" title="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+                <!-- Col 3: Services -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-widget-title">Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-details.html?service=dining">Restaurant Dining</a></li>
+            <li><a href="service-details.html?service=takeaway">Biryani Takeaway</a></li>
+            <li><a href="service-details.html?service=delivery">Doorstep Delivery</a></li>
+            <li><a href="party-orders.html">Party &amp; Bulk Orders</a></li>
+            <li><a href="service-details.html?service=wedding">Wedding Catering</a></li>
+            <li><a href="service-details.html?service=corporate">Corporate Feasts</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter & Contact -->
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-widget-title">Royal Updates</h5>
+          <p class="small text-muted mb-3">Subscribe for secret seasonal recipes, festival discounts and VIP table invites.</p>
+          <form class="newsletter-form mb-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+              <button class="btn btn-saffron" type="submit">Join</button>
+            </div>
+          </form>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone"></i>
+            <div>
+              <span class="small text-muted d-block">Takeaway &amp; Reservation Hotline:</span>
+              <a href="tel:+914023456789" class="fw-bold text-white">+91 40 2345 6789</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+            <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2026 Zaffran Royal Biryani &amp; Takeaway. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" title="Back to Top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- Core & Supporting Scripts -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+
+  <!-- Modular Application Scripts -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/orders.js"></script>
+  <script src="assets/js/filters.js"></script>
+  <script src="assets/js/main.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart | Zaffran Royal Biryani</title>
+  <meta name="description" content="Review your selected royal biryanis, apply promotional coupons, and proceed to checkout.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/icons/logo.svg" alt="Zaffran Royal Biryani" class="brand-logo-img">
+      </a>
+
+            <!-- Mobile Right Controls (Theme, RTL, Cart & Hamburger) -->
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+          <span class="small fw-bold">RTL</span>
+        </button>
+        <a href="cart.html" class="nav-action-btn" title="Shopping Cart">
+          <i class="bi bi-bag"></i>
+          <span class="nav-badge-count cart-badge-count">0</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-inline-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+              <i class="bi bi-chevron-down nav-dropdown-arrow"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-house"></i> Home 1 – Royal Landing</a></li>
+              <li><a class="dropdown-item" href="index-2.html"><i class="bi bi-stars"></i> Home 2 – Editorial Feast</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link nav-dashboard-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Right Side Action Controls -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- Theme Toggle -->
+          <button class="nav-action-btn theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="nav-action-btn rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+            <span class="small fw-bold">RTL</span>
+          </button>
+
+          <!-- Cart Button -->
+          <a href="cart.html" class="nav-action-btn d-none d-lg-inline-flex" title="Shopping Cart">
+            <i class="bi bi-bag"></i>
+            <span class="nav-badge-count cart-badge-count">0</span>
+          </a>
+
+          <!-- Auth Container (Login button / User Dropdown) -->
+          <div class="nav-auth-container">
+            <!-- Dynamically populated by auth.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero py-5" style="background-image: url('assets/images/hero/hero-menu.jpg');">
+    <div class="container text-center">
+      <span class="section-subtitle text-warning">Your Selected Delicacies</span>
+      <h1 class="display-4 font-heading fw-bold">Shopping Cart</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="menu.html">Menu</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Cart</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Cart Content Container -->
+  <main class="py-5 bg-warm flex-grow-1">
+    <div class="container" id="cartPageContainer">
+      <!-- Populated dynamically by renderCartPage() -->
+    </div>
+  </main>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <img src="assets/images/icons/logo-light.svg" alt="Zaffran Royal Biryani" class="mb-3 brand-logo-img" style="height: 50px;">
+          <p class="small text-muted mb-4">Celebrating 40 years of culinary royalty. We hand-craft authentic Hyderabadi and Awadhi dum biryanis in firewood-sealed degs using hereditary Nawabi recipes.</p>
+        </div>
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Col 3: Services -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-widget-title">Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-details.html?service=dining">Restaurant Dining</a></li>
+            <li><a href="service-details.html?service=takeaway">Biryani Takeaway</a></li>
+            <li><a href="service-details.html?service=delivery">Doorstep Delivery</a></li>
+            <li><a href="party-orders.html">Party &amp; Bulk Orders</a></li>
+            <li><a href="service-details.html?service=wedding">Wedding Catering</a></li>
+            <li><a href="service-details.html?service=corporate">Corporate Feasts</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-widget-title">Need Assistance?</h5>
+          <p class="small text-muted mb-2">Our takeaway managers are available daily until 11:30 PM.</p>
+          <a href="tel:+914023456789" class="fs-5 fw-bold text-white d-block mb-3">+91 40 2345 6789</a>
+        </div>
+      </div>
+            <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2026 Zaffran Royal Biryani &amp; Takeaway. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/orders.js"></script>
+
+  <!-- Cart Page Dynamic Renderer -->
+  <script>
+    function renderCartPage() {
+      const container = document.getElementById('cartPageContainer');
+      if (!container) return;
+
+      const items = Cart.getItems();
+      const totals = Cart.getTotals();
+
+      if (items.length === 0) {
+        container.innerHTML = `
+          <div class="card border-0 shadow-sm rounded-4 p-5 text-center bg-white my-4">
+            <div class="stat-icon mx-auto mb-3" style="width: 70px; height: 70px; font-size: 2rem;">
+              <i class="bi bi-bag-x"></i>
+            </div>
+            <h3 class="font-heading text-primary mb-2">Your Shopping Cart is Empty</h3>
+            <p class="text-muted mx-auto mb-4" style="max-width: 450px;">
+              You have not added any royal dum biryanis or delicacies to your feast yet.
+            </p>
+            <div>
+              <a href="menu.html" class="btn btn-royal btn-lg px-4">
+                <i class="bi bi-menu-button-wide me-1"></i> Explore Royal Menu
+              </a>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      let rowsHTML = items.map(item => {
+        const dish = Menu.getDishById(item.dishId);
+        if (!dish) return '';
+        const itemTotal = dish.price * item.quantity;
+        return `
+          <tr>
+            <td>
+              <div class="d-flex align-items-center gap-3">
+                <img src="${dish.image}" alt="${dish.name}" class="cart-item-img shadow-xs">
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <h6 class="font-heading mb-0 text-dark">${dish.name}</h6>
+                  </div>
+                  <span class="small text-muted">₹${dish.price} each</span>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="quantity-control">
+                <button type="button" class="qty-btn" onclick="Cart.updateQuantity('${dish.id}', ${item.quantity - 1})">−</button>
+                <input type="text" class="qty-input" value="${item.quantity}" readonly>
+                <button type="button" class="qty-btn" onclick="Cart.updateQuantity('${dish.id}', ${item.quantity + 1})">+</button>
+              </div>
+            </td>
+            <td class="fw-bold text-primary font-heading fs-5">
+              ₹${itemTotal}
+            </td>
+            <td class="text-end">
+              <button class="btn btn-sm text-danger p-0" onclick="Cart.remove('${dish.id}')" title="Remove Item">
+                <i class="bi bi-trash3 fs-5"></i>
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      container.innerHTML = `
+        <div class="row g-4">
+          <!-- Cart Table -->
+          <div class="col-lg-8">
+            <div class="cart-table shadow-sm mb-4">
+              <div class="table-responsive">
+                <table class="table mb-0">
+                  <thead>
+                    <tr>
+                      <th>Dish</th>
+                      <th>Quantity</th>
+                      <th>Subtotal</th>
+                      <th class="text-end">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${rowsHTML}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+              <a href="menu.html" class="btn btn-outline-royal btn-sm">
+                <i class="bi bi-arrow-left me-1"></i> Add More Delicacies
+              </a>
+              <button class="btn btn-outline-danger btn-sm" onclick="Cart.clear(); renderCartPage();">
+                <i class="bi bi-trash3 me-1"></i> Clear Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Order Summary Sidebar -->
+          <div class="col-lg-4">
+            <div class="order-summary-card">
+              <h4 class="font-heading text-primary mb-3">Order Summary</h4>
+              
+              <!-- Coupon Code Form -->
+              <div class="mb-3">
+                <label class="form-label small">Have a Promo Coupon?</label>
+                <div class="input-group">
+                  <input type="text" id="couponCodeInput" class="form-control form-control-sm text-uppercase" placeholder="Try ZAFFRAN10" value="${totals.appliedCode || ''}">
+                  <button class="btn btn-saffron btn-sm" type="button" onclick="applyCouponHandler()">Apply</button>
+                </div>
+                ${totals.appliedCode ? `
+                  <div class="d-flex justify-content-between align-items-center mt-2 small text-success">
+                    <span>Applied: <strong>${totals.appliedCode}</strong></span>
+                    <a href="javascript:void(0)" onclick="Cart.removeCoupon(); renderCartPage();" class="text-danger small">Remove</a>
+                  </div>
+                ` : `
+                  <small class="text-muted d-block mt-1">Codes: <code>ZAFFRAN10</code> (10% off) or <code>DUMFREE</code></small>
+                `}
+              </div>
+
+              <!-- Price Breakdown -->
+              <div class="border-top pt-3">
+                <div class="d-flex justify-content-between mb-2">
+                  <span class="text-muted">Items Subtotal (${totals.totalItems} items)</span>
+                  <span class="fw-semibold">₹${totals.subtotal}</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <span class="text-muted">Delivery Charges</span>
+                  <span class="${totals.deliveryFee === 0 ? 'text-success fw-bold' : ''}">
+                    ${totals.deliveryFee === 0 ? 'FREE' : '₹' + totals.deliveryFee}
+                  </span>
+                </div>
+                ${totals.deliveryFee > 0 ? `
+                  <small class="text-muted d-block mb-2">Add ₹${Math.max(0, 799 - totals.subtotal)} more for Free Delivery!</small>
+                ` : ''}
+
+                ${totals.discount > 0 ? `
+                  <div class="d-flex justify-content-between mb-2 text-success">
+                    <span>Discount</span>
+                    <span class="fw-bold">- ₹${totals.discount}</span>
+                  </div>
+                ` : ''}
+
+                <div class="d-flex justify-content-between border-top pt-3 mt-2">
+                  <span class="fs-5 fw-bold text-dark font-heading">Grand Total</span>
+                  <span class="fs-4 fw-bold text-primary font-heading">₹${totals.grandTotal}</span>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <a href="checkout.html" class="btn btn-royal w-100 py-3 fs-6">
+                  <i class="bi bi-credit-card me-1"></i> Proceed to Checkout
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function applyCouponHandler() {
+      const input = document.getElementById('couponCodeInput');
+      if (input && input.value.trim()) {
+        Cart.applyCoupon(input.value.trim());
+        renderCartPage();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCartPage();
+    });
+  </script>
+</body>
+</html>

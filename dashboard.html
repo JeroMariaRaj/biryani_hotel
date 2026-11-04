@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard | Zaffran Royal Biryani</title>
+  <meta name="description" content="Manage your active biryani orders, track live kitchen preparation, review past feasts, and manage saved delivery addresses.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Modern Dashboard Top Navigation -->
+  <header class="dashboard-topbar py-2 py-md-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2 gap-sm-3">
+        <!-- Mobile Sidebar Toggle -->
+        <button class="btn btn-sm btn-outline-royal d-md-none d-flex align-items-center gap-1.5 rounded-pill px-2.5 py-1.5" type="button" data-bs-toggle="offcanvas" data-bs-target="#dashboardSidebar" aria-controls="dashboardSidebar" title="Open Dashboard Menu">
+          <i class="bi bi-list fs-4"></i>
+          <span class="small fw-bold">Menu</span>
+        </button>
+
+        <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+          <img src="assets/images/icons/logo.svg" alt="Zaffran Royal Biryani" class="brand-logo-img" style="height: 42px;">
+        </a>
+        <span class="badge bg-light text-primary border border-primary-subtle d-none d-sm-inline-flex align-items-center gap-1 px-2.5 py-1.5 rounded-pill font-heading">
+          <i class="bi bi-shield-check text-warning"></i> Customer Portal
+        </span>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+
+        <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL / LTR" aria-label="Toggle RTL Mode">
+          <span class="small fw-bold">RTL</span>
+        </button>
+
+        <div class="dropdown">
+          <button class="btn btn-sm p-1 rounded-circle border dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="assets/images/chefs/chef-1.jpg" alt="User Avatar" class="rounded-circle dash-header-avatar" style="width: 32px; height: 32px; object-fit: cover;">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow border-0 rounded-3">
+            <li><h6 class="dropdown-header font-heading dash-user-name">Jero Khan</h6></li>
+            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>My Profile</a></li>
+            <li><a class="dropdown-item" href="my-orders.html"><i class="bi bi-bag-check me-2"></i>My Orders</a></li>
+            <li><a class="dropdown-item" href="addresses.html"><i class="bi bi-geo me-2"></i>Saved Addresses</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="javascript:void(0)" onclick="Auth.logout()"><i class="bi bi-box-arrow-right me-2"></i>Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dashboard Main Layout -->
+  <main class="dashboard-layout">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Sidebar Column -->
+        <div class="col-lg-3 col-md-4">
+          <div class="offcanvas-md offcanvas-start dashboard-sidebar" id="dashboardSidebar" tabindex="-1" aria-labelledby="dashboardSidebarLabel">
+            <!-- Dynamically populated by dashboard.js -->
+          </div>
+        </div>
+
+        <!-- Main Content Column -->
+        <div class="col-lg-9 col-md-8">
+          <!-- Elevated Welcome Banner Header -->
+          <div class="dash-banner p-4 p-md-5 mb-4 position-relative">
+            <div class="position-relative z-2">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge badge-gold px-3 py-1 rounded-pill fw-semibold">
+                  <i class="bi bi-award-fill me-1"></i> ROYAL PATRON OVERVIEW
+                </span>
+                <span class="badge bg-white text-dark d-none d-sm-inline-block">VIP Nawabi Tier</span>
+              </div>
+              <h2 class="font-heading text-white fw-bold mb-2" id="dashWelcomeHeading">Welcome Back to Your Royal Table</h2>
+              <p class="text-light opacity-90 mb-4" style="max-width: 600px; font-size: 0.95rem;">
+                Experience slow-cooked Awadhi &amp; Hyderabadi dum delicacies crafted fresh on order. Track live charcoal handi preparation, reorder favourite feasts in one click, and manage saved delivery residences.
+              </p>
+              <div class="d-flex align-items-center gap-3 flex-wrap">
+                <a href="menu.html" class="btn btn-saffron btn-sm px-3 py-2 rounded-pill fw-bold">
+                  <i class="bi bi-fire me-1"></i> Explore Today's Menu
+                </a>
+                <a href="track-order.html?orderId=ZBR-78321" class="btn btn-outline-gold btn-sm px-3 py-2 rounded-pill">
+                  <i class="bi bi-geo-alt me-1"></i> Track Active Feast
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upgraded Metric Counters -->
+          <div class="row g-3 mb-4">
+            <!-- Stat 1: Total Orders -->
+            <div class="col-lg-3 col-6">
+              <div class="dash-stat-card">
+                <div class="dash-stat-header">
+                  <div class="dash-stat-icon maroon">
+                    <i class="bi bi-receipt"></i>
+                  </div>
+                  <span class="badge bg-light text-muted border small">All Feasts</span>
+                </div>
+                <div>
+                  <div class="dash-stat-value text-primary" id="statTotalOrders">0</div>
+                  <div class="dash-stat-label">Total Orders</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stat 2: Active Orders -->
+            <div class="col-lg-3 col-6">
+              <div class="dash-stat-card">
+                <div class="dash-stat-header">
+                  <div class="dash-stat-icon gold">
+                    <i class="bi bi-fire"></i>
+                  </div>
+                  <span class="badge bg-warning-subtle text-warning-emphasis border border-warning dash-badge-pulse small">
+                    LIVE
+                  </span>
+                </div>
+                <div>
+                  <div class="dash-stat-value text-warning" id="statActiveOrders">0</div>
+                  <div class="dash-stat-label">Active Feasts</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stat 3: Completed Orders -->
+            <div class="col-lg-3 col-6">
+              <div class="dash-stat-card">
+                <div class="dash-stat-header">
+                  <div class="dash-stat-icon green">
+                    <i class="bi bi-check2-circle"></i>
+                  </div>
+                  <span class="badge bg-success-subtle text-success border border-success-subtle small">100% On-Time</span>
+                </div>
+                <div>
+                  <div class="dash-stat-value text-success" id="statCompletedOrders">0</div>
+                  <div class="dash-stat-label">Completed</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stat 4: Saved Favourites -->
+            <div class="col-lg-3 col-6">
+              <div class="dash-stat-card">
+                <div class="dash-stat-header">
+                  <div class="dash-stat-icon rose">
+                    <i class="bi bi-heart-fill"></i>
+                  </div>
+                  <span class="badge bg-danger-subtle text-danger border border-danger-subtle small">Saved</span>
+                </div>
+                <div>
+                  <div class="dash-stat-value text-danger" id="statFavs">0</div>
+                  <div class="dash-stat-label">Saved Dishes</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Active Order Quick Tracking Alert -->
+          <div class="dash-tracker-card mb-4" id="activeOrderCard">
+            <div class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+              <div>
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge badge-gold px-2.5 py-1 rounded-pill">
+                    <i class="bi bi-broadcast me-1"></i> LIVE KITCHEN STATUS
+                  </span>
+                  <span class="small text-muted fw-bold">Order #ZBR-78321</span>
+                </div>
+                <h5 class="font-heading mb-1 text-primary fw-bold">Current Stage: Dum Preparation over Glowing Charcoal</h5>
+                <p class="small text-muted mb-0">
+                  Your earthen deg has been sealed with dough and is simmering over aromatic coals. Estimated doorstep arrival in <strong>25 minutes</strong>.
+                </p>
+              </div>
+              <a href="track-order.html?orderId=ZBR-78321" class="btn btn-royal btn-sm rounded-pill px-3">
+                <i class="bi bi-geo-alt-fill me-1"></i> Live Tracker Timeline
+              </a>
+            </div>
+
+            <div class="dash-mini-progress">
+              <div class="dash-mini-progress-bar" style="width: 50%;"></div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center text-muted" style="font-size: 0.75rem;">
+              <span>Order Received</span>
+              <span class="fw-bold text-secondary">Dum Cooking (Active)</span>
+              <span>Packed</span>
+              <span>On The Way</span>
+              <span>Delivered</span>
+            </div>
+          </div>
+
+          <!-- Recent Orders Table -->
+          <div class="dash-table-wrap mb-4">
+            <div class="p-3 p-md-4 border-bottom d-flex justify-content-between align-items-center flex-wrap gap-2">
+              <div>
+                <h5 class="font-heading text-primary fw-bold mb-0">Recent Feasts &amp; Orders</h5>
+                <span class="small text-muted">Review your culinary order history and track active preparation.</span>
+              </div>
+              <a href="my-orders.html" class="btn btn-sm btn-outline-royal rounded-pill px-3">
+                View All Orders <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+
+            <div class="table-responsive">
+              <table class="table align-middle mb-0 dash-orders-table">
+                <thead>
+                  <tr>
+                    <th>Order Reference</th>
+                    <th>Delicacies Ordered</th>
+                    <th>Date</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th class="text-end">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="recentOrdersTableBody">
+                  <!-- Rendered dynamically by dashboard.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Chef's Curated Quick Reorder Cards -->
+          <div class="card dash-recommendations border-0 shadow-sm rounded-4 p-4 bg-white">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div>
+                <h5 class="font-heading text-primary fw-bold mb-0">Chef Altaf's Recommended Reorders</h5>
+                <span class="small text-muted">Signature slow-cooked delicacies popular with our royal patrons.</span>
+              </div>
+              <a href="menu.html" class="small text-secondary fw-bold text-decoration-none">
+                Explore Full Menu <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+
+            <div class="row g-3">
+              <!-- Dish 1 -->
+              <div class="col-md-6">
+                <div class="dash-reorder-card">
+                  <div class="d-flex align-items-center gap-3">
+                    <img src="assets/images/biryani/hyderabadi-dum-biryani.jpg" alt="Hyderabadi Biryani" class="rounded-3 shadow-xs" style="width: 70px; height: 70px; object-fit: cover;">
+                    <div>
+                      <div class="d-flex align-items-center gap-1 mb-1">
+                        <h6 class="font-heading mb-0 text-dark fw-bold">Hyderabadi Chicken Dum</h6>
+                      </div>
+                      <div class="d-flex align-items-center gap-2 mb-1">
+                        <span class="fw-bold text-primary">₹349</span>
+                        <span class="text-muted small">|</span>
+                        <span class="small text-warning"><i class="bi bi-star-fill"></i> 4.9</span>
+                      </div>
+                      <span class="text-muted small" style="font-size: 0.75rem;">Slow-cooked in sealed clay handi</span>
+                    </div>
+                  </div>
+                  <button class="btn btn-sm btn-royal rounded-pill px-3" onclick="Cart.add('dish-1')" title="Add to Cart">
+                    <i class="bi bi-plus-lg me-1"></i> Reorder
+                  </button>
+                </div>
+              </div>
+
+              <!-- Dish 2 -->
+              <div class="col-md-6">
+                <div class="dash-reorder-card">
+                  <div class="d-flex align-items-center gap-3">
+                    <img src="assets/images/biryani/chicken-65-biryani.jpg" alt="Chicken 65 Biryani" class="rounded-3 shadow-xs" style="width: 70px; height: 70px; object-fit: cover;">
+                    <div>
+                      <div class="d-flex align-items-center gap-1 mb-1">
+                        <h6 class="font-heading mb-0 text-dark fw-bold">Nizami Chicken 65 Biryani</h6>
+                      </div>
+                      <div class="d-flex align-items-center gap-2 mb-1">
+                        <span class="fw-bold text-primary">₹369</span>
+                        <span class="text-muted small">|</span>
+                        <span class="small text-warning"><i class="bi bi-star-fill"></i> 4.8</span>
+                      </div>
+                      <span class="text-muted small" style="font-size: 0.75rem;">Crispy chicken tossed with curry leaves</span>
+                    </div>
+                  </div>
+                  <button class="btn btn-sm btn-royal rounded-pill px-3" onclick="Cart.add('dish-2')" title="Add to Cart">
+                    <i class="bi bi-plus-lg me-1"></i> Reorder
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/orders.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const u = Auth.getCurrentUser() || { name: 'Jero Khan' };
+      const heading = document.getElementById('dashWelcomeHeading');
+      if (heading) {
+        heading.textContent = `Welcome Back, ${u.name}!`;
+      }
+      Dashboard.renderOverviewStats();
+    });
+  </script>
+</body>
+</html>

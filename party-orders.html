@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Party &amp; Bulk Biryani Orders | Zaffran Royal Biryani</title>
+  <meta name="description" content="Calculate handi deg quantities, customize biryani packages, and book authentic catering for birthdays, weddings, family events and corporate parties.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/icons/logo.svg" alt="Zaffran Royal Biryani" class="brand-logo-img">
+      </a>
+
+            <!-- Mobile Right Controls (Theme, RTL, Cart & Hamburger) -->
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+          <span class="small fw-bold">RTL</span>
+        </button>
+        <a href="cart.html" class="nav-action-btn" title="Shopping Cart">
+          <i class="bi bi-bag"></i>
+          <span class="nav-badge-count cart-badge-count">0</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-inline-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+              <i class="bi bi-chevron-down nav-dropdown-arrow"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-house"></i> Home 1 – Royal Landing</a></li>
+              <li><a class="dropdown-item" href="index-2.html"><i class="bi bi-stars"></i> Home 2 – Editorial Feast</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link nav-dashboard-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Right Side Action Controls -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- Theme Toggle -->
+          <button class="nav-action-btn theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="nav-action-btn rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+            <span class="small fw-bold">RTL</span>
+          </button>
+
+          <!-- Cart Button -->
+          <a href="cart.html" class="nav-action-btn d-none d-lg-inline-flex" title="Shopping Cart">
+            <i class="bi bi-bag"></i>
+            <span class="nav-badge-count cart-badge-count">0</span>
+          </a>
+
+          <!-- Auth Container (Login button / User Dropdown) -->
+          <div class="nav-auth-container">
+            <!-- Dynamically populated by auth.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       SECTION 1: PARTY ORDERS HERO
+       ========================================================================= -->
+  <section class="page-hero" style="background-image: url('assets/images/hero/hero-party.jpg');">
+    <div class="container text-center">
+      <span class="section-subtitle text-warning">Bulk Handi Degs &amp; Outdoor Banquets</span>
+      <h1 class="display-3 font-heading fw-bold">Royal Party &amp; Bulk Orders</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Party Orders</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: EVENT CATEGORIES
+       ========================================================================= -->
+  <section class="py-5 bg-white border-bottom">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Tailored Celebrations</span>
+        <h2 class="section-title">Catering For Every Occasion</h2>
+        <div class="ornament-divider"><i class="bi bi-stars"></i></div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-light text-center">
+            <div class="stat-icon mx-auto mb-3"><i class="bi bi-balloon-fill"></i></div>
+            <h5 class="font-heading text-primary">Birthday Parties</h5>
+            <p class="small text-muted mb-0">Compact 10kg to 25kg degs that make birthday dinners unforgettable. Includes fun starters and kid-friendly mild spice options.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-light text-center">
+            <div class="stat-icon mx-auto mb-3"><i class="bi bi-gem"></i></div>
+            <h5 class="font-heading text-primary">Weddings &amp; Valima</h5>
+            <p class="small text-muted mb-0">Grand scale live deg buffets for 200 to 2,000+ guests. Authentic brass ware, royal shamianas, and uniformed service captains.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-light text-center">
+            <div class="stat-icon mx-auto mb-3"><i class="bi bi-people-fill"></i></div>
+            <h5 class="font-heading text-primary">Family Functions</h5>
+            <p class="small text-muted mb-0">Housewarmings, anniversaries, Eid, and Diwali feasts. Generous family proportions with complimentary salan and desserts.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-light text-center">
+            <div class="stat-icon mx-auto mb-3"><i class="bi bi-building"></i></div>
+            <h5 class="font-heading text-primary">Corporate Events</h5>
+            <p class="small text-muted mb-0">Tech park milestones, annual conferences, and executive dinners. Delivered hot in sanitized meal containers or executive buffets.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-light text-center">
+            <div class="stat-icon mx-auto mb-3"><i class="bi bi-mortarboard-fill"></i></div>
+            <h5 class="font-heading text-primary">College &amp; Campus Fests</h5>
+            <p class="small text-muted mb-0">High-volume youth portions at special campus rates. Fast queue turnaround with spicy chicken 65 biryani bowls.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-light text-center">
+            <div class="stat-icon mx-auto mb-3"><i class="bi bi-heart-fill"></i></div>
+            <h5 class="font-heading text-primary">Private Celebrations</h5>
+            <p class="small text-muted mb-0">Intimate terrace gatherings and VIP farm house dinners. Private chef on-site to break the dough seal live at your command.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: PARTY FOOD PACKAGES
+       ========================================================================= -->
+  <section class="py-5 bg-warm">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Curated Bundles</span>
+        <h2 class="section-title">All-Inclusive Party Food Packages</h2>
+        <div class="ornament-divider"><i class="bi bi-trophy"></i></div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Package 1: Silver -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
+            <span class="badge badge-maroon align-self-start mb-2">Essential Deg Pack</span>
+            <h4 class="font-heading text-primary">Silver Nizam Pack</h4>
+            <div class="my-3">
+              <span class="fs-2 fw-bold text-secondary font-heading">₹320</span>
+              <span class="text-muted">/ Person (Min. 20 Pax)</span>
+            </div>
+            <ul class="list-unstyled small text-muted mb-4">
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Hyderabadi Chicken Dum Biryani</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Chicken 65 Boneless Starter</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Mirchi Ka Salan &amp; Curd Chutney</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Gulab Jamun Flambé (1 Pc)</li>
+              <li><i class="bi bi-check2 text-success me-2"></i> Heavy Foil Thermal Handi Packaging</li>
+            </ul>
+            <a href="#partyOrderFormSection" class="btn btn-outline-royal w-100">Book Silver Pack</a>
+          </div>
+        </div>
+
+        <!-- Package 2: Gold -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 border-2 border-warning shadow-md rounded-4 p-4 bg-white position-relative">
+            <span class="position-absolute top-0 end-0 bg-warning text-dark px-3 py-1 rounded-bottom-start small fw-bold">BEST VALUE</span>
+            <span class="badge badge-gold align-self-start mb-2">Royal Choice</span>
+            <h4 class="font-heading text-primary">Golden Sovereign Pack</h4>
+            <div class="my-3">
+              <span class="fs-2 fw-bold text-secondary font-heading">₹460</span>
+              <span class="text-muted">/ Person (Min. 30 Pax)</span>
+            </div>
+            <ul class="list-unstyled small text-muted mb-4">
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Mutton Dum + Chicken 65 Biryani</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Galouti Mutton Seekh Kebab</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Mirchi Ka Salan &amp; Burani Garlic Raita</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Shahi Royal Tukda with Rabri</li>
+              <li><i class="bi bi-check2 text-success me-2"></i> Live Charcoal Deg Warming Setup</li>
+            </ul>
+            <a href="#partyOrderFormSection" class="btn btn-royal w-100">Book Sovereign Pack</a>
+          </div>
+        </div>
+
+        <!-- Package 3: Kohinoor -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
+            <span class="badge badge-gold align-self-start mb-2">Grand Banquet</span>
+            <h4 class="font-heading text-primary">Kohinoor Imperial Feast</h4>
+            <div class="my-3">
+              <span class="fs-2 fw-bold text-secondary font-heading">₹620</span>
+              <span class="text-muted">/ Person (Min. 50 Pax)</span>
+            </div>
+            <ul class="list-unstyled small text-muted mb-4">
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Mutton Dum + Chicken + Shahi Paneer</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> 3 Starters (Tandoori, Seekh, Malai Paneer)</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Salan, Raita, Mixed Salad &amp; Mint Chutney</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Matka Phirni &amp; Shahi Tukda Platter</li>
+              <li><i class="bi bi-check2 text-success me-2"></i> Full Live Counter with Attendants</li>
+            </ul>
+            <a href="#partyOrderFormSection" class="btn btn-outline-royal w-100">Book Imperial Feast</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: INTERACTIVE BIRYANI QUANTITY CALCULATOR
+       ========================================================================= -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="section-subtitle">Live Portion Planning</span>
+          <h2 class="section-title">Calculate Exact Biryani &amp; Deg Requirements</h2>
+          <div class="ornament-divider text-start justify-content-start"><i class="bi bi-calculator"></i></div>
+          <p class="lead text-primary fw-medium">
+            Never run short, never waste a grain. Our calculator uses authentic Hyderabad caterer ratios.
+          </p>
+          <p class="text-muted">
+            1 kg of cooked royal dum biryani contains generous meat-to-rice balance serving approximately 3.5 adult guests. Adjust the slider or type your guest count to see your recommended deg allocation and estimated pricing.
+          </p>
+          <div class="alert alert-warning border-warning d-flex align-items-center gap-3">
+            <i class="bi bi-info-circle-fill text-warning fs-3"></i>
+            <small class="text-dark">
+              Orders of 30+ guests automatically receive <strong>Free On-Site Charcoal Warmer Rental</strong> and complimentary extra salan handis.
+            </small>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="calc-card">
+            <h4 class="font-heading text-primary mb-3">Live Biryani Calculator</h4>
+            
+            <div class="mb-3">
+              <label class="form-label">Number of Expected Guests:</label>
+              <div class="calc-stepper justify-content-center">
+                <button type="button" class="stepper-btn" id="btnGuestMinus">−</button>
+                <input type="number" id="calcGuests" class="form-control text-center fw-bold fs-4" style="max-width: 140px;" value="50" min="15" max="1000" step="5">
+                <button type="button" class="stepper-btn" id="btnGuestPlus">+</button>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label">Biryani Variety:</label>
+              <select id="calcBiryaniType" class="form-select">
+                <option value="chicken" selected>Hyderabadi Chicken Dum Biryani (₹280/guest)</option>
+                <option value="mutton">Kache Gosht Mutton Biryani (₹390/guest)</option>
+                <option value="veg">Zaffran Shahi Paneer Biryani (₹230/guest)</option>
+                <option value="special">Nizam Special Platter Combo (₹450/guest)</option>
+              </select>
+            </div>
+
+            <div class="p-3 bg-light rounded-3 border mb-3">
+              <div class="row text-center g-2">
+                <div class="col-4 border-end">
+                  <span class="d-block small text-muted">Biryani Weight</span>
+                  <span class="fs-4 fw-bold text-primary font-heading" id="calcKgOutput">15 kg</span>
+                </div>
+                <div class="col-4 border-end">
+                  <span class="d-block small text-muted">Handi Degs</span>
+                  <span class="fs-4 fw-bold text-primary font-heading" id="calcDegsOutput">2 Handi Degs</span>
+                </div>
+                <div class="col-4">
+                  <span class="d-block small text-muted">Est. Budget</span>
+                  <span class="fs-4 fw-bold text-success font-heading" id="calcTotalOutput">₹14,000</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="#partyOrderFormSection" class="btn btn-saffron w-100">
+              <i class="bi bi-envelope-check me-1"></i> Pre-Fill In Enquiry Form Below
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: CATERING BENEFITS & QUALITY GUARANTEE
+       ========================================================================= -->
+  <section class="py-5 bg-warm">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Peace of Mind</span>
+        <h2 class="section-title">The Zaffran Catering Guarantee</h2>
+        <div class="ornament-divider"><i class="bi bi-shield-check"></i></div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4 bg-white">
+            <i class="bi bi-clock-history fs-1 text-secondary mb-2"></i>
+            <h6 class="font-heading text-primary">Exact Timing</h6>
+            <p class="small text-muted mb-0">Dispatched to arrive 45 minutes before service so degs rest properly before unsealing.</p>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4 bg-white">
+            <i class="bi bi-fire fs-1 text-secondary mb-2"></i>
+            <h6 class="font-heading text-primary">Live Warmth</h6>
+            <p class="small text-muted mb-0">Earthen thermal seals keep the rice steaming for 3+ hours without electricity.</p>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="300">
+          <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4 bg-white">
+            <i class="bi bi-patch-check-fill fs-1 text-secondary mb-2"></i>
+            <h6 class="font-heading text-primary">FSSAI Certified</h6>
+            <p class="small text-muted mb-0">100% hygienic central kitchens following strict HACCP food handling protocols.</p>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="400">
+          <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4 bg-white">
+            <i class="bi bi-telephone-inbound fs-1 text-secondary mb-2"></i>
+            <h6 class="font-heading text-primary">Captain on Call</h6>
+            <p class="small text-muted mb-0">Direct phone access to your assigned event captain throughout the function.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: VALIDATED BULK ENQUIRY FORM
+       ========================================================================= -->
+  <section class="py-5 bg-white border-top border-bottom" id="partyOrderFormSection">
+    <div class="container" style="max-width: 900px;">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Fast Confirmation</span>
+        <h2 class="section-title">Bulk Catering Enquiry Form</h2>
+        <div class="ornament-divider"><i class="bi bi-send-check"></i></div>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          Submit your event details below. Our catering team will prepare a formal quotation within 30 minutes.
+        </p>
+      </div>
+
+      <div class="card border-0 shadow-md rounded-4 p-4 p-md-5 bg-light" data-aos="fade-up">
+        <form id="partyOrderForm" novalidate>
+          <div class="row g-3">
+            <!-- Full Name -->
+            <div class="col-md-6">
+              <label for="partyName" class="form-label">Full Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="partyName" placeholder="e.g. Jero Khan" required>
+            </div>
+
+            <!-- Mobile Number -->
+            <div class="col-md-6">
+              <label for="partyPhone" class="form-label">Mobile Number <span class="text-danger">*</span></label>
+              <input type="tel" class="form-control" id="partyPhone" placeholder="10-digit phone" required>
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-6">
+              <label for="partyEmail" class="form-label">Email Address <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="partyEmail" placeholder="name@email.com" required>
+            </div>
+
+            <!-- Event Type -->
+            <div class="col-md-6">
+              <label for="partyEventType" class="form-label">Event Type <span class="text-danger">*</span></label>
+              <select id="partyEventType" class="form-select" required>
+                <option value="Birthday Party" selected>Birthday Party</option>
+                <option value="Wedding / Reception">Wedding / Reception</option>
+                <option value="Family Function">Family Function / Housewarming</option>
+                <option value="Corporate Feast">Corporate Feast</option>
+                <option value="College Event">College Fest / Reunion</option>
+                <option value="Private Celebration">Private VIP Celebration</option>
+              </select>
+            </div>
+
+            <!-- Event Date -->
+            <div class="col-md-6">
+              <label for="partyDate" class="form-label">Event Date <span class="text-danger">*</span></label>
+              <input type="date" class="form-control" id="partyDate" required>
+            </div>
+
+            <!-- Number of Guests -->
+            <div class="col-md-6">
+              <label for="partyGuests" class="form-label">Number of Guests <span class="text-danger">*</span></label>
+              <input type="number" class="form-control" id="partyGuests" placeholder="e.g. 50" min="15" max="2500" value="50" required>
+            </div>
+
+            <!-- Biryani Preference -->
+            <div class="col-md-6">
+              <label for="partyBiryaniPref" class="form-label">Biryani Preference</label>
+              <select id="partyBiryaniPref" class="form-select">
+                <option value="Hyderabadi Chicken Dum" selected>Hyderabadi Chicken Dum Biryani</option>
+                <option value="Kache Gosht Mutton Dum">Kache Gosht Mutton Dum Biryani</option>
+                <option value="Chicken 65 Biryani">Nizami Chicken 65 Biryani</option>
+                <option value="Ambur Mutton Biryani">Traditional Ambur Mutton Biryani</option>
+                <option value="Zaffran Shahi Paneer (Veg)">Zaffran Shahi Paneer (Veg)</option>
+                <option value="Mixed Platter Assortment">Mixed Platter (Chicken + Mutton + Veg)</option>
+              </select>
+            </div>
+
+            <!-- Delivery Location -->
+            <div class="col-md-6">
+              <label for="partyLocation" class="form-label">Delivery Location / Venue</label>
+              <input type="text" class="form-control" id="partyLocation" placeholder="e.g. Jubilee Hills / Gachibowli">
+            </div>
+
+            <!-- Additional Requirements -->
+            <div class="col-12">
+              <label for="partyNotes" class="form-label">Additional Requirements (Starters, Desserts, On-Site Servers)</label>
+              <textarea class="form-control" id="partyNotes" rows="3" placeholder="Specify if you require live coal deg warmup, extra chicken 65, or shahi tukda dessert."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col-12 mt-4">
+              <button type="submit" class="btn btn-saffron w-100 py-3 fs-5">
+                <i class="bi bi-send-check me-2"></i> Submit Catering Request
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 7: CUSTOMER TESTIMONIALS & CTA
+       ========================================================================= -->
+  <section class="py-5" style="background: linear-gradient(135deg, var(--primary) 0%, #3B0A0E 100%);">
+    <div class="container py-3 text-white">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <div class="text-warning fs-5">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <span class="badge badge-gold">5.0 Star Bulk Catering Record</span>
+          </div>
+          <p class="lead text-light mb-1 fst-italic">
+            "We trusted Zaffran with our company annual retreat feast of 250 engineers. The sealed handis were steaming hot, the meat was succulent, and the chicken 65 was a runaway hit."
+          </p>
+          <span class="small text-light">— Harish Varma, VP Operations, Tech Mahindra</span>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end">
+          <a href="tel:+914023456789" class="btn btn-saffron btn-lg px-4">
+            <i class="bi bi-telephone-fill me-1"></i> Call Catering Hotline
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <img src="assets/images/icons/logo-light.svg" alt="Zaffran Royal Biryani" class="mb-3 brand-logo-img" style="height: 50px;">
+          <p class="small text-muted mb-4">Celebrating 40 years of culinary royalty. We hand-craft authentic Hyderabadi and Awadhi dum biryanis in firewood-sealed degs using hereditary Nawabi recipes.</p>
+          <div class="social-links">
+            <a href="https://facebook.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+            <a href="https://x.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Col 3: Services -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-widget-title">Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-details.html?service=dining">Restaurant Dining</a></li>
+            <li><a href="service-details.html?service=takeaway">Biryani Takeaway</a></li>
+            <li><a href="service-details.html?service=delivery">Doorstep Delivery</a></li>
+            <li><a href="party-orders.html">Party &amp; Bulk Orders</a></li>
+            <li><a href="service-details.html?service=wedding">Wedding Catering</a></li>
+            <li><a href="service-details.html?service=corporate">Corporate Feasts</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-widget-title">Royal Updates</h5>
+          <p class="small text-muted mb-3">Subscribe for secret seasonal recipes, festival discounts and VIP table invites.</p>
+          <form class="newsletter-form mb-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+              <button class="btn btn-saffron" type="submit">Join</button>
+            </div>
+          </form>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone"></i>
+            <div>
+              <span class="small text-muted d-block">Takeaway &amp; Reservation Hotline:</span>
+              <a href="tel:+914023456789" class="fw-bold text-white">+91 40 2345 6789</a>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2026 Zaffran Royal Biryani &amp; Takeaway. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" title="Back to Top"><i class="bi bi-chevron-up"></i></button>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/orders.js"></script>
+  <script src="assets/js/filters.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Zaffran Royal Biryani House</title>
+  <meta name="description" content="Discover the 40-year legacy of Zaffran Royal Biryani House. Our master ustads, hereditary spice secrets, and royal cooking philosophy.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/icons/logo.svg" alt="Zaffran Royal Biryani" class="brand-logo-img">
+      </a>
+
+            <!-- Mobile Right Controls (Theme, RTL, Cart & Hamburger) -->
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+          <span class="small fw-bold">RTL</span>
+        </button>
+        <a href="cart.html" class="nav-action-btn" title="Shopping Cart">
+          <i class="bi bi-bag"></i>
+          <span class="nav-badge-count cart-badge-count">0</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-inline-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+              <i class="bi bi-chevron-down nav-dropdown-arrow"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-house"></i> Home 1 – Royal Landing</a></li>
+              <li><a class="dropdown-item" href="index-2.html"><i class="bi bi-stars"></i> Home 2 – Editorial Feast</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link nav-dashboard-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Right Side Action Controls -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- Theme Toggle -->
+          <button class="nav-action-btn theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="nav-action-btn rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+            <span class="small fw-bold">RTL</span>
+          </button>
+
+          <!-- Cart Button -->
+          <a href="cart.html" class="nav-action-btn d-none d-lg-inline-flex" title="Shopping Cart">
+            <i class="bi bi-bag"></i>
+            <span class="nav-badge-count cart-badge-count">0</span>
+          </a>
+
+          <!-- Auth Container (Login button / User Dropdown) -->
+          <div class="nav-auth-container">
+            <!-- Dynamically populated by auth.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       SECTION 1: ABOUT HERO WITH RESTAURANT PHOTOGRAPHY
+       ========================================================================= -->
+  <section class="page-hero" style="background-image: url('assets/images/hero/hero-about.jpg');">
+    <div class="container text-center">
+      <span class="section-subtitle text-warning">Four Decades of Culinary Royalty</span>
+      <h1 class="display-3 font-heading fw-bold">Our Heritage &amp; Tradition</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">About Us</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: OUR RESTAURANT STORY & HISTORY
+       ========================================================================= -->
+  <section class="py-5 bg-white border-bottom">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="section-subtitle">Since 1984</span>
+          <h2 class="section-title">From Nizam Court Secrets to Global Recognition</h2>
+          <div class="ornament-divider text-start justify-content-start">
+            <i class="bi bi-hourglass-split"></i>
+          </div>
+          <p class="lead text-primary fw-medium">
+            Founded by Ustad Hafizuddin Qureshi in the historic Charminar bazaar, Zaffran was born from a singular passion: restoring the lost grandeur of authentic royal dum cooking.
+          </p>
+          <p class="text-muted">
+            In the 1980s, commercial pressure led many restaurants to adopt speed cooking with pressure cookers and chemical colorings. Ustad Hafizuddin refused. He insisted that true biryani can only be coaxed to life in thick copper handis, sealed with fresh dough and cradled over smoldering wood embers.
+          </p>
+          <p class="text-muted">
+            Today, four decades later, his sons and grandchildren oversee four royal dining hubs and an extensive express catering network, preparing over 2,500 authentic handis each day without losing a single degree of traditional craftsmanship.
+          </p>
+          <div class="d-flex gap-4 pt-2">
+            <div>
+              <h3 class="font-heading text-secondary fw-bold mb-0">1984</h3>
+              <small class="text-muted">Estd. In Old City</small>
+            </div>
+            <div class="vr"></div>
+            <div>
+              <h3 class="font-heading text-secondary fw-bold mb-0">1.8M+</h3>
+              <small class="text-muted">Handis Served</small>
+            </div>
+            <div class="vr"></div>
+            <div>
+              <h3 class="font-heading text-secondary fw-bold mb-0">40 Yrs</h3>
+              <small class="text-muted">Unbroken Tradition</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 d-flex align-items-center" data-aos="fade-left">
+          <img src="assets/images/nizam-court-secrets.png" alt="From Nizam Court Secrets to Global Recognition" class="img-fluid rounded-4 shadow-lg w-100" style="object-fit: cover; max-height: 460px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: MISSION, VISION & CULINARY VALUES
+       ========================================================================= -->
+  <section class="py-5 bg-warm">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Our Guiding Light</span>
+        <h2 class="section-title">Mission, Vision &amp; Values</h2>
+        <div class="ornament-divider">
+          <i class="bi bi-compass"></i>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-white">
+            <div class="stat-icon mb-3">
+              <i class="bi bi-flag-fill"></i>
+            </div>
+            <h4 class="font-heading text-primary mb-2">Our Mission</h4>
+            <p class="text-muted small mb-0">
+              To honor and preserve the sacred heritage of royal Indian dum cooking by preparing every single dish with uncompromising culinary integrity, authentic slow methods, and whole, fresh ingredients.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-white">
+            <div class="stat-icon mb-3">
+              <i class="bi bi-eye-fill"></i>
+            </div>
+            <h4 class="font-heading text-primary mb-2">Our Vision</h4>
+            <p class="text-muted small mb-0">
+              To be globally recognized as the benchmark of Indian culinary luxury, celebrated for elevating biryani from everyday street food to an artisanal culinary masterpiece fit for world-class dining.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-white">
+            <div class="stat-icon mb-3">
+              <i class="bi bi-gem"></i>
+            </div>
+            <h4 class="font-heading text-primary mb-2">Culinary Values</h4>
+            <ul class="list-unstyled small text-muted mb-0">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> <strong>Zero Compromise:</strong> Real Kashmiri saffron, zero food colors.</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> <strong>Purity First:</strong> 100% farm-fresh meats and aged basmati.</li>
+              <li><i class="bi bi-check-circle-fill text-warning me-2"></i> <strong>Warm Hospitality:</strong> Treating every diner as an honored guest of state.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: OUR COOKING PHILOSOPHY
+       ========================================================================= -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right">
+          <img src="assets/images/philosophy-of-dum-pukht.png" alt="The Philosophy of Dum Pukht" class="img-fluid rounded-4 shadow-lg w-100" style="object-fit: cover; max-height: 440px;">
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <span class="section-subtitle">The Sacred Technique</span>
+          <h2 class="section-title">The Philosophy of 'Dum Pukht'</h2>
+          <div class="ornament-divider text-start justify-content-start">
+            <i class="bi bi-fire"></i>
+          </div>
+          <p class="lead text-primary">
+            Dum Pukht literally translates to 'breathing in one's own steam'. It is an ancient Persian-Awadhi culinary secret that refuses shortcuts.
+          </p>
+          <div class="accordion accordion-flush mt-4" id="philosophyAccordion">
+            <div class="accordion-item border rounded-3 mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button fw-bold font-heading text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#philOne">
+                  <i class="bi bi-check2-circle text-secondary me-2"></i> Heavy Copper Degs &amp; Clay Handis
+                </button>
+              </h2>
+              <div id="philOne" class="accordion-collapse collapse show" data-bs-parent="#philosophyAccordion">
+                <div class="accordion-body small text-muted">
+                  Copper provides uniform heat distribution without hot spots, preventing the rice from scorching while allowing the bottom layers to develop that cherished golden crispness known as <em>tahchin</em>.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border rounded-3 mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold font-heading text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#philTwo">
+                  <i class="bi bi-check2-circle text-secondary me-2"></i> Dough Seal Hermetic Locking
+                </button>
+              </h2>
+              <div id="philTwo" class="accordion-collapse collapse" data-bs-parent="#philosophyAccordion">
+                <div class="accordion-body small text-muted">
+                  By sealing the rim with fresh whole-wheat atta dough, volatile aromatic essential oils from cardamom, mace, and rose petals are re-condensed back into the rice grains rather than vanishing into the kitchen air.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border rounded-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold font-heading text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#philThree">
+                  <i class="bi bi-check2-circle text-secondary me-2"></i> Dual-Radiant Ember Heat
+                </button>
+              </h2>
+              <div id="philThree" class="accordion-collapse collapse" data-bs-parent="#philosophyAccordion">
+                <div class="accordion-body small text-muted">
+                  Coals placed directly on top of the copper lid create radiant downward heat, ensuring the delicate topmost basmati layer is gently steamed to a dry, fluffy, separation-of-grain perfection.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: MEET OUR CHEFS AND TEAM
+       ========================================================================= -->
+  <section class="py-5 bg-warm">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Guardians of Flavour</span>
+        <h2 class="section-title">Meet Our Master Chefs</h2>
+        <div class="ornament-divider">
+          <i class="bi bi-people"></i>
+        </div>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          Decades of inherited mastery, guided by patience, passion, and an intimate understanding of royal spice alchemy.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Chef 1 -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center h-100 bg-white">
+            <img class="chef-team-photo" src="assets/images/Altaf Qureshi.jpg" alt="Ustad Altaf Qureshi">
+            <div class="p-4">
+              <h5 class="font-heading mb-1 text-primary">Altaf Qureshi</h5>
+              <span class="badge badge-gold mb-2">Grand Ustad</span>
+              <p class="small text-muted mb-0">34 years mastering the firewood deg and royal Awadhi marinades.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chef 2 -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center h-100 bg-white">
+            <img class="chef-team-photo" src="assets/images/Tariq Siddiqui.jpg" alt="Chef Tariq Siddiqui">
+            <div class="p-4">
+              <h5 class="font-heading mb-1 text-primary">Tariq Siddiqui</h5>
+              <span class="badge badge-maroon mb-2">Mutton Specialist</span>
+              <p class="small text-muted mb-0">Specialist in Kache Gosht marination and slow collagen tenderization.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chef 3 -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center h-100 bg-white">
+            <img class="chef-team-photo" src="assets/images/Nilofer Banu.jpg" alt="Chef Nilofer Banu">
+            <div class="p-4">
+              <h5 class="font-heading mb-1 text-primary">Nilofer Banu</h5>
+              <span class="badge badge-gold mb-2">Shahi Pastry Chef</span>
+              <p class="small text-muted mb-0">Crafting artisanal Shahi Tukda, Phirni, and slow-reduced saffron rabri.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chef 4 -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center h-100 bg-white">
+            <img class="chef-team-photo" src="assets/images/Imran Khan.jpg" alt="Chef Imran Khan">
+            <div class="p-4">
+              <h5 class="font-heading mb-1 text-primary">Imran Khan</h5>
+              <span class="badge badge-maroon mb-2">Tandoor Master</span>
+              <p class="small text-muted mb-0">Overseeing live clay bhatti roasting, seekh kebabs, and charred tikkas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: RESTAURANT ACHIEVEMENTS & TESTIMONIALS
+       ========================================================================= -->
+
+  <!-- =========================================================================
+       SECTION 7: FINAL CTA – EXPERIENCE OUR BIRYANI
+       ========================================================================= -->
+  <section class="py-5" style="background: linear-gradient(135deg, var(--primary) 0%, #3B0A0E 100%);">
+    <div class="container text-center py-4 text-white position-relative" data-aos="zoom-in">
+      <span class="badge badge-gold mb-3">TASTE THE 40-YEAR TRADITION</span>
+      <h2 class="display-4 font-heading text-white fw-bold mb-3">Experience Royal Biryani Tonight</h2>
+      <p class="lead text-light mx-auto mb-4" style="max-width: 600px;">
+        Join us at our Jubilee Hills dining lounge or have our sealed clay handis dispatched directly to your home.
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="menu.html" class="btn btn-saffron btn-lg px-4">
+          <i class="bi bi-bag-check-fill me-1"></i> Order Takeaway Online
+        </a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg px-4">
+          <i class="bi bi-geo-alt me-1"></i> Locate Our Restaurant
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <img src="assets/images/icons/logo-light.svg" alt="Zaffran Royal Biryani" class="mb-3 brand-logo-img" style="height: 50px;">
+          <p class="small text-muted mb-4">Celebrating 40 years of culinary royalty. We hand-craft authentic Hyderabadi and Awadhi dum biryanis in firewood-sealed degs using hereditary Nawabi recipes.</p>
+          <div class="social-links">
+            <a href="https://facebook.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+            <a href="https://x.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Col 3: Services -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-widget-title">Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-details.html?service=dining">Restaurant Dining</a></li>
+            <li><a href="service-details.html?service=takeaway">Biryani Takeaway</a></li>
+            <li><a href="service-details.html?service=delivery">Doorstep Delivery</a></li>
+            <li><a href="party-orders.html">Party &amp; Bulk Orders</a></li>
+            <li><a href="service-details.html?service=wedding">Wedding Catering</a></li>
+            <li><a href="service-details.html?service=corporate">Corporate Feasts</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-widget-title">Royal Updates</h5>
+          <p class="small text-muted mb-3">Subscribe for secret seasonal recipes, festival discounts and VIP table invites.</p>
+          <form class="newsletter-form mb-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+              <button class="btn btn-saffron" type="submit">Join</button>
+            </div>
+          </form>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone"></i>
+            <div>
+              <span class="small text-muted d-block">Takeaway &amp; Reservation Hotline:</span>
+              <a href="tel:+914023456789" class="fw-bold text-white">+91 40 2345 6789</a>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2026 Zaffran Royal Biryani &amp; Takeaway. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" title="Back to Top"><i class="bi bi-chevron-up"></i></button>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/orders.js"></script>
+  <script src="assets/js/filters.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

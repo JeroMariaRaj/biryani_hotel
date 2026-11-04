@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food &amp; Biryani Blog | Zaffran Royal Biryani</title>
+  <meta name="description" content="Read authentic stories about the history of dum cooking, spice selection, saffron harvesting, and royal Awadhi culinary traditions.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/icons/logo.svg" alt="Zaffran Royal Biryani" class="brand-logo-img">
+      </a>
+
+            <!-- Mobile Right Controls (Theme, RTL, Cart & Hamburger) -->
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+          <span class="small fw-bold">RTL</span>
+        </button>
+        <a href="cart.html" class="nav-action-btn" title="Shopping Cart">
+          <i class="bi bi-bag"></i>
+          <span class="nav-badge-count cart-badge-count">0</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-inline-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+              <i class="bi bi-chevron-down nav-dropdown-arrow"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-house"></i> Home 1 – Royal Landing</a></li>
+              <li><a class="dropdown-item" href="index-2.html"><i class="bi bi-stars"></i> Home 2 – Editorial Feast</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link nav-dashboard-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Right Side Action Controls -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- Theme Toggle -->
+          <button class="nav-action-btn theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="nav-action-btn rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+            <span class="small fw-bold">RTL</span>
+          </button>
+
+          <!-- Cart Button -->
+          <a href="cart.html" class="nav-action-btn d-none d-lg-inline-flex" title="Shopping Cart">
+            <i class="bi bi-bag"></i>
+            <span class="nav-badge-count cart-badge-count">0</span>
+          </a>
+
+          <!-- Auth Container (Login button / User Dropdown) -->
+          <div class="nav-auth-container">
+            <!-- Dynamically populated by auth.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       SECTION 1: BLOG HERO
+       ========================================================================= -->
+  <section class="page-hero" style="background-image: url('assets/images/hero/hero-blog.jpg');">
+    <div class="container text-center">
+      <span class="section-subtitle text-warning">Gastronomy &amp; Culinary Heritage</span>
+      <h1 class="display-3 font-heading fw-bold">The Royal Culinary Chronicle</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Blog</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: FEATURED ARTICLE SPOTLIGHT
+       ========================================================================= -->
+  <section class="py-5 bg-white border-bottom">
+    <div class="container">
+      <div class="card border-0 shadow-lg rounded-4 overflow-hidden bg-warm" data-aos="fade-up">
+        <div class="row g-0 align-items-center">
+          <div class="col-lg-6">
+            <img src="assets/images/sacred-geometry-dum-cooking.png" alt="The Sacred Geometry of Dum Cooking: Why the Dough Seal Matters" class="w-100 h-100" style="object-fit: cover; min-height: 380px;">
+          </div>
+          <div class="col-lg-6 p-4 p-md-5">
+            <span class="badge badge-gold mb-2">FEATURED STORY</span>
+            <div class="blog-meta mb-2">
+              <span><i class="bi bi-calendar3"></i> 28 Oct 2026</span>
+              <span><i class="bi bi-clock"></i> 6 Min Read</span>
+              <span><i class="bi bi-person"></i> Ustad Altaf Qureshi</span>
+            </div>
+            <h2 class="font-heading text-primary mb-3">The Sacred Geometry of Dum Cooking: Why the Dough Seal Matters</h2>
+            <p class="text-muted mb-4">
+              Explore the 400-year history of Dum Pukht from the royal kitchens of Awadh to the Deccan. Discover why dough-sealing trapping volatile vapors transforms everyday rice into an aromatic masterpiece.
+            </p>
+            <a href="blog-details.html" class="btn btn-royal">
+              Read Full Article <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: CATEGORY NAVIGATION & SEARCH
+       ========================================================================= -->
+  <section class="py-4 bg-light border-bottom">
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <!-- Live Blog Search -->
+        <div class="col-xl-4 col-lg-4 col-md-5">
+          <div class="search-input-group m-0" style="max-width: 100%;">
+            <i class="bi bi-search"></i>
+            <input type="text" id="blogSearchInput" class="form-control" placeholder="Search culinary articles...">
+          </div>
+        </div>
+
+        <!-- Category Pills -->
+        <div class="col-xl-8 col-lg-8 col-md-7">
+          <div class="filter-tabs m-0 d-flex flex-wrap gap-2 justify-content-md-end justify-content-start align-items-center">
+            <button class="filter-btn blog-cat-link active" data-category="all">All Articles</button>
+            <button class="filter-btn blog-cat-link" data-category="stories">Biryani Stories</button>
+            <button class="filter-btn blog-cat-link" data-category="techniques">Cooking Techniques</button>
+            <button class="filter-btn blog-cat-link" data-category="culture">Food Culture</button>
+            <button class="filter-btn blog-cat-link" data-category="tips">Catering Tips</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: BLOG LISTING GRID & SECTION 5: POPULAR ARTICLES SIDEBAR
+       ========================================================================= -->
+  <section class="py-5 bg-warm">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Main Blog Listing (Section 4) -->
+        <div class="col-lg-8">
+          <div class="row g-4" id="blogListContainer">
+            <!-- Article 1 -->
+            <div class="col-md-6 blog-item" data-category="techniques">
+              <div class="blog-card">
+                <div class="blog-thumb">
+                  <img src="assets/images/basmati-aging-secret.png" alt="Aged Basmati Selection">
+                </div>
+                <div class="blog-body">
+                  <div class="blog-meta">
+                    <span><i class="bi bi-calendar3"></i> 24 Oct 2026</span>
+                    <span><i class="bi bi-clock"></i> 5 Min</span>
+                  </div>
+                  <h5 class="blog-title font-heading text-primary">Selecting the Golden Grain: The 2-Year Basmati Aging Secret</h5>
+                  <p class="small text-muted mb-3 blog-desc">Why fresh basmati turns to mush and how 24 months of natural moisture reduction creates slender, non-sticky grains.</p>
+                  <div class="mt-auto pt-2 border-top">
+                    <a href="blog-details-2.html" class="text-secondary fw-bold small">Read Story <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="col-md-6 blog-item" data-category="culture">
+              <div class="blog-card">
+                <div class="blog-thumb">
+                  <img src="assets/images/pampore-saffron-spice.png" alt="Kashmiri Saffron">
+                </div>
+                <div class="blog-body">
+                  <div class="blog-meta">
+                    <span><i class="bi bi-calendar3"></i> 18 Oct 2026</span>
+                    <span><i class="bi bi-clock"></i> 4 Min</span>
+                  </div>
+                  <h5 class="blog-title font-heading text-primary">Red Gold: Pampore Saffron &amp; The Royal Deccan Spice Route</h5>
+                  <p class="small text-muted mb-3 blog-desc">Tracing the royal journey of saffron filaments from the Kashmir valley into the Nizami deghs of Hyderabad.</p>
+                  <div class="mt-auto pt-2 border-top">
+                    <a href="blog-details-3.html" class="text-secondary fw-bold small">Read Story <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="col-md-6 blog-item" data-category="tips">
+              <div class="blog-card">
+                <div class="blog-thumb">
+                  <img src="assets/images/biryani-quantity-guide.png" alt="Party Catering Guide">
+                </div>
+                <div class="blog-body">
+                  <div class="blog-meta">
+                    <span><i class="bi bi-calendar3"></i> 11 Oct 2026</span>
+                    <span><i class="bi bi-clock"></i> 7 Min</span>
+                  </div>
+                  <h5 class="blog-title font-heading text-primary">The Host's Guide: Calculating Biryani Quantities for 50+ Guests</h5>
+                  <p class="small text-muted mb-3 blog-desc">How to perfectly plan meat portions, vegetarian ratios, and accompaniments so every guest leaves thoroughly satisfied.</p>
+                  <div class="mt-auto pt-2 border-top">
+                    <a href="blog-details-4.html" class="text-secondary fw-bold small">Read Story <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Article 4 -->
+            <div class="col-md-6 blog-item" data-category="stories">
+              <div class="blog-card">
+                <div class="blog-thumb">
+                  <img src="assets/images/mirchi-ka-salan-hero.png" alt="Mirchi Ka Salan">
+                </div>
+                <div class="blog-body">
+                  <div class="blog-meta">
+                    <span><i class="bi bi-calendar3"></i> 05 Oct 2026</span>
+                    <span><i class="bi bi-clock"></i> 4 Min</span>
+                  </div>
+                  <h5 class="blog-title font-heading text-primary">Mirchi Ka Salan: The Unsung Hero of the Royal Table</h5>
+                  <p class="small text-muted mb-3 blog-desc">The culinary science of balancing rich saffron rice with tangy tamarind, roasted peanuts, and green chili gravy.</p>
+                  <div class="mt-auto pt-2 border-top">
+                    <a href="blog-details-5.html" class="text-secondary fw-bold small">Read Story <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Article 5 -->
+            <div class="col-md-6 blog-item" data-category="stories">
+              <div class="blog-card">
+                <div class="blog-thumb">
+                  <img src="assets/images/taj-falaknuma-catering.png" alt="How We Catered 2,000 Guests at Taj Falaknuma Palace">
+                </div>
+                <div class="blog-body">
+                  <div class="blog-meta">
+                    <span><i class="bi bi-calendar3"></i> 29 Sep 2026</span>
+                    <span><i class="bi bi-clock"></i> 6 Min</span>
+                  </div>
+                  <h5 class="blog-title font-heading text-primary">How We Catered 2,000 Guests at Taj Falaknuma Palace</h5>
+                  <p class="small text-muted mb-3 blog-desc">A behind-the-scenes look at the logistical precision, charcoal pits, and 22 copper degs required for a destination wedding.</p>
+                  <div class="mt-auto pt-2 border-top">
+                    <a href="blog-details-6.html" class="text-secondary fw-bold small">Read Story <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Article 6 -->
+            <div class="col-md-6 blog-item" data-category="culture">
+              <div class="blog-card">
+                <div class="blog-thumb">
+                  <img src="assets/images/kache-gosht-vs-pakki.png" alt="Kache Gosht vs Pakki Biryani">
+                </div>
+                <div class="blog-body">
+                  <div class="blog-meta">
+                    <span><i class="bi bi-calendar3"></i> 19 Sep 2026</span>
+                    <span><i class="bi bi-clock"></i> 5 Min</span>
+                  </div>
+                  <h5 class="blog-title font-heading text-primary">Kache Gosht vs Pakki Biryani: Understanding The Difference</h5>
+                  <p class="small text-muted mb-3 blog-desc">Decoding the two great schools of Indian biryani making: raw marinated meat vs pre-cooked meat layering.</p>
+                  <div class="mt-auto pt-2 border-top">
+                    <a href="blog-details-7.html" class="text-secondary fw-bold small">Read Story <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar: Popular Posts & Chef's Notes (Section 5) -->
+        <div class="col-lg-4">
+          <!-- Popular Articles Widget -->
+          <div class="card border-0 shadow-sm rounded-4 p-4 bg-white mb-4">
+            <h5 class="font-heading text-primary mb-3 border-bottom pb-2">Most Popular Reads</h5>
+            
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <img src="assets/images/sacred-geometry-dum-cooking.png" alt="Popular 1" class="rounded-3" style="width: 70px; height: 70px; object-fit: cover;">
+              <div>
+                <a href="blog-details.html" class="fw-bold small text-dark d-block text-truncate-2">The Sacred Geometry of Dum Cooking</a>
+                <span class="small text-muted">2.4k Reads</span>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <img src="assets/images/pampore-saffron-spice.png" alt="Popular 2" class="rounded-3" style="width: 70px; height: 70px; object-fit: cover;">
+              <div>
+                <a href="blog-details-3.html" class="fw-bold small text-dark d-block text-truncate-2">Red Gold: Pampore Saffron &amp; Deccan Spices</a>
+                <span class="small text-muted">1.8k Reads</span>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+              <img src="assets/images/mirchi-ka-salan-hero.png" alt="Popular 3" class="rounded-3" style="width: 70px; height: 70px; object-fit: cover;">
+              <div>
+                <a href="blog-details-5.html" class="fw-bold small text-dark d-block text-truncate-2">Mirchi Ka Salan: The Unsung Hero</a>
+                <span class="small text-muted">1.5k Reads</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Master Chef Quote Widget -->
+          <div class="card border-0 shadow-sm rounded-4 p-4 bg-white mb-4 border border-warning">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <img src="assets/images/chefs/chef-1.jpg" alt="Master Chef" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover; border: 2px solid var(--secondary);">
+              <div>
+                <h6 class="mb-0 font-heading text-primary">Chef's Reflection</h6>
+                <small class="text-secondary fw-semibold">Ustad Altaf Qureshi</small>
+              </div>
+            </div>
+            <p class="small text-muted fst-italic mb-0">
+              "A true biryani is eaten with all five fingers, so that your skin feels the warmth and texture before your tongue tastes the saffron."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: NEWSLETTER SUBSCRIPTION
+       ========================================================================= -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container" style="max-width: 800px;">
+      <div class="text-center" data-aos="fade-up">
+        <span class="section-subtitle">Stay Inspired</span>
+        <h2 class="section-title">Subscribe to The Royal Chronicle</h2>
+        <div class="ornament-divider"><i class="bi bi-envelope-paper-heart"></i></div>
+        <p class="text-muted mb-4">
+          Receive secret weekend recipes, historical spice essays, and exclusive private tasting invitations directly in your inbox.
+        </p>
+
+        <form class="newsletter-form mx-auto" style="max-width: 500px;">
+          <div class="input-group">
+            <input type="email" class="form-control py-3" placeholder="Enter your email address" required>
+            <button class="btn btn-saffron px-4" type="submit">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 7: RESTAURANT VISIT & TABLE BOOKING CTA
+       ========================================================================= -->
+  <section class="py-5" style="background: linear-gradient(135deg, var(--primary) 0%, #3B0A0E 100%);">
+    <div class="container py-3 text-white text-center" data-aos="zoom-in">
+      <h2 class="display-5 font-heading text-white fw-bold mb-2">Taste What You Read About</h2>
+      <p class="lead text-light mx-auto mb-4" style="max-width: 600px;">
+        Order your favourite clay pot online or reserve an intimate dining booth tonight.
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="menu.html" class="btn btn-saffron btn-lg px-4">
+          <i class="bi bi-bag-check-fill me-1"></i> Order Takeaway Now
+        </a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg px-4">
+          <i class="bi bi-calendar2-check me-1"></i> Reserve Dining Table
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <img src="assets/images/icons/logo-light.svg" alt="Zaffran Royal Biryani" class="mb-3 brand-logo-img" style="height: 50px;">
+          <p class="small text-muted mb-4">Celebrating 40 years of culinary royalty. We hand-craft authentic Hyderabadi and Awadhi dum biryanis in firewood-sealed degs using hereditary Nawabi recipes.</p>
+          <div class="social-links">
+            <a href="https://facebook.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+            <a href="https://x.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Col 3: Services -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-widget-title">Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-details.html?service=dining">Restaurant Dining</a></li>
+            <li><a href="service-details.html?service=takeaway">Biryani Takeaway</a></li>
+            <li><a href="service-details.html?service=delivery">Doorstep Delivery</a></li>
+            <li><a href="party-orders.html">Party &amp; Bulk Orders</a></li>
+            <li><a href="service-details.html?service=wedding">Wedding Catering</a></li>
+            <li><a href="service-details.html?service=corporate">Corporate Feasts</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-widget-title">Royal Updates</h5>
+          <p class="small text-muted mb-3">Subscribe for secret seasonal recipes, festival discounts and VIP table invites.</p>
+          <form class="newsletter-form mb-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+              <button class="btn btn-saffron" type="submit">Join</button>
+            </div>
+          </form>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone"></i>
+            <div>
+              <span class="small text-muted d-block">Takeaway &amp; Reservation Hotline:</span>
+              <a href="tel:+914023456789" class="fw-bold text-white">+91 40 2345 6789</a>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2026 Zaffran Royal Biryani &amp; Takeaway. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" title="Back to Top"><i class="bi bi-chevron-up"></i></button>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/orders.js"></script>
+  <script src="assets/js/filters.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      Filters.initBlogFilters();
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.getElementById('blogSearchInput');
+      const catButtons = document.querySelectorAll('.blog-cat-link');
+      const blogItems = document.querySelectorAll('.blog-item');
+
+      let currentCat = 'all';
+      let currentQuery = '';
+
+      function filterBlog() {
+        blogItems.forEach(item => {
+          const cat = item.getAttribute('data-category');
+          const title = (item.querySelector('.blog-title') ? item.querySelector('.blog-title').textContent : '').toLowerCase();
+          const desc = (item.querySelector('.blog-desc') ? item.querySelector('.blog-desc').textContent : '').toLowerCase();
+          
+          const matchesCat = (currentCat === 'all' || cat === currentCat);
+          const matchesQuery = (!currentQuery || title.includes(currentQuery) || desc.includes(currentQuery));
+
+          if (matchesCat && matchesQuery) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      }
+
+      catButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          catButtons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          currentCat = this.getAttribute('data-category');
+          filterBlog();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', function() {
+          currentQuery = this.value.trim().toLowerCase();
+          filterBlog();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

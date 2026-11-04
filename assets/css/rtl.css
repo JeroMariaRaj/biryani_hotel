@@ -1,0 +1,158 @@
+/* ==========================================================================
+   ZAFFRAN ROYAL BIRYANI & TAKEAWAY - RTL (RIGHT-TO-LEFT) SUPPORT
+   Comprehensive styles for Arabic, Hebrew & Urdu
+   ========================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Typography & General Adjustments */
+[dir="rtl"] .dropdown-menu {
+  text-align: right;
+}
+
+[dir="rtl"] .dropdown-item {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .dropdown-item:hover {
+  transform: translateX(-4px);
+}
+
+[dir="rtl"] .nav-link.active::after {
+  left: auto;
+  right: 0.9rem;
+}
+
+[dir="rtl"] .nav-badge-count {
+  right: auto;
+  left: -4px;
+}
+
+/* Navigation items spacing */
+[dir="rtl"] .navbar-nav {
+  padding-right: 0;
+}
+
+[dir="rtl"] .ms-auto {
+  margin-right: auto !important;
+  margin-left: 0 !important;
+}
+
+[dir="rtl"] .me-auto {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+[dir="rtl"] .me-2,
+[dir="rtl"] .me-3,
+[dir="rtl"] .me-4 {
+  margin-left: 0.5rem !important;
+  margin-right: 0 !important;
+}
+
+[dir="rtl"] .ms-2,
+[dir="rtl"] .ms-3,
+[dir="rtl"] .ms-4 {
+  margin-right: 0.5rem !important;
+  margin-left: 0 !important;
+}
+
+/* Breadcrumbs */
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
+  float: right;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* Food Cards */
+[dir="rtl"] .food-card-fav-btn {
+  right: auto;
+  left: 12px;
+}
+
+[dir="rtl"] .food-card-badge {
+  left: auto;
+  right: 12px;
+}
+
+[dir="rtl"] .food-price .original-price {
+  margin-left: 0;
+  margin-right: 6px;
+}
+
+/* Search Box */
+[dir="rtl"] .search-input-group input {
+  padding-left: 1rem;
+  padding-right: 2.8rem;
+}
+
+[dir="rtl"] .search-input-group i {
+  left: auto;
+  right: 1.1rem;
+}
+
+/* Dashboard Sidebar */
+[dir="rtl"] .dashboard-nav-link {
+  flex-direction: row;
+}
+
+[dir="rtl"] .stat-card {
+  flex-direction: row-reverse;
+}
+
+/* Hero Badge */
+[dir="rtl"] .hero-floating-badge {
+  left: auto;
+  right: 24px;
+}
+
+/* Timeline */
+[dir="rtl"] .timeline-track::before,
+[dir="rtl"] .timeline-track-progress {
+  left: auto;
+  right: 30px;
+}
+
+/* Footer */
+[dir="rtl"] .footer-widget-title::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .footer-links a:hover {
+  transform: translateX(-4px);
+}
+
+/* Icons that need horizontal flip */
+[dir="rtl"] .bi-arrow-right,
+[dir="rtl"] .bi-chevron-right,
+[dir="rtl"] .bi-arrow-right-circle,
+[dir="rtl"] .bi-box-arrow-right {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+[dir="rtl"] .bi-arrow-left,
+[dir="rtl"] .bi-chevron-left,
+[dir="rtl"] .bi-arrow-left-circle,
+[dir="rtl"] .bi-box-arrow-left {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+/* Floats and text alignments */
+[dir="rtl"] .text-start {
+  text-align: right !important;
+}
+
+[dir="rtl"] .text-end {
+  text-align: left !important;
+}
+
+[dir="rtl"] .back-to-top {
+  right: auto;
+  left: 25px;
+}

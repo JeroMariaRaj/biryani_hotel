@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Host's Guide: Calculating Biryani Quantities for 50+ Guests | Zaffran Chronicle</title>
+  <meta name="description" content="How to accurately plan, portion, and cater biryani for 50 to 500 guests with zero food wastage and perfect accompaniment ratios.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/icons/logo.svg" alt="Zaffran Royal Biryani" class="brand-logo-img">
+      </a>
+
+      <!-- Mobile Right Controls (Theme, RTL, Cart & Hamburger) -->
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+          <span class="small fw-bold">RTL</span>
+        </button>
+        <a href="cart.html" class="nav-action-btn" title="Shopping Cart">
+          <i class="bi bi-bag"></i>
+          <span class="nav-badge-count cart-badge-count">0</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-inline-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+              <i class="bi bi-chevron-down nav-dropdown-arrow"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-house"></i> Home 1 &ndash; Royal Landing</a></li>
+              <li><a class="dropdown-item" href="index-2.html"><i class="bi bi-stars"></i> Home 2 &ndash; Editorial Feast</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link nav-dashboard-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Right Side Action Controls -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- Theme Toggle -->
+          <button class="nav-action-btn theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="nav-action-btn rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+            <span class="small fw-bold">RTL</span>
+          </button>
+
+          <!-- Cart Button -->
+          <a href="cart.html" class="nav-action-btn d-none d-lg-inline-flex" title="Shopping Cart">
+            <i class="bi bi-bag"></i>
+            <span class="nav-badge-count cart-badge-count">0</span>
+          </a>
+
+          <!-- Auth Container (Login button / User Dropdown) -->
+          <div class="nav-auth-container">
+            <!-- Dynamically populated by auth.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       SECTION 1: ARTICLE HERO WITH AUTHOR, DATE & READING TIME (NO BG IMAGE)
+       ========================================================================= -->
+  <section class="page-hero" style="background: linear-gradient(135deg, var(--primary) 0%, #2B060A 100%);">
+    <div class="container text-center">
+      <span class="badge badge-gold mb-3">EVENT CATERING</span>
+      <h1 class="display-3 font-heading fw-bold mx-auto mb-3" style="max-width: 900px;">The Host's Guide: Calculating Biryani Quantities for 50+ Guests</h1>
+      <div class="d-flex justify-content-center align-items-center gap-4 text-light flex-wrap small">
+        <span><i class="bi bi-person text-warning me-1"></i> Chef Imran Khan</span>
+        <span><i class="bi bi-calendar3 text-warning me-1"></i> 11 October 2026</span>
+        <span><i class="bi bi-clock text-warning me-1"></i> 7 Min Read</span>
+        <span><i class="bi bi-chat-dots text-warning me-1"></i> 18 Comments</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: ARTICLE INTRO & TABLE OF CONTENTS
+       ========================================================================= -->
+  <section class="py-5 bg-white border-bottom">
+    <div class="container" style="max-width: 960px;">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-7" data-aos="fade-right">
+          <p class="lead text-primary fw-medium mb-3">
+            Hosting a grand gathering - whether a wedding reception, anniversary, Eid feast, or corporate town hall - comes with immense pressure. The single greatest fear of every Indian host is running out of biryani before the last guest has taken their plate.
+          </p>
+          <p class="text-muted mb-0">
+            Yet ordering wildly in excess leads to painful food wastage and degraded flavor. Having catered over 1,400 weddings and corporate galas, Zaffran operates on an exact mathematical formula that guarantees every guest enjoys royal generosity.
+          </p>
+        </div>
+
+        <div class="col-lg-5" data-aos="fade-left">
+          <div class="card border-0 shadow-sm p-4 rounded-4 bg-light">
+            <h6 class="font-heading text-primary mb-3"><i class="bi bi-list-nested text-secondary me-2"></i> Table of Contents</h6>
+            <ol class="small text-muted mb-0 ps-3">
+              <li class="mb-2"><a href="#formula" class="text-dark">The Golden 400g Per-Guest Formula</a></li>
+              <li class="mb-2"><a href="#handisize" class="text-dark">Sizing Your Degs: 5kg, 10kg, or 15kg?</a></li>
+              <li class="mb-2"><a href="#sides" class="text-dark">The Accompaniment Ratio: Salan & Raita</a></li>
+              <li class="mb-2"><a href="#holding" class="text-dark">Holding Temperature & Live Charcoal Warmers</a></li>
+              
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: MAIN EDITORIAL CONTENT & ASSET ILLUSTRATION
+       ========================================================================= -->
+  <section class="py-5 bg-warm">
+    <div class="container" style="max-width: 860px;">
+      <article data-aos="fade-up">
+        <h3 class="font-heading text-primary mb-3" id="formula">1. The Golden 400g Per-Guest Formula</h3>
+        <p class="text-muted">
+          When ordering biryani, hosts often ask for 'number of plates' without realizing commercial portion sizes vary wildly. In royal dum cooking, the gold standard for an adult guest is 380g to 420g of cooked biryani (including 2 succulent pieces of meat totaling 180g-200g).
+        </p>
+        <p class="text-muted">
+          For a gathering with 50 adult guests, you require precisely 20kg of finished, steaming biryani. If your guest list includes a mix of adults and children under 12, calculate children at 220g (roughly 0.6 of an adult portion).
+        </p>
+
+        <!-- High-res asset illustration directly inside article content -->
+        <div class="my-4 text-center">
+          <img src="assets/images/biryani-quantity-guide.png" alt="The Host's Guide: Calculating Biryani Quantities for 50+ Guests" class="img-fluid rounded-4 shadow-lg w-100" style="max-height: 480px; object-fit: cover;">
+          <small class="text-muted text-center d-block mt-2 fst-italic">The Host's Guide: Calculating Biryani Quantities for 50+ Guests</small>
+        </div>
+
+        <h3 class="font-heading text-primary mb-3 mt-5" id="handisize">2. Sizing Your Degs: 5kg, 10kg, or 15kg?</h3>
+        <p class="text-muted">
+          Never order one massive 40kg cauldron for a party if it cannot be served all at once. Once the dough seal of a deg is broken, the internal steam escapes, and the remaining rice begins cooling and drying out within 25 minutes.
+        </p>
+        <p class="text-muted">
+          Instead, order in modular degs: two 10kg degs or four 5kg handis. Keep the second deg sealed over glowing charcoal embers while your guests enjoy the first. When the first handi empties, unseal the second fresh and piping hot.
+        </p>
+
+        <div class="p-4 bg-white rounded-4 border my-4 border-warning">
+          <div class="d-flex align-items-center gap-3">
+            <i class="bi bi-lightbulb-fill fs-2 text-warning"></i>
+            <div>
+              <h6 class="mb-1 fw-bold text-primary">Chef Imran's Veg/Non-Veg Rule</h6>
+              <p class="small text-muted mb-0">"In a typical Indian crowd of 100 guests where both are served, 70% of guests will take non-veg mutton/chicken and 30% veg. But always prepare 40% vegetarian, because non-vegetarians will frequently sample the Paneer Tikka Biryani too!"</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: CHEF'S TECHNIQUE & INGREDIENT BREAKDOWN
+       ========================================================================= -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container" style="max-width: 860px;">
+      <article data-aos="fade-up">
+        <h3 class="font-heading text-primary mb-3" id="sides">3. The Accompaniment Ratio: Salan & Raita</h3>
+        <p class="text-muted">
+          A royal meal requires balanced sides. For every 10 guests, plan 750ml of Mirchi Ka Salan and 800ml of Burani Raita. Never skimp on fresh mint-coriander salad and quartered lemons.
+        </p>
+
+        <div class="row g-3 my-4">
+          <div class="col-sm-6">
+            <div class="p-3 bg-light rounded-3 border">
+              <h6 class="text-primary font-heading mb-1"><i class="bi bi-people text-secondary me-1"></i> 10kg Deg (25-30 Pax)</h6>
+              <p class="small text-muted mb-0">Includes 5kg raw basmati + 6kg marinated meat + 2L salan + 2L raita.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 bg-light rounded-3 border">
+              <h6 class="text-primary font-heading mb-1"><i class="bi bi-people-fill text-secondary me-1"></i> 15kg Deg (35-40 Pax)</h6>
+              <p class="small text-muted mb-0">Includes 7.5kg raw basmati + 9kg marinated meat + full accompaniment buffet.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 bg-light rounded-3 border">
+              <h6 class="text-primary font-heading mb-1"><i class="bi bi-fire text-secondary me-1"></i> Charcoal Warmers</h6>
+              <p class="small text-muted mb-0">Keeps sealed degs at a consistent 68°C without drying or burning the base.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 bg-light rounded-3 border">
+              <h6 class="text-primary font-heading mb-1"><i class="bi bi-box-seam text-secondary me-1"></i> Insulated Handis</h6>
+              <p class="small text-muted mb-0">Earthen pots that retain thermal core heat for up to 3.5 hours in transit.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <h3 class="font-heading text-primary mb-3 mt-5" id="holding">4. Staging and Timing Your Buffet</h3>
+        <p class="text-muted mb-4">
+          Schedule your handi delivery 30 to 45 minutes before dinner is called. Our catering technicians set up low-heat charcoal braziers beneath each copper handi, ensuring that whether guests eat at 8:30 PM or 10:30 PM, the rice is aromatic and sizzling.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: AUTHOR BIO & SOCIAL SHARING
+       ========================================================================= -->
+  <section class="py-5 bg-warm">
+    <div class="container" style="max-width: 860px;" data-aos="fade-up">
+      <div class="card border-0 shadow-sm p-4 p-md-5 rounded-4 bg-white mb-4">
+        <div class="d-flex flex-column flex-sm-row align-items-center gap-4 text-center text-sm-start">
+          <img src="assets/images/Imran Khan.jpg" alt="Chef Imran Khan" class="rounded-circle" style="width: 80px; height: 80px; object-fit: cover; border: 3px solid var(--secondary);">
+          <div>
+            <span class="badge bg-light text-secondary mb-1">WRITTEN BY</span>
+            <h5 class="font-heading text-primary mb-1">Chef Imran Khan</h5>
+            <p class="small text-muted mb-2">Head of Banquets & Bulk Operations</p>
+            <p class="small text-muted mb-0">Logistics mastermind managing large-scale catering operations, live coal stations, and corporate food events across Telangana.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <div class="d-flex align-items-center gap-2">
+          <span class="fw-bold text-primary small">Share Article:</span>
+          <a href="#" data-article-share="copy" class="btn btn-sm btn-outline-royal"><i class="bi bi-link-45deg"></i> Copy Link</a>
+          <a href="#" data-article-share="facebook" class="btn btn-sm btn-outline-royal"><i class="bi bi-facebook"></i> Facebook</a>
+          <a href="#" data-article-share="x" class="btn btn-sm btn-outline-royal"><i class="bi bi-twitter-x"></i> X / Twitter</a>
+          <a href="#" data-article-share="whatsapp" class="btn btn-sm btn-outline-royal"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: RELATED ARTICLES GRID
+       ========================================================================= -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Continue Reading</span>
+        <h2 class="section-title">Related Stories from the Royal Archive</h2>
+        <div class="ornament-divider"><i class="bi bi-journal-bookmark"></i></div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="blog-card">
+            <div class="blog-thumb">
+              <img src="assets/images/sacred-geometry-dum-cooking.png" alt="The Sacred Geometry of Dum Cooking">
+            </div>
+            <div class="blog-body">
+              <span class="small text-muted mb-1 d-block"><i class="bi bi-calendar3"></i> 28 Oct 2026</span>
+              <h5 class="blog-title font-heading text-primary">The Sacred Geometry of Dum Cooking</h5>
+              <p class="small text-muted mb-3">Why dough-sealing trapping volatile vapors transforms everyday rice.</p>
+              <div class="mt-auto">
+                <a href="blog-details.html" class="text-secondary fw-bold small">Read Story <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="blog-card">
+            <div class="blog-thumb">
+              <img src="assets/images/mirchi-ka-salan-hero.png" alt="Mirchi Ka Salan: The Unsung Hero of the Royal Table">
+            </div>
+            <div class="blog-body">
+              <span class="small text-muted mb-1 d-block"><i class="bi bi-calendar3"></i> 05 Oct 2026</span>
+              <h5 class="blog-title font-heading text-primary">Mirchi Ka Salan: The Unsung Hero of the Royal Table</h5>
+              <p class="small text-muted mb-3">The balance of roasted peanuts, sesame, and tamarind that cuts through meat richness.</p>
+              <div class="mt-auto">
+                <a href="blog-details-5.html" class="text-secondary fw-bold small">Read Story <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="blog-card">
+            <div class="blog-thumb">
+              <img src="assets/images/taj-falaknuma-catering.png" alt="How We Catered 2,000 Guests at Taj Falaknuma Palace">
+            </div>
+            <div class="blog-body">
+              <span class="small text-muted mb-1 d-block"><i class="bi bi-calendar3"></i> 29 Sep 2026</span>
+              <h5 class="blog-title font-heading text-primary">How We Catered 2,000 Guests at Taj Falaknuma Palace</h5>
+              <p class="small text-muted mb-3">A behind-the-scenes look at logistical precision and 22 copper degs.</p>
+              <div class="mt-auto">
+                <a href="blog-details-6.html" class="text-secondary fw-bold small">Read Story <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 7: NEWSLETTER SUBSCRIPTION & ROYAL TABLE CTA
+       ========================================================================= -->
+  <section class="py-5" style="background: linear-gradient(135deg, var(--primary) 0%, #3B0A0E 100%);">
+    <div class="container py-3 text-white text-center" data-aos="zoom-in">
+      <h2 class="display-5 font-heading text-white fw-bold mb-2">Craving Authentic Dum Biryani?</h2>
+      <p class="lead text-light mx-auto mb-4" style="max-width: 600px;">
+        Experience royal Awadhi-Hyderabadi flavors hand-crafted in sealed clay handis and delivered piping hot to your table or doorstep.
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="menu.html" class="btn btn-saffron btn-lg"><i class="bi bi-book-half me-1"></i> Order from Our Menu</a>
+        <a href="party-orders.html" class="btn btn-outline-light btn-lg"><i class="bi bi-boxes me-1"></i> Book a Party Deg</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-3 col-md-6">
+          <img src="assets/images/icons/logo-light.svg" alt="Zaffran Royal Biryani" class="mb-3 brand-logo-img" style="height: 50px;">
+          <p class="text-white-50 small mb-4">
+            Celebrating 40 years of culinary royalty. We hand-craft authentic Hyderabadi and Awadhi dum biryanis in firewood-sealed degs using hereditary Nawabi recipes.
+          </p>
+          <div class="social-links d-flex gap-2">
+            <a href="https://facebook.com" class="social-btn" title="Facebook" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" class="social-btn" title="Instagram" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+            <a href="https://x.com" class="social-btn" title="Twitter" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://youtube.com" class="social-btn" title="YouTube" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-widget-title">Services</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="my-orders.html">My Orders</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+            <li><a href="party-orders.html">Party Orders</a></li>
+            <li><a href="blog.html">Food Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-widget-title">Royal Updates</h5>
+          <p class="text-white-50 small mb-3">
+            Subscribe for secret seasonal recipes, festival discounts and VIP table invites.
+          </p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); Swal.fire('Subscribed!', 'Welcome to the Royal Table inner circle.', 'success'); this.reset();">
+            <div class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+              <button class="btn btn-saffron" type="submit">Join</button>
+            </div>
+          </form>
+          <div class="small text-white-50">
+            <i class="bi bi-telephone-inbound text-warning me-2"></i> Takeaway &amp; Reservation Hotline:
+            <strong class="text-white d-block mt-1">+91 40 2345 6789</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2026 Zaffran Royal Biryani &amp; Takeaway. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTopBtn" title="Back to Top"><i class="bi bi-chevron-up"></i></button>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/article-share.js"></script>
+</body>
+</html>

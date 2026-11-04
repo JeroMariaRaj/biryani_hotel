@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catering &amp; Biryani Packages Pricing | Zaffran Royal Biryani</title>
+  <meta name="description" content="Transparent pricing for individual handis, family combos, party packs, wedding catering, and corporate lunch subscriptions.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/icons/logo.svg" alt="Zaffran Royal Biryani" class="brand-logo-img">
+      </a>
+
+            <!-- Mobile Right Controls (Theme, RTL, Cart & Hamburger) -->
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+          <span class="small fw-bold">RTL</span>
+        </button>
+        <a href="cart.html" class="nav-action-btn" title="Shopping Cart">
+          <i class="bi bi-bag"></i>
+          <span class="nav-badge-count cart-badge-count">0</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-inline-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+              <i class="bi bi-chevron-down nav-dropdown-arrow"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-house"></i> Home 1 – Royal Landing</a></li>
+              <li><a class="dropdown-item" href="index-2.html"><i class="bi bi-stars"></i> Home 2 – Editorial Feast</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link nav-dashboard-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Right Side Action Controls -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- Theme Toggle -->
+          <button class="nav-action-btn theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="nav-action-btn rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+            <span class="small fw-bold">RTL</span>
+          </button>
+
+          <!-- Cart Button -->
+          <a href="cart.html" class="nav-action-btn d-none d-lg-inline-flex" title="Shopping Cart">
+            <i class="bi bi-bag"></i>
+            <span class="nav-badge-count cart-badge-count">0</span>
+          </a>
+
+          <!-- Auth Container (Login button / User Dropdown) -->
+          <div class="nav-auth-container">
+            <!-- Dynamically populated by auth.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       SECTION 1: PRICING HERO
+       ========================================================================= -->
+  <section class="page-hero" style="background-image: url('assets/images/hero/hero-pricing.jpg');">
+    <div class="container text-center">
+      <span class="section-subtitle text-warning">Honest Culinary Value</span>
+      <h1 class="display-3 font-heading fw-bold">Royal Package Pricing</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Pricing</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: INDIVIDUAL BIRYANI PACKAGES
+       ========================================================================= -->
+  <section class="py-5 bg-white border-bottom">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Single &amp; Couple Portions</span>
+        <h2 class="section-title">Individual &amp; Couple Dining</h2>
+        <div class="ornament-divider"><i class="bi bi-person"></i></div>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          Authentic clay pot handis served with complimentary Mirchi Ka Salan and whipped curd raita.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Card 1 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-light">
+            <span class="badge badge-maroon align-self-start mb-2">Solo Royalty</span>
+            <h4 class="font-heading text-primary">Royal Solo Feast</h4>
+            <div class="my-3">
+              <span class="fs-2 fw-bold text-secondary font-heading">₹349</span>
+              <span class="text-muted">/ Portioned Pot</span>
+            </div>
+            <ul class="list-unstyled small text-muted mb-4">
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> 1 Full Handi Hyderabadi Chicken Biryani</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> 2 Succulent Saffron Chicken Cuts</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Earthen Pot Mirchi Ka Salan &amp; Raita</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Boiled Egg with Caramelized Onions</li>
+            </ul>
+            <button class="btn btn-outline-royal w-100" onclick="Cart.add('dish-1')">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 border-2 border-warning shadow-md rounded-4 p-4 bg-white position-relative">
+            <span class="position-absolute top-0 end-0 bg-warning text-dark px-3 py-1 rounded-bottom-start small fw-bold">BESTSELLER</span>
+            <span class="badge badge-gold align-self-start mb-2">Couple Delight</span>
+            <h4 class="font-heading text-primary">Nizam Couple Combo</h4>
+            <div class="my-3">
+              <span class="fs-2 fw-bold text-secondary font-heading">₹599</span>
+              <span class="text-muted">/ 2 Persons</span>
+            </div>
+            <ul class="list-unstyled small text-muted mb-4">
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> 1 Hyderabadi Chicken + 1 Chicken 65 Starter</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> 2 Chilled Kesar Mango Lassi Bottles</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Double Mirchi Ka Salan &amp; Burani Raita</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> 2 Warm Gulab Jamuns in Cardamom Syrup</li>
+            </ul>
+            <button class="btn btn-royal w-100" onclick="Cart.add('dish-1'); Cart.add('dish-21', 2);">Order Couple Combo</button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-light">
+            <span class="badge badge-gold align-self-start mb-2">Prime Meat</span>
+            <h4 class="font-heading text-primary">Mutton Connoisseur Solo</h4>
+            <div class="my-3">
+              <span class="fs-2 fw-bold text-secondary font-heading">₹469</span>
+              <span class="text-muted">/ Portioned Pot</span>
+            </div>
+            <ul class="list-unstyled small text-muted mb-4">
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> 1 Full Handi Kache Gosht Mutton Biryani</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Tender Baby Lamb Shank &amp; Marrow Cut</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Traditional Salan &amp; Garlic Raita</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> 1 Earthen Cup Matka Phirni</li>
+            </ul>
+            <button class="btn btn-outline-royal w-100" onclick="Cart.add('dish-4')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: FAMILY COMBOS
+       ========================================================================= -->
+  <section class="py-5 bg-warm">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Household Celebrations</span>
+        <h2 class="section-title">Family Combos &amp; Sharing Platters</h2>
+        <div class="ornament-divider"><i class="bi bi-people"></i></div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Family 4-5 -->
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white">
+            <span class="badge badge-gold align-self-start mb-2">Feast Platter</span>
+            <h3 class="font-heading text-primary mb-2">Royal Family Platter (4-5 Pax)</h3>
+            <p class="text-muted small mb-3">Our signature brass platter feast designed for Sunday family dinners.</p>
+            <div class="my-3">
+              <span class="display-6 fw-bold text-secondary font-heading">₹999</span>
+              <span class="text-muted text-decoration-line-through ms-2">₹1,199</span>
+            </div>
+            <ul class="list-unstyled small text-muted mb-4">
+              <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> 1kg Chicken Dum Biryani + 500g Mutton Biryani</li>
+              <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> 4 Pcs Charcoal Smoked Chicken Tikka</li>
+              <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> 4 Boiled Farm Eggs &amp; Brown Fried Onions</li>
+              <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> 2 Large Bowls of Mirchi Ka Salan &amp; Raita</li>
+              <li><i class="bi bi-check2-circle text-success me-2"></i> 2 Plates Shahi Tukda with Rabri</li>
+            </ul>
+            <button class="btn btn-royal w-100" onclick="Cart.add('dish-10')">Add Family Platter to Cart</button>
+          </div>
+        </div>
+
+        <!-- Grand Family 6-8 -->
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white">
+            <span class="badge badge-maroon align-self-start mb-2">Grand Spread</span>
+            <h3 class="font-heading text-primary mb-2">Nizam Grand Feast (6-8 Pax)</h3>
+            <p class="text-muted small mb-3">A complete royal banquet table delivered in insulated thermal packaging.</p>
+            <div class="my-3">
+              <span class="display-6 fw-bold text-secondary font-heading">₹1,599</span>
+              <span class="text-muted text-decoration-line-through ms-2">₹1,899</span>
+            </div>
+            <ul class="list-unstyled small text-muted mb-4">
+              <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> 2 Full Chicken Dum Biryanis + 1 Mutton Dum Biryani</li>
+              <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Full Bhatti Da Murgh Tandoori Chicken</li>
+              <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> 6 Boiled Eggs + Extra Garnish Tub</li>
+              <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> 3 Large Salan &amp; Burani Garlic Raitas</li>
+              <li><i class="bi bi-check2-circle text-success me-2"></i> 4 Matka Phirni Clay Pots</li>
+            </ul>
+            <button class="btn btn-royal w-100" onclick="Cart.add('dish-10'); Cart.add('dish-13');">Order Grand Feast Combo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: PARTY PACKAGES (15-30 GUESTS)
+       ========================================================================= -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Small Gatherings</span>
+        <h2 class="section-title">Party Handi Packs (15 to 30 Guests)</h2>
+        <div class="ornament-divider"><i class="bi bi-balloon"></i></div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-light text-center">
+            <h5 class="font-heading text-primary">Mini Handi Deg (15 Pax)</h5>
+            <span class="fs-3 fw-bold text-secondary font-heading d-block my-2">₹4,200</span>
+            <p class="small text-muted mb-3">5 kg Chicken Dum Biryani + 15 Chicken 65 Starter Portions + Salan &amp; Raita.</p>
+            <a href="party-orders.html" class="btn btn-sm btn-outline-royal w-100">Configure 15 Pax</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-light text-center">
+            <h5 class="font-heading text-primary">Classic Handi Deg (25 Pax)</h5>
+            <span class="fs-3 fw-bold text-secondary font-heading d-block my-2">₹6,800</span>
+            <p class="small text-muted mb-3">8 kg Chicken or Mutton Dum + 25 Seekh Kebabs + Phirni Pots + Free Charcoal Warmer.</p>
+            <a href="party-orders.html" class="btn btn-sm btn-royal w-100">Configure 25 Pax</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-light text-center">
+            <h5 class="font-heading text-primary">Celebration Deg (35 Pax)</h5>
+            <span class="fs-3 fw-bold text-secondary font-heading d-block my-2">₹9,500</span>
+            <p class="small text-muted mb-3">12 kg Split Handis (Chicken &amp; Mutton) + 35 Starters + Shahi Tukda Dessert + Delivery.</p>
+            <a href="party-orders.html" class="btn btn-sm btn-outline-royal w-100">Configure 35 Pax</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: WEDDING CATERING PACKAGES
+       ========================================================================= -->
+  <section class="py-5 bg-warm">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Grand Scale Matrimony</span>
+        <h2 class="section-title">Wedding Catering Tiers (100 - 2000+ Pax)</h2>
+        <div class="ornament-divider"><i class="bi bi-gem"></i></div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-white">
+            <span class="badge badge-maroon align-self-start mb-2">Silver Tier</span>
+            <h4 class="font-heading text-primary">Silver Banquet</h4>
+            <div class="my-3">
+              <span class="fs-2 fw-bold text-secondary font-heading">₹420</span>
+              <span class="small text-muted">/ Guest</span>
+            </div>
+            <ul class="list-unstyled small text-muted mb-4">
+              <li class="mb-2"><i class="bi bi-check text-success me-1"></i> Chicken Dum Biryani in live copper degs</li>
+              <li class="mb-2"><i class="bi bi-check text-success me-1"></i> Crispy Chicken 65 Starter counter</li>
+              <li class="mb-2"><i class="bi bi-check text-success me-1"></i> Mirchi Salan &amp; Curd Chutney</li>
+              <li><i class="bi bi-check text-success me-1"></i> Gulab Jamun Flambé</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline-royal w-100">Select Silver</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 border-2 border-warning shadow-md rounded-4 p-4 bg-white position-relative">
+            <span class="position-absolute top-0 end-0 bg-warning text-dark px-3 py-1 rounded-bottom-start small fw-bold">RECOMMENDED</span>
+            <span class="badge badge-gold align-self-start mb-2">Gold Tier</span>
+            <h4 class="font-heading text-primary">Golden Nizam Royal</h4>
+            <div class="my-3">
+              <span class="fs-2 fw-bold text-secondary font-heading">₹590</span>
+              <span class="small text-muted">/ Guest</span>
+            </div>
+            <ul class="list-unstyled small text-muted mb-4">
+              <li class="mb-2"><i class="bi bi-check text-success me-1"></i> Choice of Mutton &amp; Chicken Dum Biryani</li>
+              <li class="mb-2"><i class="bi bi-check text-success me-1"></i> Mutton Seekh Kebab &amp; Chicken Tikka</li>
+              <li class="mb-2"><i class="bi bi-check text-success me-1"></i> Salan, Burani Raita &amp; Tossed Salad</li>
+              <li><i class="bi bi-check text-success me-1"></i> Shahi Tukda with Pistachio Rabri</li>
+            </ul>
+            <a href="contact.html" class="btn btn-royal w-100">Select Golden Nizam</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-white">
+            <span class="badge badge-gold align-self-start mb-2">Imperial Tier</span>
+            <h4 class="font-heading text-primary">Kohinoor Grand</h4>
+            <div class="my-3">
+              <span class="fs-2 fw-bold text-secondary font-heading">₹780</span>
+              <span class="small text-muted">/ Guest</span>
+            </div>
+            <ul class="list-unstyled small text-muted mb-4">
+              <li class="mb-2"><i class="bi bi-check text-success me-1"></i> Mutton + Chicken 65 + Shahi Paneer</li>
+              <li class="mb-2"><i class="bi bi-check text-success me-1"></i> 4 Royal Starters live skewer grill</li>
+              <li class="mb-2"><i class="bi bi-check text-success me-1"></i> Complete Awadhi accompaniments bar</li>
+              <li><i class="bi bi-check text-success me-1"></i> Dual Dessert (Phirni &amp; Shahi Tukda)</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline-royal w-100">Select Kohinoor</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: CORPORATE LUNCH PLANS
+       ========================================================================= -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Workplace Dining</span>
+        <h2 class="section-title">Corporate Lunch &amp; Meeting Plans</h2>
+        <div class="ornament-divider"><i class="bi bi-building"></i></div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="card border-0 shadow-sm p-4 rounded-4 bg-light h-100">
+            <h5 class="font-heading text-primary mb-2">Individual Executive Meal Box</h5>
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="fs-3 fw-bold text-secondary font-heading">₹280</span>
+              <span class="text-muted">/ Box (Min. 15 Boxes)</span>
+            </div>
+            <p class="small text-muted">Individually portioned hot thermal box with chicken biryani, chicken 65, salan, raita, cutlery, and gulab jamun. Perfect for team sprints and training sessions.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="card border-0 shadow-sm p-4 rounded-4 bg-light h-100">
+            <h5 class="font-heading text-primary mb-2">Executive Townhall Buffet (50+ Pax)</h5>
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="fs-3 fw-bold text-secondary font-heading">₹390</span>
+              <span class="text-muted">/ Employee</span>
+            </div>
+            <p class="small text-muted">Complete cafeteria setup with dual live degs, chicken and vegetarian options, live tossed kebab stations, and cold Alphonso mango lassi bottles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 7: CUSTOM CONSULTATION CTA
+       ========================================================================= -->
+  <section class="py-5" style="background: linear-gradient(135deg, var(--primary) 0%, #3B0A0E 100%);">
+    <div class="container py-3 text-white text-center" data-aos="zoom-in">
+      <h2 class="display-5 font-heading text-white fw-bold mb-2">Need a Tailored Menu Quote?</h2>
+      <p class="lead text-light mx-auto mb-4" style="max-width: 600px;">
+        Contact our banquet director to customize portions, dietary mixes, and on-site service requirements.
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="party-orders.html" class="btn btn-saffron btn-lg px-4">
+          <i class="bi bi-calculator me-1"></i> Calculate Your Degs
+        </a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg px-4">
+          <i class="bi bi-telephone me-1"></i> Contact Catering Desk
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <img src="assets/images/icons/logo-light.svg" alt="Zaffran Royal Biryani" class="mb-3 brand-logo-img" style="height: 50px;">
+          <p class="small text-muted mb-4">Celebrating 40 years of culinary royalty. We hand-craft authentic Hyderabadi and Awadhi dum biryanis in firewood-sealed degs using hereditary Nawabi recipes.</p>
+          <div class="social-links">
+            <a href="https://facebook.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+            <a href="https://x.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Col 3: Services -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-widget-title">Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-details.html?service=dining">Restaurant Dining</a></li>
+            <li><a href="service-details.html?service=takeaway">Biryani Takeaway</a></li>
+            <li><a href="service-details.html?service=delivery">Doorstep Delivery</a></li>
+            <li><a href="party-orders.html">Party &amp; Bulk Orders</a></li>
+            <li><a href="service-details.html?service=wedding">Wedding Catering</a></li>
+            <li><a href="service-details.html?service=corporate">Corporate Feasts</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-widget-title">Royal Updates</h5>
+          <p class="small text-muted mb-3">Subscribe for secret seasonal recipes, festival discounts and VIP table invites.</p>
+          <form class="newsletter-form mb-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+              <button class="btn btn-saffron" type="submit">Join</button>
+            </div>
+          </form>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone"></i>
+            <div>
+              <span class="small text-muted d-block">Takeaway &amp; Reservation Hotline:</span>
+              <a href="tel:+914023456789" class="fw-bold text-white">+91 40 2345 6789</a>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2026 Zaffran Royal Biryani &amp; Takeaway. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" title="Back to Top"><i class="bi bi-chevron-up"></i></button>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/orders.js"></script>
+  <script src="assets/js/filters.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

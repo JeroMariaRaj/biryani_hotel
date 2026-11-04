@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Zaffran Royal Biryani</title>
+  <meta name="description" content="Complete your order for authentic royal biryani takeaway with instant order tracking.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="bg-warm d-flex flex-column min-vh-100">
+
+  <!-- Top Simple Nav -->
+  <header class="py-3 bg-white border-bottom shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="index.html" class="d-inline-flex align-items-center">
+        <img src="assets/images/icons/logo.svg" alt="Zaffran Royal Biryani" class="brand-logo-img" style="height: 44px;">
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="cart.html" class="small text-muted fw-semibold me-2"><i class="bi bi-bag me-1"></i> Edit Cart</a>
+        <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL / LTR" aria-label="Toggle RTL Mode">
+          <span class="small fw-bold">RTL</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Checkout Main Container -->
+  <main class="py-5 flex-grow-1">
+    <div class="container" style="max-width: 1040px;">
+      <div class="text-center mb-4">
+        <span class="badge badge-gold mb-2">FINAL STEP</span>
+        <h2 class="font-heading text-primary fw-bold mb-1">Confirm Your Delivery Order</h2>
+        <p class="small text-muted">Your feast will be slow-cooked to order and dispatched in insulated earthen pots.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Checkout Form (Customer Info & Delivery Address) -->
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white mb-4">
+            <h4 class="font-heading text-primary mb-3">1. Guest &amp; Delivery Details</h4>
+
+            <form id="checkoutForm" novalidate>
+              <div class="row g-3">
+                <!-- Customer Name -->
+                <div class="col-md-6">
+                  <label for="checkoutName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="checkoutName" placeholder="e.g. Jero Khan" required>
+                </div>
+
+                <!-- Email -->
+                <div class="col-md-6">
+                  <label for="checkoutEmail" class="form-label">Email Address <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control" id="checkoutEmail" placeholder="name@email.com" required>
+                </div>
+
+                <!-- Phone -->
+                <div class="col-12">
+                  <label for="checkoutPhone" class="form-label">Mobile Number (For Rider &amp; SMS Tracking) <span class="text-danger">*</span></label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light">+91</span>
+                    <input type="tel" class="form-control" id="checkoutPhone" placeholder="10-digit mobile" required>
+                  </div>
+                </div>
+
+                <!-- Delivery Address -->
+                <div class="col-12">
+                  <label for="checkoutAddress" class="form-label">Street Address &amp; Villa/Flat No. <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="checkoutAddress" placeholder="e.g. Villa #14, Royal Palms, Road No. 36, Jubilee Hills" required>
+                </div>
+
+                <!-- City & Pincode -->
+                <div class="col-md-6">
+                  <label for="checkoutCity" class="form-label">City <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="checkoutCity" value="Hyderabad" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="checkoutPincode" class="form-label">Pincode <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="checkoutPincode" value="500033" required>
+                </div>
+
+                <!-- Delivery Instructions -->
+                <div class="col-12">
+                  <label for="checkoutNotes" class="form-label">Delivery Instructions (Optional)</label>
+                  <textarea class="form-control" id="checkoutNotes" rows="2" placeholder="e.g. Gate code, extra mirchi ka salan, leave at security"></textarea>
+                </div>
+              </div>
+
+              <!-- Payment Method Selection -->
+              <h4 class="font-heading text-primary mt-5 mb-3">2. Payment Method</h4>
+              
+              <div class="list-group mb-4">
+                <label class="list-group-item d-flex align-items-center gap-3 p-3">
+                  <input class="form-check-input flex-shrink-0" type="radio" name="paymentMethod" value="Cash on Delivery" checked>
+                  <div class="d-flex align-items-center justify-content-between w-100">
+                    <div>
+                      <h6 class="mb-0 fw-bold">Cash on Delivery (COD)</h6>
+                      <small class="text-muted">Pay in cash or UPI QR upon receiving your hot clay pot</small>
+                    </div>
+                    <i class="bi bi-cash-stack fs-3 text-secondary"></i>
+                  </div>
+                </label>
+
+                <label class="list-group-item d-flex align-items-center gap-3 p-3">
+                  <input class="form-check-input flex-shrink-0" type="radio" name="paymentMethod" value="Online UPI / Cards (Demo)">
+                  <div class="d-flex align-items-center justify-content-between w-100">
+                    <div>
+                      <h6 class="mb-0 fw-bold">Online Payment (UPI, Cards, NetBanking)</h6>
+                      <small class="text-muted">Instant simulated authorization (no real payment charged)</small>
+                    </div>
+                    <i class="bi bi-credit-card-2-front-fill fs-3 text-secondary"></i>
+                  </div>
+                </label>
+              </div>
+
+              <button type="submit" id="placeOrderBtn" class="btn btn-royal w-100 py-3 fs-5">
+                <i class="bi bi-bag-check-fill me-2"></i> Place Royal Feast Order
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Order Summary Sidebar -->
+        <div class="col-lg-5">
+          <div class="order-summary-card sticky-top" style="top: 20px;">
+            <h4 class="font-heading text-primary mb-3">Order Summary</h4>
+            <div id="checkoutItemsList">
+              <!-- Rendered by checkout.js -->
+            </div>
+            <div class="p-3 bg-light rounded-3 border mt-3 small text-muted">
+              <i class="bi bi-shield-lock-fill text-success me-1"></i>
+              <strong>Safe &amp; Clean:</strong> Earthen handis are sealed with dough and packed in insulated tamper-proof thermal packaging.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-3 bg-white border-top text-center text-muted small">
+    © 2026 Zaffran Royal Biryani &amp; Takeaway. Frontend Demo System.
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/orders.js"></script>
+  <script src="assets/js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How We Catered 2,000 Guests at Taj Falaknuma Palace | Zaffran Chronicle</title>
+  <meta name="description" content="Behind the scenes of an epic destination royal wedding catering 2,000 guests with 22 live copper degs at Hyderabad's Falaknuma Palace.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/icons/logo.svg" alt="Zaffran Royal Biryani" class="brand-logo-img">
+      </a>
+
+      <!-- Mobile Right Controls (Theme, RTL, Cart & Hamburger) -->
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+          <span class="small fw-bold">RTL</span>
+        </button>
+        <a href="cart.html" class="nav-action-btn" title="Shopping Cart">
+          <i class="bi bi-bag"></i>
+          <span class="nav-badge-count cart-badge-count">0</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-inline-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+              <i class="bi bi-chevron-down nav-dropdown-arrow"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-house"></i> Home 1 &ndash; Royal Landing</a></li>
+              <li><a class="dropdown-item" href="index-2.html"><i class="bi bi-stars"></i> Home 2 &ndash; Editorial Feast</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link nav-dashboard-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Right Side Action Controls -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- Theme Toggle -->
+          <button class="nav-action-btn theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="nav-action-btn rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+            <span class="small fw-bold">RTL</span>
+          </button>
+
+          <!-- Cart Button -->
+          <a href="cart.html" class="nav-action-btn d-none d-lg-inline-flex" title="Shopping Cart">
+            <i class="bi bi-bag"></i>
+            <span class="nav-badge-count cart-badge-count">0</span>
+          </a>
+
+          <!-- Auth Container (Login button / User Dropdown) -->
+          <div class="nav-auth-container">
+            <!-- Dynamically populated by auth.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       SECTION 1: ARTICLE HERO WITH AUTHOR, DATE & READING TIME (NO BG IMAGE)
+       ========================================================================= -->
+  <section class="page-hero" style="background: linear-gradient(135deg, var(--primary) 0%, #2B060A 100%);">
+    <div class="container text-center">
+      <span class="badge badge-gold mb-3">ROYAL CATERING</span>
+      <h1 class="display-3 font-heading fw-bold mx-auto mb-3" style="max-width: 900px;">How We Catered 2,000 Guests at Taj Falaknuma Palace</h1>
+      <div class="d-flex justify-content-center align-items-center gap-4 text-light flex-wrap small">
+        <span><i class="bi bi-person text-warning me-1"></i> Chef Tariq Siddiqui</span>
+        <span><i class="bi bi-calendar3 text-warning me-1"></i> 29 September 2026</span>
+        <span><i class="bi bi-clock text-warning me-1"></i> 6 Min Read</span>
+        <span><i class="bi bi-chat-dots text-warning me-1"></i> 22 Comments</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: ARTICLE INTRO & TABLE OF CONTENTS
+       ========================================================================= -->
+  <section class="py-5 bg-white border-bottom">
+    <div class="container" style="max-width: 960px;">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-7" data-aos="fade-right">
+          <p class="lead text-primary fw-medium mb-3">
+            Perched 2,000 feet above Hyderabad, Taj Falaknuma Palace - the 'Mirror of the Sky' - once hosted kings, tsars, and British viceroys. In November last year, Zaffran was commissioned to cater an international destination wedding for 2,000 dignitaries and royalty.
+          </p>
+          <p class="text-muted mb-0">
+            Preparing 2,000 plates of commercial rice in modern hotel steam kettles is straightforward. But preparing 2,000 portions of authentic, firewood-simmered, dough-sealed dum biryani without sacrificing a single degree of tradition is an operational miracle.
+          </p>
+        </div>
+
+        <div class="col-lg-5" data-aos="fade-left">
+          <div class="card border-0 shadow-sm p-4 rounded-4 bg-light">
+            <h6 class="font-heading text-primary mb-3"><i class="bi bi-list-nested text-secondary me-2"></i> Table of Contents</h6>
+            <ol class="small text-muted mb-0 ps-3">
+              <li class="mb-2"><a href="#trenches" class="text-dark">The 30-Meter Charcoal Trenches</a></li>
+              <li class="mb-2"><a href="#coppers" class="text-dark">The 22 Sealed Copper Degs</a></li>
+              <li class="mb-2"><a href="#synchrony" class="text-dark">Synchronized Unsealing Ceremony</a></li>
+              <li class="mb-2"><a href="#verdict" class="text-dark">The Royal Guest Verdict</a></li>
+              
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: MAIN EDITORIAL CONTENT & ASSET ILLUSTRATION
+       ========================================================================= -->
+  <section class="py-5 bg-warm">
+    <div class="container" style="max-width: 860px;">
+      <article data-aos="fade-up">
+        <h3 class="font-heading text-primary mb-3" id="trenches">1. The 30-Meter Charcoal Trenches</h3>
+        <p class="text-muted">
+          Palace heritage protocols strictly forbade modern gas burners on the palace gardens. Our engineering team constructed custom insulated steel trenches lined with firebricks on the lower terrace, fueled entirely by cured babool charcoal.
+        </p>
+        <p class="text-muted">
+          Temperature probes monitored the heat beneath each quadrant of the trench. To achieve the delicate balance of dum pukht, 28 culinary assistants rotated hot coals onto the lids of 22 colossal 80kg copper degs simultaneously.
+        </p>
+
+        <!-- High-res asset illustration directly inside article content -->
+        <div class="my-4 text-center">
+          <img src="assets/images/taj-falaknuma-catering.png" alt="How We Catered 2,000 Guests at Taj Falaknuma Palace" class="img-fluid rounded-4 shadow-lg w-100" style="max-height: 480px; object-fit: cover;">
+          <small class="text-muted text-center d-block mt-2 fst-italic">How We Catered 2,000 Guests at Taj Falaknuma Palace</small>
+        </div>
+
+        <h3 class="font-heading text-primary mb-3 mt-5" id="coppers">2. The 22 Sealed Copper Degs</h3>
+        <p class="text-muted">
+          Each copper deg contained 35kg of tender baby mutton, 30kg of two-year aged Himalayan basmati, 8kg of pure desi ghee, and 45g of pure Pampore saffron. That represents over 750kg of meat and 660kg of aged rice in continuous harmony.
+        </p>
+        <p class="text-muted">
+          The rim of each deg was hermetically sealed with 6kg of fresh whole-wheat atta dough. For four hours, the terraces of Falaknuma filled with the sweet, intoxicating scent of slow-rendering marrow and saffron steam.
+        </p>
+
+        <div class="p-4 bg-white rounded-4 border my-4 border-warning">
+          <div class="d-flex align-items-center gap-3">
+            <i class="bi bi-lightbulb-fill fs-2 text-warning"></i>
+            <div>
+              <h6 class="mb-1 fw-bold text-primary">Chef Tariq's Banquet Rule</h6>
+              <p class="small text-muted mb-0">"When catering for thousands, never cut the dough seal in the kitchen and transfer the rice into chafing dishes. Bring the blazing hot handis directly to the buffet tables and unseal them in front of the guests."</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: CHEF'S TECHNIQUE & INGREDIENT BREAKDOWN
+       ========================================================================= -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container" style="max-width: 860px;">
+      <article data-aos="fade-up">
+        <h3 class="font-heading text-primary mb-3" id="synchrony">3. The Synchronized Unsealing Ceremony</h3>
+        <p class="text-muted">
+          At precisely 9:00 PM, as the royal shehnai signaled the opening of the banquet, 22 ustads raised ceremonial brass knives and sliced the dough rims in unison. A unified cloud of steam rose into the night sky, drawing applause from guests who rushed to the counters.
+        </p>
+
+        <div class="row g-3 my-4">
+          <div class="col-sm-6">
+            <div class="p-3 bg-light rounded-3 border">
+              <h6 class="text-primary font-heading mb-1"><i class="bi bi-gem text-secondary me-1"></i> 22 Copper Degs</h6>
+              <p class="small text-muted mb-0">Specially hammered 80kg capacity brass degs crafted by Old City tinsmiths.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 bg-light rounded-3 border">
+              <h6 class="text-primary font-heading mb-1"><i class="bi bi-basket text-secondary me-1"></i> 750kg Heritage Mutton</h6>
+              <p class="small text-muted mb-0">Pre-marinated in cold-pressed mustard oil, raw papaya, and royal potli masala.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 bg-light rounded-3 border">
+              <h6 class="text-primary font-heading mb-1"><i class="bi bi-people text-secondary me-1"></i> 120 Kitchen Crew</h6>
+              <p class="small text-muted mb-0">Dedicated team of ustads, coal tenders, and silver-service servers.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 bg-light rounded-3 border">
+              <h6 class="text-primary font-heading mb-1"><i class="bi bi-check-circle text-secondary me-1"></i> 0g Compromise</h6>
+              <p class="small text-muted mb-0">Every grain fluffy, separate, and basted in golden bone marrow essence.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <h3 class="font-heading text-primary mb-3 mt-5" id="verdict">4. The Royal Guest Verdict</h3>
+        <p class="text-muted mb-4">
+          By midnight, every single deg had been cleaned to the shining bottom copper. Critics and diplomats from six continents proclaimed it the finest biryani they had ever experienced - proof that true royal craftsmanship scales to any height when tradition is never compromised.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: AUTHOR BIO & SOCIAL SHARING
+       ========================================================================= -->
+  <section class="py-5 bg-warm">
+    <div class="container" style="max-width: 860px;" data-aos="fade-up">
+      <div class="card border-0 shadow-sm p-4 p-md-5 rounded-4 bg-white mb-4">
+        <div class="d-flex flex-column flex-sm-row align-items-center gap-4 text-center text-sm-start">
+          <img src="assets/images/Tariq Siddiqui.jpg" alt="Chef Tariq Siddiqui" class="rounded-circle" style="width: 80px; height: 80px; object-fit: cover; border: 3px solid var(--secondary);">
+          <div>
+            <span class="badge bg-light text-secondary mb-1">WRITTEN BY</span>
+            <h5 class="font-heading text-primary mb-1">Chef Tariq Siddiqui</h5>
+            <p class="small text-muted mb-2">Executive Sous Chef & Banquet Director</p>
+            <p class="small text-muted mb-0">Specialist in large-scale royal banqueting, ceremonial dum unsealing rituals, and palace kitchen operations.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <div class="d-flex align-items-center gap-2">
+          <span class="fw-bold text-primary small">Share Article:</span>
+          <a href="#" data-article-share="copy" class="btn btn-sm btn-outline-royal"><i class="bi bi-link-45deg"></i> Copy Link</a>
+          <a href="#" data-article-share="facebook" class="btn btn-sm btn-outline-royal"><i class="bi bi-facebook"></i> Facebook</a>
+          <a href="#" data-article-share="x" class="btn btn-sm btn-outline-royal"><i class="bi bi-twitter-x"></i> X / Twitter</a>
+          <a href="#" data-article-share="whatsapp" class="btn btn-sm btn-outline-royal"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: RELATED ARTICLES GRID
+       ========================================================================= -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Continue Reading</span>
+        <h2 class="section-title">Related Stories from the Royal Archive</h2>
+        <div class="ornament-divider"><i class="bi bi-journal-bookmark"></i></div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="blog-card">
+            <div class="blog-thumb">
+              <img src="assets/images/sacred-geometry-dum-cooking.png" alt="The Sacred Geometry of Dum Cooking">
+            </div>
+            <div class="blog-body">
+              <span class="small text-muted mb-1 d-block"><i class="bi bi-calendar3"></i> 28 Oct 2026</span>
+              <h5 class="blog-title font-heading text-primary">The Sacred Geometry of Dum Cooking</h5>
+              <p class="small text-muted mb-3">Why dough-sealing trapping volatile vapors transforms everyday rice.</p>
+              <div class="mt-auto">
+                <a href="blog-details.html" class="text-secondary fw-bold small">Read Story <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="blog-card">
+            <div class="blog-thumb">
+              <img src="assets/images/biryani-quantity-guide.png" alt="The Host's Guide: Calculating Biryani Quantities for 50+ Guests">
+            </div>
+            <div class="blog-body">
+              <span class="small text-muted mb-1 d-block"><i class="bi bi-calendar3"></i> 11 Oct 2026</span>
+              <h5 class="blog-title font-heading text-primary">The Host's Guide: Calculating Biryani Quantities for 50+ Guests</h5>
+              <p class="small text-muted mb-3">How to accurately plan meat portions, vegetarian ratios, and accompaniments.</p>
+              <div class="mt-auto">
+                <a href="blog-details-4.html" class="text-secondary fw-bold small">Read Story <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="blog-card">
+            <div class="blog-thumb">
+              <img src="assets/images/kache-gosht-vs-pakki.png" alt="Kache Gosht vs Pakki Biryani: Understanding The Difference">
+            </div>
+            <div class="blog-body">
+              <span class="small text-muted mb-1 d-block"><i class="bi bi-calendar3"></i> 19 Sep 2026</span>
+              <h5 class="blog-title font-heading text-primary">Kache Gosht vs Pakki Biryani: Understanding The Difference</h5>
+              <p class="small text-muted mb-3">Decoding the two great schools of Indian biryani making.</p>
+              <div class="mt-auto">
+                <a href="blog-details-7.html" class="text-secondary fw-bold small">Read Story <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 7: NEWSLETTER SUBSCRIPTION & ROYAL TABLE CTA
+       ========================================================================= -->
+  <section class="py-5" style="background: linear-gradient(135deg, var(--primary) 0%, #3B0A0E 100%);">
+    <div class="container py-3 text-white text-center" data-aos="zoom-in">
+      <h2 class="display-5 font-heading text-white fw-bold mb-2">Craving Authentic Dum Biryani?</h2>
+      <p class="lead text-light mx-auto mb-4" style="max-width: 600px;">
+        Experience royal Awadhi-Hyderabadi flavors hand-crafted in sealed clay handis and delivered piping hot to your table or doorstep.
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="menu.html" class="btn btn-saffron btn-lg"><i class="bi bi-book-half me-1"></i> Order from Our Menu</a>
+        <a href="party-orders.html" class="btn btn-outline-light btn-lg"><i class="bi bi-boxes me-1"></i> Book a Party Deg</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-3 col-md-6">
+          <img src="assets/images/icons/logo-light.svg" alt="Zaffran Royal Biryani" class="mb-3 brand-logo-img" style="height: 50px;">
+          <p class="text-white-50 small mb-4">
+            Celebrating 40 years of culinary royalty. We hand-craft authentic Hyderabadi and Awadhi dum biryanis in firewood-sealed degs using hereditary Nawabi recipes.
+          </p>
+          <div class="social-links d-flex gap-2">
+            <a href="https://facebook.com" class="social-btn" title="Facebook" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" class="social-btn" title="Instagram" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+            <a href="https://x.com" class="social-btn" title="Twitter" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://youtube.com" class="social-btn" title="YouTube" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-widget-title">Services</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="my-orders.html">My Orders</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+            <li><a href="party-orders.html">Party Orders</a></li>
+            <li><a href="blog.html">Food Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-widget-title">Royal Updates</h5>
+          <p class="text-white-50 small mb-3">
+            Subscribe for secret seasonal recipes, festival discounts and VIP table invites.
+          </p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); Swal.fire('Subscribed!', 'Welcome to the Royal Table inner circle.', 'success'); this.reset();">
+            <div class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+              <button class="btn btn-saffron" type="submit">Join</button>
+            </div>
+          </form>
+          <div class="small text-white-50">
+            <i class="bi bi-telephone-inbound text-warning me-2"></i> Takeaway &amp; Reservation Hotline:
+            <strong class="text-white d-block mt-1">+91 40 2345 6789</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2026 Zaffran Royal Biryani &amp; Takeaway. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTopBtn" title="Back to Top"><i class="bi bi-chevron-up"></i></button>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/article-share.js"></script>
+</body>
+</html>

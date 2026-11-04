@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Food Menu | Zaffran Biryani House & Takeaway</title>
+  <meta name="description" content="Browse authentic royal biryanis, charcoal tandoori starters, slow-cooked accompaniments and Awadhi shahi desserts. Order online with express delivery.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/icons/logo.svg" alt="Zaffran Royal Biryani" class="brand-logo-img">
+      </a>
+
+            <!-- Mobile Right Controls (Theme, RTL, Cart & Hamburger) -->
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+          <span class="small fw-bold">RTL</span>
+        </button>
+        <a href="cart.html" class="nav-action-btn" title="Shopping Cart">
+          <i class="bi bi-bag"></i>
+          <span class="nav-badge-count cart-badge-count">0</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-inline-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+              <i class="bi bi-chevron-down nav-dropdown-arrow"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-house"></i> Home 1 – Royal Landing</a></li>
+              <li><a class="dropdown-item" href="index-2.html"><i class="bi bi-stars"></i> Home 2 – Editorial Feast</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link nav-dashboard-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Right Side Action Controls -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- Theme Toggle -->
+          <button class="nav-action-btn theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="nav-action-btn rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+            <span class="small fw-bold">RTL</span>
+          </button>
+
+          <!-- Cart Button -->
+          <a href="cart.html" class="nav-action-btn d-none d-lg-inline-flex" title="Shopping Cart">
+            <i class="bi bi-bag"></i>
+            <span class="nav-badge-count cart-badge-count">0</span>
+          </a>
+
+          <!-- Auth Container (Login button / User Dropdown) -->
+          <div class="nav-auth-container">
+            <!-- Dynamically populated by auth.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       SECTION 1: MENU HERO SECTION
+       ========================================================================= -->
+  <section class="page-hero" style="background-image: url('assets/images/hero/hero-menu.jpg');">
+    <div class="container text-center">
+      <span class="section-subtitle text-warning">Gastronomic Nawabi Repertoire</span>
+      <h1 class="display-3 font-heading fw-bold">The Royal Dining Menu</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Menu</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: FOOD CATEGORY NAVIGATION, SEARCH & FILTER CONTROLS
+       ========================================================================= -->
+  <section class="py-4 bg-white border-bottom sticky-top menu-filter-section" style="top: 72px; z-index: 1010; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <!-- Live Search -->
+        <div class="col-lg-4 col-md-6">
+          <div class="search-input-group m-0" style="max-width: 100%;">
+            <i class="bi bi-search"></i>
+            <input type="text" id="menuSearchInput" class="form-control" placeholder="Search biryanis, starters, desserts...">
+          </div>
+        </div>
+
+        <!-- Veg Only Switch -->
+        <div class="col-lg-3 col-md-6 text-md-center">
+          <div class="form-check form-switch d-inline-flex align-items-center gap-2">
+            <input class="form-check-input" type="checkbox" id="vegOnlyToggle" role="switch">
+            <label class="form-check-label fw-bold small text-success" for="vegOnlyToggle">
+              Pure Veg Only
+            </label>
+          </div>
+        </div>
+
+        <!-- Sort Select -->
+        <div class="col-lg-5 col-12 d-flex justify-content-lg-end justify-content-between align-items-center gap-2">
+          <label class="small text-muted fw-bold text-nowrap mb-0">Sort By:</label>
+          <select id="menuSortSelect" class="form-select form-select-sm" style="max-width: 220px;">
+            <option value="default" selected>Recommended</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="filter-tabs mt-3 mb-0">
+        <button class="filter-btn menu-filter-btn active" data-filter="all"><i class="bi bi-grid"></i> All Items</button>
+        <button class="filter-btn menu-filter-btn" data-filter="hyderabadi"><i class="bi bi-award"></i> Hyderabadi</button>
+        <button class="filter-btn menu-filter-btn" data-filter="chicken"><i class="bi bi-egg-fried"></i> Chicken</button>
+        <button class="filter-btn menu-filter-btn" data-filter="mutton"><i class="bi bi-gem"></i> Mutton</button>
+        <button class="filter-btn menu-filter-btn" data-filter="ambur"><i class="bi bi-geo"></i> Ambur</button>
+        <button class="filter-btn menu-filter-btn" data-filter="veg"><i class="bi bi-flower1"></i> Vegetarian</button>
+        <button class="filter-btn menu-filter-btn" data-filter="special"><i class="bi bi-stars"></i> Special Combos</button>
+        <button class="filter-btn menu-filter-btn" data-filter="starters"><i class="bi bi-fire"></i> Starters</button>
+        <button class="filter-btn menu-filter-btn" data-filter="sides"><i class="bi bi-cup"></i> Side Dishes</button>
+        <button class="filter-btn menu-filter-btn" data-filter="desserts"><i class="bi bi-cake2"></i> Desserts</button>
+        <button class="filter-btn menu-filter-btn" data-filter="beverages"><i class="bi bi-cup-straw"></i> Beverages</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: POPULAR BIRYANI COLLECTION & MAIN MENU GRID
+       ========================================================================= -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Freshly Sealed</span>
+        <h2 class="section-title">Our Master Menu Showcase</h2>
+        <div class="ornament-divider">
+          <i class="bi bi-fire"></i>
+        </div>
+      </div>
+
+      <!-- Dynamically filled with complete MenuData by filters.js / menu.js -->
+      <div class="row g-4" id="menuItemsContainer">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: SPECIAL COMBOS & FAMILY PACKS
+       ========================================================================= -->
+  <section class="py-5 bg-warm">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Family &amp; Group Feasts</span>
+        <h2 class="section-title">Special Combos &amp; Large Platters</h2>
+        <div class="ornament-divider">
+          <i class="bi bi-people"></i>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Combo 1 -->
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden bg-white h-100">
+            <div class="row g-0 h-100">
+              <div class="col-md-5">
+                <img src="assets/images/Royal Feast Family Platter Biryani.jpg" alt="Family Platter" class="h-100 w-100" style="object-fit: cover; min-height: 220px;">
+              </div>
+              <div class="col-md-7 p-4 d-flex flex-column justify-content-between">
+                <div>
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="badge badge-gold">Serves 4 - 5</span>
+                    <span class="fw-bold fs-5 text-primary">₹999</span>
+                  </div>
+                  <h5 class="font-heading mb-2">Royal Family Feast Platter</h5>
+                  <p class="small text-muted mb-3">1 Chicken Dum Biryani + 1 Mutton Dum Biryani + 4 Boiled Eggs + 4 Pcs Chicken Tikka + Salan &amp; Raita + 2 Shahi Tukda.</p>
+                </div>
+                <button class="btn btn-royal btn-sm" onclick="Cart.add('dish-10')">
+                  <i class="bi bi-cart-plus me-1"></i> Add Platter to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo 2 -->
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden bg-white h-100">
+            <div class="row g-0 h-100">
+              <div class="col-md-5">
+                <img src="assets/images/Nizami Chicken 65 Biryani.jpg" alt="Couple Combo" class="h-100 w-100" style="object-fit: cover; min-height: 220px;">
+              </div>
+              <div class="col-md-7 p-4 d-flex flex-column justify-content-between">
+                <div>
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="badge badge-maroon">Serves 2</span>
+                    <span class="fw-bold fs-5 text-primary">₹599</span>
+                  </div>
+                  <h5 class="font-heading mb-2">Nizam Couple Combo</h5>
+                  <p class="small text-muted mb-3">1 Hyderabadi Chicken Biryani + 1 Nizami Chicken 65 Starter + 2 Alphonso Mango Lassis + Mirchi Ka Salan &amp; Raita.</p>
+                </div>
+                <button class="btn btn-royal btn-sm" onclick="Cart.add('dish-2'); Cart.add('dish-21', 2);">
+                  <i class="bi bi-cart-plus me-1"></i> Add Couple Combo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: DIETARY & CHEF CUSTOMIZATION NOTES
+       ========================================================================= -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8" data-aos="fade-right">
+          <span class="section-subtitle">Culinary Assurance</span>
+          <h3 class="font-heading text-primary mb-2">Spice Levels &amp; Allergen Transparency</h3>
+          <p class="text-muted mb-3">
+            Every dish is made with pure cow ghee and 100% Halal certified meats. We do not use any artificial flavor enhancers (MSG) or chemical colorants. If you prefer low chili or nut-free preparation for your children or guests, simply mention it in your checkout instructions.
+          </p>
+          <div class="d-flex gap-3 flex-wrap">
+            <span class="badge bg-light text-dark p-2 border"><i class="bi bi-shield-check text-success me-1"></i> 100% Halal Certified</span>
+            <span class="badge bg-light text-dark p-2 border"><i class="bi bi-shield-check text-success me-1"></i> Pure Desi Cow Ghee</span>
+            <span class="badge bg-light text-dark p-2 border"><i class="bi bi-shield-check text-success me-1"></i> Zero Food Colors</span>
+          </div>
+        </div>
+        <div class="col-lg-4 text-lg-end" data-aos="fade-left">
+          <a href="party-orders.html" class="btn btn-outline-gold btn-lg">
+            <i class="bi bi-calculator me-1"></i> Bulk Party Estimator
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 7: ORDER CTA
+       ========================================================================= -->
+  <section class="py-5" style="background: linear-gradient(135deg, var(--primary) 0%, #3B0A0E 100%);">
+    <div class="container text-center py-3 text-white" data-aos="zoom-in">
+      <h2 class="font-heading text-white mb-2">Have a Dish in Mind?</h2>
+      <p class="text-light mb-4">View your selected items and complete your takeaway order with express doorstep dispatch.</p>
+      <a href="cart.html" class="btn btn-saffron btn-lg px-4">
+        <i class="bi bi-bag-check-fill me-1"></i> Proceed to Shopping Cart
+      </a>
+    </div>
+  </section>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <img src="assets/images/icons/logo-light.svg" alt="Zaffran Royal Biryani" class="mb-3 brand-logo-img" style="height: 50px;">
+          <p class="small text-muted mb-4">Celebrating 40 years of culinary royalty. We hand-craft authentic Hyderabadi and Awadhi dum biryanis in firewood-sealed degs using hereditary Nawabi recipes.</p>
+          <div class="social-links">
+            <a href="https://facebook.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+            <a href="https://x.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Col 3: Services -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-widget-title">Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-details.html?service=dining">Restaurant Dining</a></li>
+            <li><a href="service-details.html?service=takeaway">Biryani Takeaway</a></li>
+            <li><a href="service-details.html?service=delivery">Doorstep Delivery</a></li>
+            <li><a href="party-orders.html">Party &amp; Bulk Orders</a></li>
+            <li><a href="service-details.html?service=wedding">Wedding Catering</a></li>
+            <li><a href="service-details.html?service=corporate">Corporate Feasts</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-widget-title">Royal Updates</h5>
+          <p class="small text-muted mb-3">Subscribe for secret seasonal recipes, festival discounts and VIP table invites.</p>
+          <form class="newsletter-form mb-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+              <button class="btn btn-saffron" type="submit">Join</button>
+            </div>
+          </form>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone"></i>
+            <div>
+              <span class="small text-muted d-block">Takeaway &amp; Reservation Hotline:</span>
+              <a href="tel:+914023456789" class="fw-bold text-white">+91 40 2345 6789</a>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2026 Zaffran Royal Biryani &amp; Takeaway. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" title="Back to Top"><i class="bi bi-chevron-up"></i></button>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/orders.js"></script>
+  <script src="assets/js/filters.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      Filters.initMenuFilters();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaffran Luxury Dining &amp; Biryani Lounge | Home 2</title>
+  <meta name="description" content="An editorial culinary journey into slow-cooked royal Awadhi and Hyderabadi biryanis. Reserve an intimate dining booth or order exquisite takeaway.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <!-- Core & Vendor CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+  <!-- Custom & Theme CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <style>
+    /* Editorial Home 2 Specific Enhancements */
+    .hero-editorial {
+      position: relative;
+      min-height: 95vh;
+      display: flex;
+      align-items: center;
+      background: url('assets/images/hero/hero-biryani-2.jpg') center/cover no-repeat;
+      color: #FFF8EF;
+    }
+    .hero-editorial::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(23, 19, 17, 0.75) 0%, rgba(23, 19, 17, 0.95) 100%);
+    }
+    .editorial-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 18px;
+      border: 1px solid var(--secondary);
+      border-radius: 50px;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      color: var(--secondary);
+      background-color: rgba(23, 19, 17, 0.6);
+      margin-bottom: 1.5rem;
+    }
+    .editorial-step-card {
+      background: var(--surface);
+      border-left: 4px solid var(--secondary);
+      padding: 1.5rem;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .editorial-step-card:hover {
+      transform: translateX(8px);
+      box-shadow: var(--shadow-md);
+    }
+    .gallery-grid-img {
+      height: 280px;
+      object-fit: cover;
+      width: 100%;
+      border-radius: var(--radius-md);
+      transition: transform 0.5s ease;
+    }
+    .gallery-grid-img:hover {
+      transform: scale(1.04);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/icons/logo.svg" alt="Zaffran Royal Biryani" class="brand-logo-img">
+      </a>
+
+            <!-- Mobile Right Controls (Theme, RTL, Cart & Hamburger) -->
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+          <span class="small fw-bold">RTL</span>
+        </button>
+        <a href="cart.html" class="nav-action-btn" title="Shopping Cart">
+          <i class="bi bi-bag"></i>
+          <span class="nav-badge-count cart-badge-count">0</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active d-inline-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+              <i class="bi bi-chevron-down nav-dropdown-arrow"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-house"></i> Home 1 – Royal Landing</a></li>
+              <li><a class="dropdown-item active" href="index-2.html"><i class="bi bi-stars"></i> Home 2 – Editorial Feast</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <!-- Dashboard immediately follows Contact -->
+          <li class="nav-item">
+            <a class="nav-link nav-dashboard-link" href="dashboard.html">Dashboard</a>
+          </li>
+        </ul>
+        <!-- Right Side Action Controls -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- Theme Toggle -->
+          <button class="nav-action-btn theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="nav-action-btn rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+            <span class="small fw-bold">RTL</span>
+          </button>
+
+          <!-- Cart Button -->
+          <a href="cart.html" class="nav-action-btn d-none d-lg-inline-flex" title="Shopping Cart">
+            <i class="bi bi-bag"></i>
+            <span class="nav-badge-count cart-badge-count">0</span>
+          </a>
+
+          <!-- Auth Container (Login button / User Dropdown) -->
+          <div class="nav-auth-container">
+            <!-- Dynamically populated by auth.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       SECTION 1: FULL-SCREEN EDITORIAL FOOD HERO
+       ========================================================================= -->
+  <section class="hero-editorial">
+    <div class="container position-relative z-2 text-center py-5">
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <span class="editorial-badge">THE ROYAL NAWABI CULINARY ARCHIVE</span>
+        <h1 class="display-2 font-heading text-white fw-bold mb-3" style="max-width: 900px; margin: 0 auto; line-height: 1.15;">
+          The Nizam's Royal Secret, <span class="text-gold">Rediscovered</span>.
+        </h1>
+        <p class="fs-5 text-light mx-auto mb-5" style="max-width: 650px; line-height: 1.7;">
+          An uncompromising devotion to age-old dum techniques. Slow-cooked over charcoal embers in sealed earthen pots, perfumed with Persian saffron and cold-pressed pure ghee.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="menu.html" class="btn btn-saffron btn-lg px-4">
+            <i class="bi bi-fire me-1"></i> Discover Tasting Menu
+          </a>
+          <a href="contact.html" class="btn btn-outline-light btn-lg px-4">
+            <i class="bi bi-bookmark-star me-1"></i> Reserve Dining Booth
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: RESTAURANT SPECIALITY & CHEF'S SIGNATURE DISHES
+       ========================================================================= -->
+  <section class="py-5 bg-white border-bottom">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5" data-aos="fade-right">
+          <span class="section-subtitle">Chef's Signature Reserve</span>
+          <h2 class="section-title">The Art of the Royal Deg</h2>
+          <div class="ornament-divider text-start justify-content-start">
+            <i class="bi bi-trophy"></i>
+          </div>
+          <p class="lead text-primary fw-medium">
+            "We do not rush the fire. Fire is a patient servant that extracts soul from bone, marrow and spice."
+          </p>
+          <p class="text-muted">
+            Curated by Master Ustad Altaf Qureshi, our signature reserve represents four generations of Awadhi culinary philosophy. Every morning, spices are roasted whole on heavy iron tawas and stone-ground by hand.
+          </p>
+          <div class="p-3 bg-light rounded-3 border mb-4">
+            <div class="d-flex align-items-center gap-3">
+              <img src="assets/images/chefs/chef-1.jpg" alt="Ustad Altaf Qureshi" class="rounded-circle" style="width: 60px; height: 60px; object-fit: cover; border: 2px solid var(--secondary);">
+              <div>
+                <h6 class="mb-0 fw-bold font-heading">Ustad Altaf Qureshi</h6>
+                <small class="text-secondary fw-semibold">Head Culinary Master &amp; Deg Conservator</small>
+              </div>
+            </div>
+          </div>
+          <a href="about.html" class="btn btn-royal">
+            <i class="bi bi-person-lines-fill me-1"></i> Meet Our Master Chefs
+          </a>
+        </div>
+
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="row g-4">
+            <!-- Signature Item 1 -->
+            <div class="col-sm-6">
+              <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                <img src="assets/images/Kache Gosht Ki Mutton Dum Biryani.jpg" alt="Kache Gosht Biryani" style="height: 190px; object-fit: cover;">
+                <div class="card-body p-3">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="badge-gold">Chef's Masterpiece</span>
+                    <span class="fw-bold text-primary fs-5">₹469</span>
+                  </div>
+                  <h6 class="font-heading mb-1">Kache Gosht Ki Mutton Dum</h6>
+                  <p class="small text-muted mb-3">Tender young goat cuts steeped in saffron yogurt and cooked raw with basmati.</p>
+                  <button class="btn btn-sm btn-outline-royal w-100" onclick="Cart.add('dish-4')">
+                    <i class="bi bi-cart-plus"></i> Add to Order
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Signature Item 2 -->
+            <div class="col-sm-6">
+              <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                <img src="assets/images/desserts/shahi-tukda.jpg" alt="Shahi Tukda" style="height: 190px; object-fit: cover;">
+                <div class="card-body p-3">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="badge-gold">Royal Dessert</span>
+                    <span class="fw-bold text-primary fs-5">₹179</span>
+                  </div>
+                  <h6 class="font-heading mb-1">Awadhi Shahi Tukda with Rabri</h6>
+                  <p class="small text-muted mb-3">Crisp brioche drenched in saffron syrup and layered with slow-reduced milk cream.</p>
+                  <button class="btn btn-sm btn-outline-royal w-100" onclick="Cart.add('dish-18')">
+                    <i class="bi bi-cart-plus"></i> Add to Order
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: INTERACTIVE BIRYANI MENU SHOWCASE
+       ========================================================================= -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Curated Offerings</span>
+        <h2 class="section-title">The Royal Biryani Deg Showcase</h2>
+        <div class="ornament-divider">
+          <i class="bi bi-stars"></i>
+        </div>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          Choose your desired flavor profile. Each pot is accompanied by authentic Mirchi Ka Salan and whipped Burani Raita.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Showcase Item 1 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/Royal Hyderabadi Chicken Dum Biryani.jpg" alt="Hyderabadi Dum Biryani">
+              <button class="food-card-fav-btn fav-btn-dish-1" onclick="Menu.toggleFavourite('dish-1')">
+                <i class="bi bi-heart"></i>
+              </button>
+              <div class="food-card-badge">
+                <span class="badge-gold">Bestseller</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <span class="food-rating"><i class="bi bi-star-fill text-warning"></i> 4.9 (320)</span>
+              </div>
+              <h5 class="food-card-title">Hyderabadi Chicken Dum Biryani</h5>
+              <p class="food-card-desc">The crown jewel of Hyderabad. Fragrant long-grain rice layered with spiced marinated chicken and fried brown shallots.</p>
+              <div class="food-card-footer">
+                <div class="food-price">₹349 <span class="original-price">₹399</span></div>
+                <button class="btn btn-add-cart" onclick="Cart.add('dish-1')">
+                  <i class="bi bi-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Showcase Item 2 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/Awadhi Lucknowi Chicken Dum Biryani.jpg" alt="Lucknowi Biryani">
+              <button class="food-card-fav-btn fav-btn-dish-3" onclick="Menu.toggleFavourite('dish-3')">
+                <i class="bi bi-heart"></i>
+              </button>
+              <div class="food-card-badge">
+                <span class="badge-maroon">Awadhi Style</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <span class="food-rating"><i class="bi bi-star-fill text-warning"></i> 4.7 (140)</span>
+              </div>
+              <h5 class="food-card-title">Awadhi Lucknowi Chicken Dum</h5>
+              <p class="food-card-desc">Subtle, fragrant chicken stewed in aromatic yakhni stock, milk, kewra essence, and floral sweet mace.</p>
+              <div class="food-card-footer">
+                <div class="food-price">₹359 <span class="original-price">₹410</span></div>
+                <button class="btn btn-add-cart" onclick="Cart.add('dish-3')">
+                  <i class="bi bi-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Showcase Item 3 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/Kashmiri Saffron & Dry Fruit Biryani.jpg" alt="Kashmiri Saffron Biryani">
+              <button class="food-card-fav-btn fav-btn-dish-9" onclick="Menu.toggleFavourite('dish-9')">
+                <i class="bi bi-heart"></i>
+              </button>
+              <div class="food-card-badge">
+                <span class="badge-gold">Vegetarian</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <span class="food-rating"><i class="bi bi-star-fill text-warning"></i> 4.9 (185)</span>
+              </div>
+              <h5 class="food-card-title">Kashmiri Saffron &amp; Dry Fruit Biryani</h5>
+              <p class="food-card-desc">Infused with real Pampore saffron, toasted almonds, cashews, golden sultanas, pomegranate arils and paneer.</p>
+              <div class="food-card-footer">
+                <div class="food-price">₹329 <span class="original-price">₹389</span></div>
+                <button class="btn btn-add-cart" onclick="Cart.add('dish-9')">
+                  <i class="bi bi-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: TRADITIONAL COOKING STORY & FOOD PREPARATION
+       ========================================================================= -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Our 4-Stage Sacred Ritual</span>
+        <h2 class="section-title">The Four Pillars of Authentic Dum Cooking</h2>
+        <div class="ornament-divider">
+          <i class="bi bi-fire"></i>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="editorial-step-card h-100">
+            <span class="badge badge-gold mb-2">Stage 01</span>
+            <h5 class="font-heading text-primary">Marination &amp; Yakhni</h5>
+            <p class="small text-muted mb-0">Meats are soaked in hung curd, ginger garlic paste, and crushed green chillies for 12 hours to break down collagen naturally.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="editorial-step-card h-100">
+            <span class="badge badge-gold mb-2">Stage 02</span>
+            <h5 class="font-heading text-primary">Precision Rice Par-Boil</h5>
+            <p class="small text-muted mb-0">2-year aged basmati is boiled in rolling aromatic water with cinnamon bark, cloves and green cardamom to precisely 70% tenderness.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="editorial-step-card h-100">
+            <span class="badge badge-gold mb-2">Stage 03</span>
+            <h5 class="font-heading text-primary">Dough Seal (Pukht)</h5>
+            <p class="small text-muted mb-0">The heavy brass deg lid is hermetically sealed with fresh whole-wheat dough to trap every trace of steam and vapor inside the pot.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="editorial-step-card h-100">
+            <span class="badge badge-gold mb-2">Stage 04</span>
+            <h5 class="font-heading text-primary">Gentle Charcoal Embers</h5>
+            <p class="small text-muted mb-0">Slow-simmered over wood embers from below and glowing coals from above, creating a radiant convection heat chamber.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: BEST-SELLING DISHES (PRODUCT CARDS)
+       ========================================================================= -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Patron Favorites</span>
+        <h2 class="section-title">Most Loved Delicacies This Month</h2>
+        <div class="ornament-divider">
+          <i class="bi bi-heart"></i>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Bestseller 1: Tandoori Murgh -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/starters/tandoori-chicken.jpg" alt="Tandoori Murgh">
+              <button class="food-card-fav-btn fav-btn-dish-13" onclick="Menu.toggleFavourite('dish-13')">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <span class="food-rating"><i class="bi bi-star-fill text-warning"></i> 4.9 (280)</span>
+              </div>
+              <h5 class="food-card-title">Bhatti Da Murgh Tandoori (Full)</h5>
+              <p class="food-card-desc">Whole chicken marinated in Kashmiri chili and mustard oil, roasted to charred perfection in clay bhatti.</p>
+              <div class="food-card-footer">
+                <div class="food-price">₹399 <span class="original-price">₹449</span></div>
+                <button class="btn btn-add-cart" onclick="Cart.add('dish-13')">
+                  <i class="bi bi-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bestseller 2: Seekh Kebab -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/starters/seekh-kebab.jpg" alt="Galouti Seekh Kebab">
+              <button class="food-card-fav-btn fav-btn-dish-15" onclick="Menu.toggleFavourite('dish-15')">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <span class="food-rating"><i class="bi bi-star-fill text-warning"></i> 4.9 (210)</span>
+              </div>
+              <h5 class="food-card-title">Galouti Mutton Seekh Kebab</h5>
+              <p class="food-card-desc">Finely minced lamb infused with 16 secret pot spices, smoked with clove butter on iron skewers.</p>
+              <div class="food-card-footer">
+                <div class="food-price">₹369 <span class="original-price">₹419</span></div>
+                <button class="btn btn-add-cart" onclick="Cart.add('dish-15')">
+                  <i class="bi bi-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bestseller 3: Kesar Mango Lassi -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="food-card">
+            <div class="food-card-thumb">
+              <img src="assets/images/desserts/mango-lassi.jpg" alt="Alphonso Mango Lassi">
+              <button class="food-card-fav-btn fav-btn-dish-21" onclick="Menu.toggleFavourite('dish-21')">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <span class="food-rating"><i class="bi bi-star-fill text-warning"></i> 4.9 (390)</span>
+              </div>
+              <h5 class="food-card-title">Royal Alphonso Kesar Lassi</h5>
+              <p class="food-card-desc">Thick whipped sweet yogurt blended with pure Ratnagiri mango pulp, saffron strands, and almond slivers.</p>
+              <div class="food-card-footer">
+                <div class="food-price">₹119 <span class="original-price">₹139</span></div>
+                <button class="btn btn-add-cart" onclick="Cart.add('dish-21')">
+                  <i class="bi bi-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: RESTAURANT ATMOSPHERE & PHOTOGRAPHY GALLERY
+       ========================================================================= -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Visual Splendour</span>
+        <h2 class="section-title">The Royal Dining Atmosphere</h2>
+        <div class="ornament-divider">
+          <i class="bi bi-camera"></i>
+        </div>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          Warm ambient chandeliers, carved rosewood screens, and the irresistible scent of freshly unsealed handis.
+        </p>
+      </div>
+
+      <div class="row g-3" data-aos="fade-up">
+        <div class="col-md-4 col-sm-6">
+          <img src="assets/images/restaurant/interior-1.jpg" alt="Royal Dining Hall" class="gallery-grid-img shadow-sm">
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <img src="assets/images/restaurant/interior-2.jpg" alt="Private Booth" class="gallery-grid-img shadow-sm">
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <img src="assets/images/restaurant/spices-display.jpg" alt="Spices Selection" class="gallery-grid-img shadow-sm">
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <img src="assets/images/restaurant/kitchen-dum.jpg" alt="Clay Pot Preparation" class="gallery-grid-img shadow-sm">
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <img src="assets/images/catering/wedding-catering.jpg" alt="Live Event Counter" class="gallery-grid-img shadow-sm">
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <img src="assets/images/restaurant/exterior.jpg" alt="Facade at Dusk" class="gallery-grid-img shadow-sm">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 7: CUSTOMER REVIEWS & TABLE RESERVATION / ORDER CTA
+       ========================================================================= -->
+  <section class="py-5 bg-warm">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="section-subtitle">Reserve Your Table</span>
+          <h2 class="section-title">Experience Royal Dining Tonight</h2>
+          <div class="ornament-divider text-start justify-content-start">
+            <i class="bi bi-calendar-event"></i>
+          </div>
+          <p class="text-muted mb-4">
+            Whether an anniversary celebration, family reunion, or executive business lunch, our private dining alcoves offer an unforgettable experience of Nizam hospitality.
+          </p>
+
+          <div class="card border-0 shadow-sm p-4 rounded-4 bg-white mb-4">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <i class="bi bi-quote fs-1 text-secondary"></i>
+              <div class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <p class="fst-italic text-dark mb-2">
+              "The finest ambience in Hyderabad. You feel like an honored guest at a 19th-century royal banquet. The aroma when the waiter breaks the dough seal at your table is mesmerizing."
+            </p>
+            <span class="fw-bold text-primary font-heading">— Nawabzada Mir Tariq Ali</span>
+          </div>
+
+          <div class="d-flex gap-3">
+            <a href="menu.html" class="btn btn-royal">
+              <i class="bi bi-bag"></i> Order Takeaway Online
+            </a>
+            <a href="tel:+914023456789" class="btn btn-outline-royal">
+              <i class="bi bi-telephone"></i> Call for Reservation
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="card border-0 shadow-md rounded-4 p-4 p-md-5 bg-white border border-warning border-opacity-25">
+            <h4 class="font-heading text-primary mb-3">Online Table Inquiry</h4>
+            <p class="small text-muted mb-4">Leave your details and our maître d' will confirm your table seating within 15 minutes.</p>
+            
+            <form id="contactForm" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" id="contactName" class="form-control" placeholder="Your name" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" id="contactPhone" class="form-control" placeholder="10-digit mobile" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" id="contactEmail" class="form-control" placeholder="name@email.com" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Date &amp; Time</label>
+                  <input type="text" id="contactSubject" class="form-control" placeholder="Today 8:00 PM" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Special Requests (Seating, Guests count)</label>
+                  <textarea id="contactMessage" class="form-control" rows="3" placeholder="e.g. 4 guests, quiet booth, anniversary setup" required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-saffron w-100 py-2">
+                    <i class="bi bi-check2-circle me-1"></i> Send Table Reservation Request
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <img src="assets/images/icons/logo-light.svg" alt="Zaffran Royal Biryani" class="mb-3 brand-logo-img" style="height: 50px;">
+          <p class="small text-muted mb-4">
+            Celebrating 40 years of culinary royalty. We hand-craft authentic Hyderabadi and Awadhi dum biryanis in firewood-sealed degs using hereditary Nawabi recipes.
+          </p>
+          <div class="social-links">
+            <a href="https://facebook.com" class="social-btn" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" class="social-btn" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://twitter.com" class="social-btn" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://youtube.com" class="social-btn" title="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Col 3: Services -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-widget-title">Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-details.html?service=dining">Restaurant Dining</a></li>
+            <li><a href="service-details.html?service=takeaway">Biryani Takeaway</a></li>
+            <li><a href="service-details.html?service=delivery">Doorstep Delivery</a></li>
+            <li><a href="party-orders.html">Party &amp; Bulk Orders</a></li>
+            <li><a href="service-details.html?service=wedding">Wedding Catering</a></li>
+            <li><a href="service-details.html?service=corporate">Corporate Feasts</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-widget-title">Royal Updates</h5>
+          <p class="small text-muted mb-3">Subscribe for secret seasonal recipes, festival discounts and VIP table invites.</p>
+          <form class="newsletter-form mb-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+              <button class="btn btn-saffron" type="submit">Join</button>
+            </div>
+          </form>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone"></i>
+            <div>
+              <span class="small text-muted d-block">Takeaway &amp; Reservation Hotline:</span>
+              <a href="tel:+914023456789" class="fw-bold text-white">+91 40 2345 6789</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+            <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2026 Zaffran Royal Biryani &amp; Takeaway. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" title="Back to Top"><i class="bi bi-chevron-up"></i></button>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/orders.js"></script>
+  <script src="assets/js/filters.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

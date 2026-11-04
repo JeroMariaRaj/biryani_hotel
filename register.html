@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create an Account | Zaffran Royal Biryani</title>
+  <meta name="description" content="Register for a Zaffran customer account to track orders, save favourite dishes, and earn royal rewards.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="bg-warm d-flex flex-column min-vh-100 position-relative">
+
+  <!-- Top Right Theme & RTL Controls (Desktop & Mobile) -->
+  <div class="position-absolute top-0 end-0 p-3 p-md-4 d-flex align-items-center gap-2 z-3">
+    <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+      <i class="bi bi-moon-stars-fill"></i>
+    </button>
+    <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+      <span class="small fw-bold">RTL</span>
+    </button>
+  </div>
+
+  <!-- Registration Form Card -->
+  <main class="flex-grow-1 d-flex flex-column justify-content-center py-5">
+    <div class="container" style="max-width: 580px;">
+      <div class="card auth-card border-0 rounded-4 overflow-hidden">
+        <div class="p-4 p-md-5">
+
+          <!-- Brand Logo & Title INSIDE Container -->
+          <div class="text-center mb-4">
+            <a href="index.html" class="d-inline-block mb-3" title="Zaffran Royal Biryani">
+              <img src="assets/images/icons/logo.svg" alt="Zaffran Royal Biryani" class="brand-logo-img" style="height: 48px;">
+            </a>
+            <div>
+              <span class="badge badge-gold mb-2">ROYAL GUEST REGISTRATION</span>
+            </div>
+            <h2 class="font-heading text-primary fw-bold mb-1">Create Your Account</h2>
+            <p class="small text-muted mb-0">Join the Zaffran culinary family to manage live orders and saved feasts.</p>
+          </div>
+
+          <form id="registrationForm" novalidate>
+            <!-- Full Name -->
+            <div class="mb-3">
+              <label for="regName" class="form-label">Full Name <span class="text-danger">*</span></label>
+              <div class="input-group">
+                <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
+                <input type="text" class="form-control" id="regName" placeholder="e.g. Aslam Khan" required>
+              </div>
+            </div>
+
+            <!-- Email Address -->
+            <div class="mb-3">
+              <label for="regEmail" class="form-label">Email Address <span class="text-danger">*</span></label>
+              <div class="input-group">
+                <span class="input-group-text bg-light"><i class="bi bi-envelope"></i></span>
+                <input type="email" class="form-control" id="regEmail" placeholder="name@example.com" required>
+              </div>
+            </div>
+
+            <!-- Mobile Number -->
+            <div class="mb-3">
+              <label for="regPhone" class="form-label">Mobile Number <span class="text-danger">*</span></label>
+              <div class="input-group">
+                <span class="input-group-text bg-light">+91</span>
+                <input type="tel" class="form-control" id="regPhone" placeholder="10-digit mobile number" required>
+              </div>
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3">
+              <label for="regPassword" class="form-label">Create Password <span class="text-danger">*</span></label>
+              <div class="input-group">
+                <span class="input-group-text bg-light"><i class="bi bi-lock"></i></span>
+                <input type="password" class="form-control" id="regPassword" placeholder="Minimum 6 characters" required>
+              </div>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="mb-3">
+              <label for="regConfirmPassword" class="form-label">Confirm Password <span class="text-danger">*</span></label>
+              <div class="input-group">
+                <span class="input-group-text bg-light"><i class="bi bi-lock-fill"></i></span>
+                <input type="password" class="form-control" id="regConfirmPassword" placeholder="Re-type password" required>
+              </div>
+            </div>
+
+            <!-- Terms & Conditions Checkbox -->
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" id="regTerms" required>
+              <label class="form-check-label small text-muted" for="regTerms">
+                I agree to the <a href="contact.html" class="text-primary">Terms &amp; Conditions</a> and understand that this is a simulated demo store.
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-royal w-100 py-3 fs-6 rounded-3 fw-bold">
+              <i class="bi bi-person-check-fill me-1"></i> Register Account
+            </button>
+          </form>
+
+          <div class="text-center mt-4 pt-3 border-top">
+            <p class="small text-muted mb-0">
+              Already have an account? 
+              <a href="login.html" class="text-primary fw-bold text-decoration-none">Sign In Here</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Theme & RTL Buttons (Under container in centre) -->
+      <div class="d-flex d-md-none justify-content-center align-items-center gap-3 mt-4">
+        <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+          <span class="small fw-bold">RTL</span>
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/auth.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('registrationForm');
+      if (!form) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('regName');
+        const email = document.getElementById('regEmail');
+        const phone = document.getElementById('regPhone');
+        const pass = document.getElementById('regPassword');
+        const confirmPass = document.getElementById('regConfirmPassword');
+        const terms = document.getElementById('regTerms');
+
+        if (!name.value.trim()) {
+          Validation.toast('Please enter your full name.', 'error');
+          name.focus();
+          return;
+        }
+
+        if (!Validation.validateEmail(email.value)) {
+          Validation.toast('Please enter a valid email address.', 'error');
+          email.focus();
+          return;
+        }
+
+        if (!Validation.validatePhone(phone.value)) {
+          Validation.toast('Please enter a valid 10-digit mobile number.', 'error');
+          phone.focus();
+          return;
+        }
+
+        if (pass.value.length < 6) {
+          Validation.toast('Password must be at least 6 characters.', 'error');
+          pass.focus();
+          return;
+        }
+
+        if (pass.value !== confirmPass.value) {
+          Validation.toast('Passwords do not match.', 'error');
+          confirmPass.focus();
+          return;
+        }
+
+        if (!terms.checked) {
+          Validation.toast('You must agree to the Terms & Conditions.', 'warning');
+          return;
+        }
+
+        const newUser = {
+          id: 'USR-' + Date.now().toString().slice(-4),
+          name: name.value.trim(),
+          email: email.value.trim().toLowerCase(),
+          phone: phone.value.trim(),
+          password: pass.value,
+          registeredAt: new Date().toISOString(),
+          avatar: 'assets/images/chefs/chef-1.jpg',
+          memberSince: 'Nov 2026'
+        };
+
+        const existingUsers = Auth.getUsers();
+        if (existingUsers.some(u => u.email === newUser.email)) {
+          Validation.toast('An account with this email already exists.', 'error');
+          return;
+        }
+
+        Auth.registerUser(newUser);
+
+        Swal.fire({
+          title: 'Registration Successful!',
+          text: 'Welcome to Zaffran Royal Biryani! Please sign in with your credentials.',
+          icon: 'success',
+          confirmButtonColor: '#741C24',
+          confirmButtonText: 'Proceed to Login'
+        }).then(function () {
+          window.location.href = 'login.html';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

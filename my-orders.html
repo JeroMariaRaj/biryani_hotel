@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders | Customer Dashboard</title>
+  <meta name="description" content="View your active and past biryani orders, status updates, and order summaries.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Modern Dashboard Top Navigation -->
+  <header class="dashboard-topbar py-2 py-md-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2 gap-sm-3">
+        <!-- Mobile Sidebar Toggle -->
+        <button class="btn btn-sm btn-outline-royal d-md-none d-flex align-items-center gap-1.5 rounded-pill px-2.5 py-1.5" type="button" data-bs-toggle="offcanvas" data-bs-target="#dashboardSidebar" aria-controls="dashboardSidebar" title="Open Dashboard Menu">
+          <i class="bi bi-list fs-4"></i>
+          <span class="small fw-bold">Menu</span>
+        </button>
+
+        <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+          <img src="assets/images/icons/logo.svg" alt="Zaffran Royal Biryani" class="brand-logo-img" style="height: 42px;">
+        </a>
+        <span class="badge bg-light text-primary border border-primary-subtle d-none d-sm-inline-flex align-items-center gap-1 px-2.5 py-1.5 rounded-pill font-heading">
+          <i class="bi bi-shield-check text-warning"></i> Customer Portal
+        </span>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+
+        <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL / LTR" aria-label="Toggle RTL Mode">
+          <span class="small fw-bold">RTL</span>
+        </button>
+
+        <div class="dropdown">
+          <button class="btn btn-sm p-1 rounded-circle border dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="assets/images/chefs/chef-1.jpg" alt="User Avatar" class="rounded-circle dash-header-avatar" style="width: 32px; height: 32px; object-fit: cover;">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow border-0 rounded-3">
+            <li><h6 class="dropdown-header font-heading dash-user-name">Jero Khan</h6></li>
+            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>My Profile</a></li>
+            <li><a class="dropdown-item" href="my-orders.html"><i class="bi bi-bag-check me-2"></i>My Orders</a></li>
+            <li><a class="dropdown-item" href="addresses.html"><i class="bi bi-geo me-2"></i>Saved Addresses</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="javascript:void(0)" onclick="Auth.logout()"><i class="bi bi-box-arrow-right me-2"></i>Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Dashboard Main Layout -->
+  <main class="dashboard-layout">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Sidebar Column -->
+        <div class="col-lg-3 col-md-4">
+          <div class="offcanvas-md offcanvas-start dashboard-sidebar" id="dashboardSidebar" tabindex="-1" aria-labelledby="dashboardSidebarLabel">
+            <!-- Dynamically populated by dashboard.js -->
+          </div>
+        </div>
+
+        <!-- Main Content Column -->
+        <div class="col-lg-9 col-md-8">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h3 class="font-heading text-primary mb-1">My Orders</h3>
+              <p class="small text-muted mb-0">Track and manage all your royal biryani takeaway &amp; catering orders.</p>
+            </div>
+            <a href="menu.html" class="btn btn-royal btn-sm">
+              <i class="bi bi-cart-plus me-1"></i> Order New Feast
+            </a>
+          </div>
+
+          <!-- Orders Container -->
+          <div id="myOrdersListContainer">
+            <!-- Rendered by orders.js / inline script -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Order Details / Invoice Modal -->
+  <div class="modal fade" id="orderDetailsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-heading" id="modalOrderTitle">Order Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modalOrderBody">
+          <!-- Populated dynamically -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-royal btn-sm" onclick="window.print()"><i class="bi bi-printer me-1"></i> Print Receipt</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/orders.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+
+  <script>
+    function renderMyOrdersPage() {
+      const container = document.getElementById('myOrdersListContainer');
+      if (!container) return;
+
+      const orders = Orders.getOrders();
+
+      if (orders.length === 0) {
+        container.innerHTML = `
+          <div class="card border-0 shadow-sm rounded-4 p-5 text-center bg-white">
+            <i class="bi bi-bag-x display-4 text-muted mb-3 d-block"></i>
+            <h4 class="font-heading text-primary">No Orders Found</h4>
+            <p class="text-muted mb-4">You haven't ordered any delicious biryani yet.</p>
+            <a href="menu.html" class="btn btn-royal">Explore Menu</a>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = orders.map(order => {
+        const isCompleted = order.currentStep === 6;
+        return `
+          <div class="card border-0 shadow-sm rounded-4 mb-4 bg-white overflow-hidden">
+            <div class="card-header bg-light py-3 px-4 d-flex justify-content-between align-items-center flex-wrap gap-2 border-bottom">
+              <div>
+                <span class="small text-muted d-block">ORDER REFERENCE:</span>
+                <span class="fs-5 fw-bold text-primary font-heading">${order.orderId}</span>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <span class="badge ${isCompleted ? 'bg-success' : 'bg-warning text-dark'} py-2 px-3 fs-6">
+                  ${order.status}
+                </span>
+                <span class="small text-muted">${order.date}</span>
+              </div>
+            </div>
+
+            <div class="card-body p-4">
+              <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                  <h6 class="small text-muted text-uppercase letter-spacing-1 mb-2">Ordered Delicacies:</h6>
+                  <ul class="list-unstyled mb-3">
+                    ${order.items.map(i => `
+                      <li class="d-flex align-items-center gap-2 mb-1">
+                        <strong class="text-dark">${i.name}</strong>
+                        <span class="text-muted small">× ${i.quantity}</span>
+                        <span class="ms-auto fw-semibold">₹${i.price * i.quantity}</span>
+                      </li>
+                    `).join('')}
+                  </ul>
+                  <p class="small text-muted mb-0"><i class="bi bi-geo-alt text-secondary"></i> Destination: ${order.customer.address}</p>
+                </div>
+
+                <div class="col-lg-5 text-lg-end border-start-lg pt-3 pt-lg-0">
+                  <div class="mb-3">
+                    <span class="small text-muted d-block">Total Paid via ${order.payment.method}:</span>
+                    <span class="fs-3 fw-bold text-primary font-heading">₹${order.totals.grandTotal}</span>
+                  </div>
+
+                  <div class="d-flex justify-content-lg-end gap-2 flex-wrap">
+                    <button class="btn btn-sm btn-outline-royal" onclick="viewOrderModal('${order.orderId}')">
+                      <i class="bi bi-receipt"></i> Details / Invoice
+                    </button>
+                    ${!isCompleted ? `
+                      <a href="track-order.html?orderId=${order.orderId}" class="btn btn-sm btn-saffron">
+                        <i class="bi bi-geo-alt"></i> Live Tracking
+                      </a>
+                    ` : `
+                      <button class="btn btn-sm btn-royal" onclick="Orders.reorder('${order.orderId}')">
+                        <i class="bi bi-arrow-repeat"></i> Reorder This Feast
+                      </button>
+                    `}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function viewOrderModal(orderId) {
+      const order = Orders.getOrderById(orderId);
+      if (!order) return;
+
+      document.getElementById('modalOrderTitle').textContent = `Invoice #${order.orderId}`;
+      document.getElementById('modalOrderBody').innerHTML = `
+        <div class="p-2">
+          <div class="d-flex justify-content-between mb-3 border-bottom pb-2">
+            <div>
+              <strong class="text-primary font-heading fs-5">Zaffran Royal Biryani</strong><br>
+              <small class="text-muted">Road No. 36, Jubilee Hills, Hyderabad</small>
+            </div>
+            <div class="text-end">
+              <span class="badge bg-light text-dark border">Date: ${order.date}</span><br>
+              <small class="text-muted">${order.payment.method}</small>
+            </div>
+          </div>
+
+          <h6 class="font-heading text-primary mb-2">Customer Details:</h6>
+          <p class="small text-muted mb-3">
+            <strong>${order.customer.name}</strong> | ${order.customer.phone}<br>
+            ${order.customer.address}
+          </p>
+
+          <h6 class="font-heading text-primary mb-2">Items:</h6>
+          <div class="list-group list-group-flush mb-3 border-bottom">
+            ${order.items.map(i => `
+              <div class="list-group-item d-flex justify-content-between px-0 py-2 small">
+                <span>${i.name} (×${i.quantity})</span>
+                <span class="fw-bold">₹${i.price * i.quantity}</span>
+              </div>
+            `).join('')}
+          </div>
+
+          <div class="d-flex justify-content-between mb-1 small text-muted">
+            <span>Subtotal:</span>
+            <span>₹${order.totals.subtotal}</span>
+          </div>
+          <div class="d-flex justify-content-between mb-1 small text-muted">
+            <span>Delivery Fee:</span>
+            <span>${order.totals.deliveryFee === 0 ? 'FREE' : '₹' + order.totals.deliveryFee}</span>
+          </div>
+          ${order.totals.discount > 0 ? `
+            <div class="d-flex justify-content-between mb-1 small text-success">
+              <span>Promo Discount:</span>
+              <span>- ₹${order.totals.discount}</span>
+            </div>
+          ` : ''}
+          <div class="d-flex justify-content-between border-top pt-2 fw-bold fs-5 text-primary">
+            <span>Grand Total:</span>
+            <span>₹${order.totals.grandTotal}</span>
+          </div>
+        </div>
+      `;
+
+      const modal = new bootstrap.Modal(document.getElementById('orderDetailsModal'));
+      modal.show();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderMyOrdersPage();
+    });
+  </script>
+</body>
+</html>

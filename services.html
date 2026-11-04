@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Restaurant Services | Zaffran Royal Biryani</title>
+  <meta name="description" content="Discover royal dining, fast takeaway, home delivery, party orders, wedding catering and corporate food services by Zaffran.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/icons/logo.svg" alt="Zaffran Royal Biryani" class="brand-logo-img">
+      </a>
+
+            <!-- Mobile Right Controls (Theme, RTL, Cart & Hamburger) -->
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+          <span class="small fw-bold">RTL</span>
+        </button>
+        <a href="cart.html" class="nav-action-btn" title="Shopping Cart">
+          <i class="bi bi-bag"></i>
+          <span class="nav-badge-count cart-badge-count">0</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-inline-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Home</span>
+              <i class="bi bi-chevron-down nav-dropdown-arrow"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-house"></i> Home 1 – Royal Landing</a></li>
+              <li><a class="dropdown-item" href="index-2.html"><i class="bi bi-stars"></i> Home 2 – Editorial Feast</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link nav-dashboard-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <!-- Right Side Action Controls -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- Theme Toggle -->
+          <button class="nav-action-btn theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="nav-action-btn rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL" aria-label="Toggle RTL">
+            <span class="small fw-bold">RTL</span>
+          </button>
+
+          <!-- Cart Button -->
+          <a href="cart.html" class="nav-action-btn d-none d-lg-inline-flex" title="Shopping Cart">
+            <i class="bi bi-bag"></i>
+            <span class="nav-badge-count cart-badge-count">0</span>
+          </a>
+
+          <!-- Auth Container (Login button / User Dropdown) -->
+          <div class="nav-auth-container">
+            <!-- Dynamically populated by auth.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       SECTION 1: SERVICES HERO
+       ========================================================================= -->
+  <section class="page-hero" style="background-image: url('assets/images/hero/hero-services.jpg');">
+    <div class="container text-center">
+      <span class="section-subtitle text-warning">Royal Hospitality For Every Occasion</span>
+      <h1 class="display-3 font-heading fw-bold">Our Restaurant Services</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Services</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: DINING & TAKEAWAY CORE SERVICES
+       ========================================================================= -->
+  <section class="py-5 bg-white border-bottom">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Everyday Excellence</span>
+        <h2 class="section-title">Fine Dining &amp; Express Takeaway</h2>
+        <div class="ornament-divider"><i class="bi bi-cup-hot"></i></div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Service 1: Restaurant Dining -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card">
+            <div class="service-thumb">
+              <img src="assets/images/restaurant/interior-1.jpg" alt="Restaurant Dining">
+            </div>
+            <div class="service-body">
+              <span class="badge badge-gold align-self-start mb-2">Hospitality Experience</span>
+              <h4 class="service-title font-heading text-primary">01. Restaurant Fine Dining</h4>
+              <p class="text-muted">
+                Step into an opulent, heritage-inspired dining hall featuring carved rosewood partitions, soft amber lighting, and the regal ceremonial unsealing of clay pots right at your table.
+              </p>
+              <ul class="service-features">
+                <li><i class="bi bi-check-circle-fill"></i> Private family booths and intimate couple seating</li>
+                <li><i class="bi bi-check-circle-fill"></i> Table-side dough-breaking ritual with live aroma release</li>
+                <li><i class="bi bi-check-circle-fill"></i> Full beverage bar with kesar lassis and royal sherbets</li>
+              </ul>
+              <div class="mt-auto pt-3 border-top">
+                <a href="service-details.html?service=dining" class="btn btn-outline-royal btn-sm">
+                  View Dining Details <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2: Biryani Takeaway -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card">
+            <div class="service-thumb">
+              <img src="assets/images/Authentic Biryani Takeaway.jpg" alt="Biryani Takeaway">
+            </div>
+            <div class="service-body">
+              <span class="badge badge-maroon align-self-start mb-2">Fast &amp; Fresh</span>
+              <h4 class="service-title font-heading text-primary">02. Authentic Biryani Takeaway</h4>
+              <p class="text-muted">
+                Pick up steaming biryani straight from the kitchen counter within 15 minutes of ordering. Packed in genuine earthenware handis with foil seals to lock in the saffron heat.
+              </p>
+              <ul class="service-features">
+                <li><i class="bi bi-check-circle-fill"></i> Dedicated express takeaway counter with zero wait time</li>
+                <li><i class="bi bi-check-circle-fill"></i> Reusable earthen clay pots with salan and raita included</li>
+                <li><i class="bi bi-check-circle-fill"></i> Pre-order online via customer dashboard for instant pickup</li>
+              </ul>
+              <div class="mt-auto pt-3 border-top">
+                <a href="service-details.html?service=takeaway" class="btn btn-outline-royal btn-sm">
+                  View Takeaway Details <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: HOME DELIVERY & EXPRESS LOGISTICS
+       ========================================================================= -->
+  <section class="py-5 bg-warm">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <img src="assets/images/Express Home Delivery.png" alt="Express Delivery" class="img-fluid rounded-4 shadow-lg w-100" style="max-height: 440px; object-fit: cover;">
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <span class="section-subtitle">Doorstep Luxury</span>
+          <h2 class="section-title">03. Express Home Delivery</h2>
+          <div class="ornament-divider text-start justify-content-start"><i class="bi bi-scooter"></i></div>
+          <p class="lead text-primary fw-medium">
+            We deliver steaming-hot handis across the city in our proprietary thermal-insulated rider carriers.
+          </p>
+          <p class="text-muted">
+            Each delivery order is sealed immediately upon leaving the embers. Live GPS tracking through your customer dashboard ensures you know the exact minute your feast reaches your dining table.
+          </p>
+          <ul class="service-features my-3">
+            <li><i class="bi bi-check-circle-fill"></i> 35-minute average delivery guarantee in Hyderabad</li>
+            <li><i class="bi bi-check-circle-fill"></i> Contactless delivery and digital live tracking timeline</li>
+            <li><i class="bi bi-check-circle-fill"></i> Free delivery on orders over ₹799</li>
+          </ul>
+          <div class="d-flex gap-3">
+            <a href="service-details.html?service=delivery" class="btn btn-royal">
+              View Delivery Details
+            </a>
+            <a href="menu.html" class="btn btn-saffron">
+              Order Online Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: PARTY ORDERS & BULK CATERING
+       ========================================================================= -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Celebrations at Scale</span>
+        <h2 class="section-title">04. Royal Party &amp; Bulk Orders</h2>
+        <div class="ornament-divider"><i class="bi bi-cake2"></i></div>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          For home birthdays, family reunions, and anniversaries. Whole 5kg, 10kg, and 15kg handi degs cooked specifically for your guest list.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center bg-light d-flex flex-column">
+            <div>
+              <div class="stat-icon mx-auto mb-3"><i class="bi bi-balloon-heart-fill"></i></div>
+              <h5 class="font-heading text-primary">Birthday Bashes (15-30 Pax)</h5>
+              <p class="small text-muted mb-3">Single 10kg deg with choice of chicken or mutton, chicken 65 starter, mirchi ka salan, and gulab jamun.</p>
+            </div>
+            <div class="mt-auto pt-3">
+              <span class="fw-bold text-secondary fs-5 d-block mb-3">From &#8377;4,500</span>
+              <a href="party-orders.html" class="btn btn-sm btn-outline-royal w-100">Plan Party Pack</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center bg-light d-flex flex-column">
+            <div>
+              <div class="stat-icon mx-auto mb-3"><i class="bi bi-houses-fill"></i></div>
+              <h5 class="font-heading text-primary">Housewarming &amp; Milad (30-60 Pax)</h5>
+              <p class="small text-muted mb-3">Twin degs delivered hot on charcoal warmers. Full accompaniment buffet with seekh kebabs and shahi phirni.</p>
+            </div>
+            <div class="mt-auto pt-3">
+              <span class="fw-bold text-secondary fs-5 d-block mb-3">From &#8377;8,900</span>
+              <a href="party-orders.html" class="btn btn-sm btn-outline-royal w-100">Plan Party Pack</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center bg-light d-flex flex-column">
+            <div>
+              <div class="stat-icon mx-auto mb-3"><i class="bi bi-trophy-fill"></i></div>
+              <h5 class="font-heading text-primary">Custom Deg Sizing</h5>
+              <p class="small text-muted mb-3">Have specific dietary proportions? Mix chicken, mutton, and vegetarian handis with customized spice intensity.</p>
+            </div>
+            <div class="mt-auto pt-3">
+              <span class="fw-bold text-secondary fs-5 d-block mb-3">Tailored Quote</span>
+              <a href="service-details.html?service=party" class="btn btn-sm btn-royal w-100">Explore Custom Degs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: WEDDING CATERING
+       ========================================================================= -->
+  <section class="py-5 bg-warm">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+          <img src="assets/images/Grand Wedding Catering.jpg" alt="Grand Wedding Catering" class="img-fluid rounded-4 shadow-lg w-100" style="max-height: 440px; object-fit: cover;">
+        </div>
+        <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+          <span class="section-subtitle">Royal Matrimony Feasts</span>
+          <h2 class="section-title">05. Grand Wedding Catering</h2>
+          <div class="ornament-divider text-start justify-content-start"><i class="bi bi-gem"></i></div>
+          <p class="lead text-primary fw-medium">
+            Over 1,400 memorable wedding feasts catered across South India and destination palaces.
+          </p>
+          <p class="text-muted">
+            We bring the theater of live wood-fired deg cooking to your wedding venue. Our master ustads set up traditional copper deg stalls where your guests witness the aromatic breaking of the dough seal live.
+          </p>
+          <ul class="service-features my-3">
+            <li><i class="bi bi-check-circle-fill"></i> Capacity for 100 to 2,500+ guests</li>
+            <li><i class="bi bi-check-circle-fill"></i> Live clay tandoor and kebab carving stations</li>
+            <li><i class="bi bi-check-circle-fill"></i> Royal brass chafing warmers and uniformed banquet servers</li>
+          </ul>
+          <a href="service-details.html?service=wedding" class="btn btn-royal">
+            View Wedding Packages &amp; Menu
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: CORPORATE ORDERS & FAMILY COMBOS
+       ========================================================================= -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Business &amp; Everyday Dining</span>
+        <h2 class="section-title">Corporate Feasts &amp; Family Combos</h2>
+        <div class="ornament-divider"><i class="bi bi-briefcase"></i></div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Service 6: Corporate Food Orders -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-light">
+            <span class="badge badge-gold align-self-start mb-2">Corporate Service</span>
+            <h4 class="font-heading text-primary mb-2">06. Corporate Food Orders &amp; Executive Lunches</h4>
+            <p class="text-muted">
+              Impress visiting clients, celebrate quarterly milestones, or treat your engineering teams with hot individual handi boxes or buffet spreads delivered to your tech park office.
+            </p>
+            <ul class="service-features mb-4">
+              <li><i class="bi bi-check-circle-fill"></i> Individual sanitized meal boxes with salan, raita, and dessert</li>
+              <li><i class="bi bi-check-circle-fill"></i> Monthly corporate invoicing and priority express scheduling</li>
+              <li><i class="bi bi-check-circle-fill"></i> Dedicated account manager for bulk corporate events</li>
+            </ul>
+            <div class="mt-auto">
+              <a href="service-details.html?service=corporate" class="btn btn-outline-royal btn-sm">
+                Corporate Plans <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 7: Family Combos -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-light">
+            <span class="badge badge-maroon align-self-start mb-2">Value &amp; Abundance</span>
+            <h4 class="font-heading text-primary mb-2">07. Family &amp; Group Feast Combos</h4>
+            <p class="text-muted">
+              Weekend family dinners made effortless. Our master combos package signature biryanis with charcoal kebabs, refreshing beverages, and shahi sweets at up to 25% savings.
+            </p>
+            <ul class="service-features mb-4">
+              <li><i class="bi bi-check-circle-fill"></i> Royal Platter serving 4 to 5 guests with chicken and mutton</li>
+              <li><i class="bi bi-check-circle-fill"></i> Nizam Couple Combo for intimate celebrations</li>
+              <li><i class="bi bi-check-circle-fill"></i> Ready in 20 minutes for takeaway or rapid home delivery</li>
+            </ul>
+            <div class="mt-auto">
+              <a href="service-details.html?service=family" class="btn btn-outline-royal btn-sm">
+                Family Combo Details <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 7: CONSULTATION & BOOKING CTA
+       ========================================================================= -->
+  <section class="py-5" style="background: linear-gradient(135deg, var(--primary) 0%, #3B0A0E 100%);">
+    <div class="container text-center py-4 text-white" data-aos="zoom-in">
+      <span class="badge badge-gold mb-2">DEDICATED SERVICE MANAGERS</span>
+      <h2 class="display-5 font-heading text-white fw-bold mb-3">Need Custom Catering For Your Event?</h2>
+      <p class="lead text-light mx-auto mb-4" style="max-width: 600px;">
+        Speak directly with our senior catering director for personalized tastings, menu curations, and live deg demonstrations.
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="party-orders.html" class="btn btn-saffron btn-lg px-4">
+          <i class="bi bi-calculator me-1"></i> Plan Party Order
+        </a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg px-4">
+          <i class="bi bi-envelope me-1"></i> Send Direct Enquiry
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <img src="assets/images/icons/logo-light.svg" alt="Zaffran Royal Biryani" class="mb-3 brand-logo-img" style="height: 50px;">
+          <p class="small text-muted mb-4">Celebrating 40 years of culinary royalty. We hand-craft authentic Hyderabadi and Awadhi dum biryanis in firewood-sealed degs using hereditary Nawabi recipes.</p>
+          <div class="social-links">
+            <a href="https://facebook.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+            <a href="https://x.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://youtube.com" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Col 3: Services -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-widget-title">Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-details.html?service=dining">Restaurant Dining</a></li>
+            <li><a href="service-details.html?service=takeaway">Biryani Takeaway</a></li>
+            <li><a href="service-details.html?service=delivery">Doorstep Delivery</a></li>
+            <li><a href="party-orders.html">Party &amp; Bulk Orders</a></li>
+            <li><a href="service-details.html?service=wedding">Wedding Catering</a></li>
+            <li><a href="service-details.html?service=corporate">Corporate Feasts</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-widget-title">Royal Updates</h5>
+          <p class="small text-muted mb-3">Subscribe for secret seasonal recipes, festival discounts and VIP table invites.</p>
+          <form class="newsletter-form mb-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+              <button class="btn btn-saffron" type="submit">Join</button>
+            </div>
+          </form>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone"></i>
+            <div>
+              <span class="small text-muted d-block">Takeaway &amp; Reservation Hotline:</span>
+              <a href="tel:+914023456789" class="fw-bold text-white">+91 40 2345 6789</a>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2026 Zaffran Royal Biryani &amp; Takeaway. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" title="Back to Top"><i class="bi bi-chevron-up"></i></button>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/orders.js"></script>
+  <script src="assets/js/filters.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

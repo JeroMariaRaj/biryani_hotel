@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Order Tracking | Customer Dashboard</title>
+  <meta name="description" content="Track your royal dum biryani order in real-time from dough sealing and kitchen embers to delivery dispatch.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Modern Dashboard Top Navigation -->
+  <header class="dashboard-topbar py-2 py-md-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2 gap-sm-3">
+        <!-- Mobile Sidebar Toggle -->
+        <button class="btn btn-sm btn-outline-royal d-md-none d-flex align-items-center gap-1.5 rounded-pill px-2.5 py-1.5" type="button" data-bs-toggle="offcanvas" data-bs-target="#dashboardSidebar" aria-controls="dashboardSidebar" title="Open Dashboard Menu">
+          <i class="bi bi-list fs-4"></i>
+          <span class="small fw-bold">Menu</span>
+        </button>
+
+        <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+          <img src="assets/images/icons/logo.svg" alt="Zaffran Royal Biryani" class="brand-logo-img" style="height: 42px;">
+        </a>
+        <span class="badge bg-light text-primary border border-primary-subtle d-none d-sm-inline-flex align-items-center gap-1 px-2.5 py-1.5 rounded-pill font-heading">
+          <i class="bi bi-shield-check text-warning"></i> Customer Portal
+        </span>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+
+        <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL / LTR" aria-label="Toggle RTL Mode">
+          <span class="small fw-bold">RTL</span>
+        </button>
+
+        <div class="dropdown">
+          <button class="btn btn-sm p-1 rounded-circle border dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="assets/images/chefs/chef-1.jpg" alt="User Avatar" class="rounded-circle dash-header-avatar" style="width: 32px; height: 32px; object-fit: cover;">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow border-0 rounded-3">
+            <li><h6 class="dropdown-header font-heading dash-user-name">Jero Khan</h6></li>
+            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>My Profile</a></li>
+            <li><a class="dropdown-item" href="my-orders.html"><i class="bi bi-bag-check me-2"></i>My Orders</a></li>
+            <li><a class="dropdown-item" href="addresses.html"><i class="bi bi-geo me-2"></i>Saved Addresses</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="javascript:void(0)" onclick="Auth.logout()"><i class="bi bi-box-arrow-right me-2"></i>Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Dashboard Main Layout -->
+  <main class="dashboard-layout">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Sidebar Column -->
+        <div class="col-lg-3 col-md-4">
+          <div class="offcanvas-md offcanvas-start dashboard-sidebar" id="dashboardSidebar" tabindex="-1" aria-labelledby="dashboardSidebarLabel">
+            <!-- Dynamically populated by dashboard.js -->
+          </div>
+        </div>
+
+        <!-- Main Content Column -->
+        <div class="col-lg-9 col-md-8">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h3 class="font-heading text-primary mb-1">Live Order Tracking</h3>
+              <p class="small text-muted mb-0">Watch your sealed clay handi move through our slow-cooking stages.</p>
+            </div>
+            
+            <!-- Order Selector Dropdown -->
+            <div class="d-flex align-items-center gap-2">
+              <label for="selectOrderToTrack" class="small text-muted fw-bold text-nowrap mb-0">Select Order:</label>
+              <select id="selectOrderToTrack" class="form-select form-select-sm" style="min-width: 170px;">
+                <!-- Populated dynamically -->
+              </select>
+            </div>
+          </div>
+
+          <!-- Dynamic Tracking Container -->
+          <div id="trackingContainer">
+            <!-- Rendered by orders.js -->
+          </div>
+
+          <!-- Support & Rider Contact Card -->
+          <div class="card border-0 shadow-sm rounded-4 p-4 bg-white mt-4">
+            <div class="row align-items-center g-3">
+              <div class="col-md-8">
+                <h5 class="font-heading text-primary mb-1">Assigned Delivery Rider</h5>
+                <p class="small text-muted mb-2">Trained in thermal handi handling to ensure zero spill and 100% steam retention.</p>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="assets/images/chefs/chef-2.jpg" alt="Rider" class="rounded-circle" style="width: 48px; height: 48px; object-fit: cover; border: 2px solid var(--secondary);">
+                  <div>
+                    <h6 class="mb-0 fw-bold">Mohammed Riaz (Rider ID #409)</h6>
+                    <small class="text-success"><i class="bi bi-shield-check"></i> Vaccinated &amp; Verified Royal Courier</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 text-md-end">
+                <a href="tel:+914023456789" class="btn btn-outline-royal btn-sm me-2">
+                  <i class="bi bi-telephone"></i> Call Rider
+                </a>
+                <a href="contact.html" class="btn btn-secondary btn-sm">
+                  Help Desk
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/orders.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const orders = Orders.getOrders();
+      const selector = document.getElementById('selectOrderToTrack');
+      
+      const urlParams = new URLSearchParams(window.location.search);
+      let targetOrderId = urlParams.get('orderId');
+
+      if (selector && orders.length > 0) {
+        selector.innerHTML = orders.map(o => `
+          <option value="${o.orderId}" ${o.orderId === targetOrderId ? 'selected' : ''}>
+            ${o.orderId} (${o.status})
+          </option>
+        `).join('');
+
+        if (!targetOrderId) {
+          targetOrderId = orders[0].orderId;
+        }
+
+        selector.addEventListener('change', (e) => {
+          Orders.renderLiveTracking(e.target.value);
+        });
+      }
+
+      Orders.renderLiveTracking(targetOrderId);
+    });
+  </script>
+</body>
+</html>

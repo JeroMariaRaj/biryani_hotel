@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opening Soon in Gachibowli | Zaffran Royal Biryani</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <style>
+    .coming-soon-bg {
+      background: linear-gradient(180deg, rgba(23, 19, 17, 0.85) 0%, rgba(23, 19, 17, 0.95) 100%),
+                  url('assets/images/hero/hero-biryani-2.jpg') center/cover no-repeat;
+      min-height: 100vh;
+    }
+    .countdown-box {
+      background: rgba(36, 30, 27, 0.85);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-md);
+      padding: 1.5rem 1rem;
+      min-width: 100px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+    .countdown-num {
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--secondary);
+      line-height: 1;
+    }
+    .countdown-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #C2B6AA;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body class="coming-soon-bg d-flex flex-column justify-content-between text-white p-3 p-md-5">
+
+  <header class="d-flex justify-content-between align-items-center mb-4">
+    <img src="assets/images/icons/logo-light.svg" alt="Zaffran Royal Biryani" class="brand-logo-img" style="height: 48px;">
+    <div class="d-flex align-items-center gap-2">
+      <a href="index.html" class="btn btn-outline-gold btn-sm"><i class="bi bi-house me-1"></i> Return Home</a>
+      <button class="nav-action-btn theme-toggle-btn" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
+      <button class="nav-action-btn rtl-toggle-btn" type="button" title="Toggle RTL / LTR" aria-label="Toggle RTL Mode">
+        <span class="small fw-bold">RTL</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="my-auto py-5 text-center">
+    <div class="container" style="max-width: 780px;">
+      <span class="badge badge-gold mb-3">GRAND OPENING ANNOUNCEMENT</span>
+      <h1 class="display-3 font-heading fw-bold mb-3">The Royal Deg Arrives in Gachibowli</h1>
+      <p class="lead text-light mb-5" style="line-height: 1.8;">
+        We are putting the finishing touches on our second royal flagship dining lounge and live takeaway kitchen. Opening our copper degs soon!
+      </p>
+
+      <!-- Countdown Timer -->
+      <div class="d-flex justify-content-center gap-3 gap-md-4 mb-5 flex-wrap">
+        <div class="countdown-box">
+          <div class="countdown-num" id="cdDays">14</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-num" id="cdHours">08</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-num" id="cdMinutes">42</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-num" id="cdSeconds">19</div>
+          <div class="countdown-label">Seconds</div>
+        </div>
+      </div>
+
+      <!-- Newsletter Form -->
+      <div class="card border-0 rounded-4 p-4 mx-auto bg-dark border border-warning" style="max-width: 540px;">
+        <h5 class="font-heading text-warning mb-2">Be the First on the Guest List</h5>
+        <p class="small text-light opacity-75 mb-3">Subscribe to receive an exclusive 25% launch dining invitation.</p>
+        <form id="csForm">
+          <div class="input-group">
+            <input type="email" id="csEmail" class="form-control" placeholder="Enter your email" required>
+            <button class="btn btn-saffron" type="submit">Notify Me</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center text-light opacity-75 small mt-4">
+    © 2026 Zaffran Royal Biryani &amp; Takeaway. Plot 108, Financial District, Gachibowli, Hyderabad.
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+  <script src="assets/js/validation.js"></script>
+
+  <script>
+    // Live Countdown
+    let target = new Date().getTime() + (14 * 24 * 60 * 60 * 1000) + (8 * 60 * 60 * 1000);
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = Math.max(0, target - now);
+
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cdDays').textContent = String(d).padStart(2, '0');
+      document.getElementById('cdHours').textContent = String(h).padStart(2, '0');
+      document.getElementById('cdMinutes').textContent = String(m).padStart(2, '0');
+      document.getElementById('cdSeconds').textContent = String(s).padStart(2, '0');
+    }, 1000);
+
+    document.getElementById('csForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('csEmail');
+      if (Validation.validateEmail(email.value)) {
+        Validation.alert('You are on the VIP List!', `We will notify ${email.value} 24 hours before our grand doors unseal.`, 'success');
+        email.value = '';
+      } else {
+        Validation.toast('Please enter a valid email address.', 'error');
+      }
+    });
+  </script>
+  <script src="assets/js/theme.js"></script>
+</body>
+</html>
