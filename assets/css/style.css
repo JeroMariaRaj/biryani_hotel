@@ -634,6 +634,29 @@ img {
   font-size: 1.4rem;
 }
 
+.hero-floating-badge h6 {
+  color: #FFF8EF;
+}
+
+.hero-floating-badge small {
+  color: #F0B246;
+}
+
+.about-values-list li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: start;
+}
+
+.about-values-list li > i {
+  flex: 0 0 1rem;
+  margin-top: 0.15em;
+}
+
+.about-values-list li > span {
+  min-width: 0;
+}
+
 /* Trust Bar */
 .trust-bar {
   background-color: var(--surface);
@@ -1904,6 +1927,30 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 14px;
+}
+
+.dash-recommendations .row > [class*="col-"] {
+  display: flex;
+}
+
+.dash-recommendations .dash-reorder-card {
+  width: 100%;
+  height: 100%;
+}
+
+.dash-reorder-info {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.dash-reorder-card > .d-flex {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.dash-reorder-card > .btn {
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
 
 .dash-reorder-card:hover {
