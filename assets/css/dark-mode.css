@@ -486,6 +486,44 @@
   color: #F7F1EB !important;
 }
 
+/* Footer */
+[data-bs-theme="dark"] .main-footer,
+[data-bs-theme="dark"] .footer-section {
+  background-color: #171311;
+  color: #DDD4CA;
+}
+
+[data-bs-theme="dark"] .main-footer p,
+[data-bs-theme="dark"] .main-footer span,
+[data-bs-theme="dark"] .main-footer .text-muted,
+[data-bs-theme="dark"] .main-footer .small,
+[data-bs-theme="dark"] .main-footer .footer-contact-item span,
+[data-bs-theme="dark"] .main-footer .footer-bottom p {
+  color: #DDD4CA !important;
+}
+
+[data-bs-theme="dark"] .main-footer .footer-widget-title {
+  color: #FFF8EF;
+}
+
+[data-bs-theme="dark"] .main-footer .footer-contact-item a.text-white {
+  color: #FFF8EF !important;
+}
+
+[data-bs-theme="dark"] .main-footer .footer-links a,
+[data-bs-theme="dark"] .main-footer .footer-bottom {
+  color: #DDD4CA;
+}
+
+[data-bs-theme="dark"] .main-footer .social-btn {
+  background-color: #241E1B;
+  color: #E2D7CC;
+}
+
+[data-bs-theme="dark"] .main-footer .footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+
 
 /* Saffron & Custom CTA Buttons in Dark Mode */
 [data-bs-theme="dark"] .btn-saffron,

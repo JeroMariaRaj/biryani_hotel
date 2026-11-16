@@ -1562,8 +1562,8 @@ img {
    ========================================================================== */
 .main-footer,
 .footer-section {
-  background-color: #171311;
-  color: #DDD4CA;
+  background-color: #FFFFFF;
+  color: #34302D;
   padding: 5rem 0 2rem;
   border-top: 3px solid var(--secondary);
   position: relative;
@@ -1574,7 +1574,15 @@ img {
 .main-footer .text-muted,
 .main-footer .small,
 .main-footer .footer-contact-item span {
-  color: #DDD4CA !important;
+  color: #625B55 !important;
+}
+
+.main-footer .footer-widget-title {
+  color: #351216;
+}
+
+.main-footer .footer-contact-item a.text-white {
+  color: #351216 !important;
 }
 
 .footer-widget-title {
@@ -1606,7 +1614,7 @@ img {
 }
 
 .footer-links a {
-  color: #DDD4CA;
+  color: #4C4540;
   font-size: 0.92rem;
   transition: var(--transition-fast);
   display: inline-flex;
@@ -1641,9 +1649,9 @@ img {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background-color: #241E1B;
+  background-color: #FFFFFF;
   border: 1px solid rgba(217, 154, 50, 0.3);
-  color: #E2D7CC;
+  color: #4C4540;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1660,16 +1668,16 @@ img {
 .footer-bottom {
   margin-top: 4rem;
   padding-top: 1.8rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(53, 18, 22, 0.14);
   font-size: 0.88rem;
-  color: #DDD4CA;
+  color: #625B55;
 }
 
 .footer-bottom p,
 .footer-bottom span,
 .footer-bottom a,
 .footer-bottom a.text-muted {
-  color: #DDD4CA !important;
+  color: #625B55 !important;
   transition: var(--transition-fast);
 }
 
